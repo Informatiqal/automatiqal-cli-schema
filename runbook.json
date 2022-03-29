@@ -6,8 +6,35 @@
     "additionalProperties": false,
     "properties": {
         "name": {
+            "description": "Name of the runbook",
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "edition": {
+            "description": "Target Qlik Sense environment type (windows or saas)",
             "type": "string",
-            "description": "Name of the runbook"
+            "enum": [
+                "windows",
+                "saas"
+            ],
+            "contains": {
+                "const": "controls"
+            },
+            "additionalItems": false
+        },
+        "trace": {
+            "description": "Trace levels",
+            "type": "string",
+            "enum": [
+                "error",
+                "debug"
+            ],
+            "contains": {
+                "const": "controls"
+            },
+            "additionalItems": false
         },
         "environment": {
             "type": "object",
@@ -38,34 +65,133 @@
                         }
                     }
                 }
-            }
+            },
+            "required": [
+                "host",
+                "authentication"
+            ]
         },
         "tasks": {
             "type": "array",
-            "items": [
-                {
-                    "name": {
-                        "type": "string"
+            "minItems": 1,
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "#/definitions/app.get"
                     },
-                    "description1": {
-                        "type": "string"
+                    {
+                        "$ref": "#/definitions/app.upload"
                     },
-                    "operation": {
-                        "type": "string"
-                    },
-                    "details": {
-                        "type": "object",
-                        "properties": {
-                            "file": {
-                                "type": "string"
-                            },
-                            "name": {
+                    {
+                        "$ref": "#/definitions/app.update"
+                    }
+                ]
+            }
+        }
+    },
+    "required": [
+        "name",
+        "environment",
+        "tasks"
+    ],
+    "definitions": {
+        "app.get": {
+            "type": "object",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "app.upload": {
+            "type": "object",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.upload"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "file",
+                        "name"
+                    ],
+                    "properties": {
+                        "file": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "app.update": {
+            "type": "object",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.update"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "tags": {
+                            "type": "array",
+                            "items": {
                                 "type": "string"
                             }
                         }
                     }
+                },
+                "skip": {
+                    "type": "boolean"
                 }
-            ]
+            }
         }
     }
 }
