@@ -1,4 +1,4 @@
-# Automatiqal CLI JSON schema
+# Automatiqal CLI (JSON schema)
 
 This repository contains JSON schema that can be used when writing [Automatiqal CLI](https://github.com/Informatiqal/automatiqal-cli) runbooks.
 
