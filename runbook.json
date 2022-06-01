@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "JSON Schema for Automatiqal runbook files",
-    "description": "",
+    "description": "Automatiqal JSON schema (@informatiqal)",
     "type": "object",
     "additionalProperties": false,
     "properties": {
@@ -10,10 +10,11 @@
             "type": "string"
         },
         "description": {
-            "type": "string"
+            "type": "string",
+            "description": "Free text runbook description"
         },
         "edition": {
-            "description": "Target Qlik Sense environment type (windows or saas)",
+            "description": "Target Qlik Sense environment type - windows or saas. Default is \"windows\"",
             "type": "string",
             "enum": [
                 "windows",
@@ -38,18 +39,20 @@
         },
         "environment": {
             "type": "object",
+            "description": "Define the Qlik environment details (host, port, authentication etc.)",
             "properties": {
                 "host": {
                     "type": "string",
-                    "description": ""
+                    "description": "Qlik Sense host name"
                 },
                 "port": {
-                    "type": "number",
-                    "description": ""
+                    "type": "integer",
+                    "description": "Repository port (default 4242)",
+                    "default": 4242
                 },
                 "authentication": {
                     "type": "object",
-                    "description": "",
+                    "description": "Authentication information (certificates, jwt etc.)",
                     "properties": {
                         "cert": {
                             "type": "string"
@@ -73,6 +76,7 @@
         },
         "tasks": {
             "type": "array",
+            "description": "List of tasks to be executed in sequence",
             "minItems": 1,
             "items": {
                 "oneOf": [
@@ -84,6 +88,18 @@
                     },
                     {
                         "$ref": "#/definitions/app.update"
+                    },
+                    {
+                        "$ref": "#/definitions/app.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/app.publish"
+                    },
+                    {
+                        "$ref": "#/definitions/app.copy"
+                    },
+                    {
+                        "$ref": "#/definitions/app.export"
                     }
                 ]
             }
@@ -97,6 +113,7 @@
     "definitions": {
         "app.get": {
             "type": "object",
+            "description": "Get instance of app/apps",
             "required": [
                 "name",
                 "operation",
@@ -122,6 +139,7 @@
         },
         "app.upload": {
             "type": "object",
+            "description": "Upload brand new app (qvf)",
             "required": [
                 "name",
                 "operation",
@@ -159,11 +177,7 @@
         },
         "app.update": {
             "type": "object",
-            "required": [
-                "name",
-                "operation",
-                "details"
-            ],
+            "description": "Update app/apps properties",
             "properties": {
                 "name": {
                     "type": "string"
@@ -190,8 +204,295 @@
                 },
                 "skip": {
                     "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
                 }
-            }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "app.remove": {
+            "type": "object",
+            "description": "Remove app/apps",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "app.publish": {
+            "type": "object",
+            "description": "Publish app/apps to stream",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.publish"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the app after is published"
+                        },
+                        "stream": {
+                            "type": "string",
+                            "description": "Name of the stream where the app will be published"
+                        }
+                    },
+                    "required": [
+                        "stream"
+                    ]
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "app.copy": {
+            "type": "object",
+            "description": "Duplicate app/apps",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.copy"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "App new name"
+                        },
+                        "includeCustomProperties": {
+                            "type": "boolean",
+                            "description": "Copy the custom properties as well"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "app.export": {
+            "type": "object",
+            "description": "Export app/apps",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.export"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "token": {
+                            "type": "string",
+                            "description": "Export token"
+                        },
+                        "skipData": {
+                            "type": "boolean",
+                            "description": "Export without data"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
         }
     }
 }
