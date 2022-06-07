@@ -16,7 +16,7 @@ Inline method is applied to each yaml runbook file.
 
 Add the following line to the top of the runbook yaml file:
 
-`# yaml-language-server: $schema=https://github.com/Informatiqal/automatiqal-cli-schema/blob/main/runbook.json?raw=true`
+`# yaml-language-server: $schema=https://github.com/Informatiqal/automatiqal-cli-schema/blob/main/schemas/runbook.json?raw=true`
 
 ### User settings
 
@@ -29,7 +29,11 @@ Add the following line to the top of the runbook yaml file:
   ```json
   {
     "fileMatch": ["/*.something.yaml"],
-    "url": "https://github.com/Informatiqal/automatiqal-cli-schema/blob/main/runbook.json?raw=true"
+    "url": "https://github.com/Informatiqal/automatiqal-cli-schema/blob/main/schemas/runbook.json?raw=true"
   }
   ```
   `*.something.yaml` - the schema in this case will be applied to all files that have `something.yaml` in their name. Replace `something` with whatever you want.
+
+### UI Schema
+
+`runbook.json` schema is used to produce `ui_schema.json`. This (simplified) schema can be used when creating UI on top of `Automatiqal`
