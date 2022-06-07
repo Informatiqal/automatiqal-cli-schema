@@ -125,6 +125,7 @@
                 },
                 "operation": {
                     "type": "string",
+                    "readOnly": true,
                     "enum": [
                         "app.get"
                     ]
@@ -446,8 +447,8 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "type": "string",
-                    "description": "Filter to apply to retrieve the apps to update"
+                    "description": "Filter to apply to retrieve the apps to update",
+                    "type": "string"
                 },
                 "source": {
                     "type": "string",
@@ -458,7 +459,7 @@
                     "properties": {
                         "token": {
                             "type": "string",
-                            "description": "Export token"
+                            "description": "App new name"
                         },
                         "skipData": {
                             "type": "boolean",

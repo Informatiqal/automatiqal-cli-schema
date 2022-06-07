@@ -1,0 +1,164 @@
+{
+    "general": {
+        "name": {
+            "description": "Name of the runbook",
+            "type": "string"
+        },
+        "description": {
+            "type": "string",
+            "description": "Free text runbook description"
+        },
+        "edition": {
+            "description": "Target Qlik Sense environment type - windows or saas. Default is \"windows\"",
+            "type": "string"
+        },
+        "trace": {
+            "description": "Trace levels",
+            "type": "string"
+        }
+    },
+    "tasks": {
+        "app.get": {
+            "description": "Get instance of app/apps",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
+        "app.upload": {
+            "description": "Upload brand new app (qvf)",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "file": {
+                    "type": "string",
+                    "required": true
+                },
+                "name": {
+                    "type": "string",
+                    "required": true
+                }
+            }
+        },
+        "app.update": {
+            "description": "Update app/apps properties",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "name": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "filterAndSource": true
+        },
+        "app.remove": {
+            "description": "Remove app/apps",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterAndSource": true
+        },
+        "app.publish": {
+            "description": "Publish app/apps to stream",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the app after is published"
+                },
+                "stream": {
+                    "type": "string",
+                    "description": "Name of the stream where the app will be published",
+                    "required": true
+                }
+            },
+            "filterAndSource": true
+        },
+        "app.copy": {
+            "description": "Duplicate app/apps",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "name": {
+                    "type": "string",
+                    "description": "App new name"
+                },
+                "includeCustomProperties": {
+                    "type": "boolean",
+                    "description": "Copy the custom properties as well"
+                }
+            },
+            "filterAndSource": true
+        },
+        "app.export": {
+            "description": "Export app/apps",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "token": {
+                    "type": "string",
+                    "description": "App new name"
+                },
+                "skipData": {
+                    "type": "boolean",
+                    "description": "Export without data"
+                }
+            },
+            "filterAndSource": true
+        }
+    }
+}

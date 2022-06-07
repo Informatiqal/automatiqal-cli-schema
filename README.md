@@ -1,5 +1,7 @@
 # Automatiqal CLI (JSON schema)
 
+## UNDER DEVELOPMENT
+
 This repository contains JSON schema that can be used when writing [Automatiqal CLI](https://github.com/Informatiqal/automatiqal-cli) runbooks.
 
 ## VSCode
