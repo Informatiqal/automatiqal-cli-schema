@@ -1,0 +1,70 @@
+{
+    "type": "object",
+    "description": "Create new custom property",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "customProperty.create"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "choiceValues": {
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "objectTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "App",
+                            "AnalyticConnection",
+                            "ContentLibrary",
+                            "DataConnection",
+                            "EngineService",
+                            "Extension",
+                            "ExternalProgramTask",
+                            "ServerNodeConfiguration",
+                            "PrintingService",
+                            "ProxyService",
+                            "ReloadTask",
+                            "RepositoryService",
+                            "SchedulerService",
+                            "Stream",
+                            "UserSyncTask",
+                            "User",
+                            "VirtualProxyConfig"
+                        ]
+                    }
+                },
+                "valueType": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "skip": {
+        "type": "boolean"
+    }
+}

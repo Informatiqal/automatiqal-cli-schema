@@ -23,9 +23,11 @@ async function generateRunbookSchema() {
   }
 
   fs.writeFileSync(
-    `./schemas/runbook.json`,
+    `./schemas/runbook_expanded.json`,
     JSON.stringify(placeholder, null, 4)
   );
+
+  fs.writeFileSync(`./schemas/runbook.json`, JSON.stringify(placeholder));
 
   return placeholder;
 }
@@ -109,10 +111,13 @@ async function generateUISchema(runbookSchema) {
     }
   });
   runbook.tasks = { ...result };
+
   fs.writeFileSync(
-    "./schemas/ui_schema.json",
+    "./schemas/ui_schema_expanded.json",
     JSON.stringify(runbook, null, 4)
   );
+
+  fs.writeFileSync("./schemas/ui_schema.json", JSON.stringify(runbook));
 }
 
 (async function () {

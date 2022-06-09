@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "description": "Get instance of custom property(ies)",
+    "required": [
+        "name",
+        "operation",
+        "filter"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "customProperty.get"
+            ]
+        },
+        "filter": {
+            "type": "string"
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

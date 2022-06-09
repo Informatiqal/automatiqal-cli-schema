@@ -1,0 +1,1092 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "JSON Schema for Automatiqal runbook files",
+    "description": "Automatiqal JSON schema (@informatiqal)",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "name": {
+            "description": "Name of the runbook",
+            "type": "string"
+        },
+        "description": {
+            "type": "string",
+            "description": "Free text runbook description"
+        },
+        "edition": {
+            "description": "Target Qlik Sense environment type - windows or saas. Default is \"windows\"",
+            "type": "string",
+            "enum": [
+                "windows",
+                "saas"
+            ],
+            "contains": {
+                "const": "controls"
+            },
+            "additionalItems": false
+        },
+        "trace": {
+            "description": "Trace levels",
+            "type": "string",
+            "enum": [
+                "error",
+                "debug"
+            ],
+            "contains": {
+                "const": "controls"
+            },
+            "additionalItems": false
+        },
+        "environment": {
+            "type": "object",
+            "description": "Define the Qlik environment details (host, port, authentication etc.)",
+            "properties": {
+                "host": {
+                    "type": "string",
+                    "description": "Qlik Sense host name"
+                },
+                "port": {
+                    "type": "integer",
+                    "description": "Repository port (default 4242)",
+                    "default": 4242
+                },
+                "authentication": {
+                    "type": "object",
+                    "description": "Authentication information (certificates, jwt etc.)",
+                    "properties": {
+                        "cert": {
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "user_dir": {
+                            "type": "string"
+                        },
+                        "user_name": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "host",
+                "authentication"
+            ]
+        },
+        "tasks": {
+            "type": "array",
+            "description": "List of tasks to be executed in sequence",
+            "minItems": 1,
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "#/definitions/app.copy"
+                    },
+                    {
+                        "$ref": "#/definitions/app.export"
+                    },
+                    {
+                        "$ref": "#/definitions/app.exportMany"
+                    },
+                    {
+                        "$ref": "#/definitions/app.get"
+                    },
+                    {
+                        "$ref": "#/definitions/app.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/app.publish"
+                    },
+                    {
+                        "$ref": "#/definitions/app.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/app.switch"
+                    },
+                    {
+                        "$ref": "#/definitions/app.update"
+                    },
+                    {
+                        "$ref": "#/definitions/app.upload"
+                    },
+                    {
+                        "$ref": "#/definitions/app.uploadAndReplace"
+                    },
+                    {
+                        "$ref": "#/definitions/customProperty.create"
+                    },
+                    {
+                        "$ref": "#/definitions/customProperty.get"
+                    },
+                    {
+                        "$ref": "#/definitions/customProperty.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/customProperty.update"
+                    },
+                    {
+                        "$ref": "#/definitions/dataConnection.create"
+                    },
+                    {
+                        "$ref": "#/definitions/dataConnection.get"
+                    },
+                    {
+                        "$ref": "#/definitions/dataConnection.remove"
+                    }
+                ]
+            }
+        }
+    },
+    "required": [
+        "name",
+        "environment",
+        "tasks"
+    ],
+    "definitions": {
+        "app.copy": {
+            "type": "object",
+            "description": "Duplicate app/apps",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.copy"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "App new name"
+                        },
+                        "includeCustomProperties": {
+                            "type": "boolean",
+                            "description": "Copy the custom properties as well"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "app.export": {
+            "type": "object",
+            "description": "Export app/apps",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.export"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "description": "Filter to apply to retrieve the apps to update",
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "token": {
+                            "type": "string",
+                            "description": "App new name"
+                        },
+                        "skipData": {
+                            "type": "boolean",
+                            "description": "Export without data"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "app.exportMany": {
+            "type": "object",
+            "description": "Export apps",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.export"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "description": "Filter to apply to retrieve the apps to update",
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "skipData": {
+                            "type": "boolean",
+                            "description": "Export without data"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "app.get": {
+            "type": "object",
+            "description": "Get instance of app/apps",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "app.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "app.getAll": {
+            "type": "object",
+            "description": "Get instance of all apps",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "app.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "app.publish": {
+            "type": "object",
+            "description": "Publish app/apps to stream",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.publish"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the app after is published"
+                        },
+                        "stream": {
+                            "type": "string",
+                            "description": "Name of the stream where the app will be published"
+                        }
+                    },
+                    "required": [
+                        "stream"
+                    ]
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "app.remove": {
+            "type": "object",
+            "description": "Remove app/apps",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "app.switch": {
+            "type": "object",
+            "description": "Publish an app by overwriting existing app",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "app.switch"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "targetAppId": {
+                            "type": "string",
+                            "description": "Target app id"
+                        }
+                    },
+                    "required": [
+                        "targetAppId"
+                    ]
+                }
+            }
+        },
+        "app.update": {
+            "type": "object",
+            "description": "Update app/apps properties",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.update"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "tags": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "app.upload": {
+            "type": "object",
+            "description": "Upload brand new app (qvf)",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.upload"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "file",
+                        "name"
+                    ],
+                    "properties": {
+                        "file": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "app.uploadAndReplace": {
+            "type": "object",
+            "description": "Upload new app and replace existing app",
+            "required": [
+                "name",
+                "file",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "file": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "app.switch"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "targetAppId": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "targetAppId"
+                    ]
+                }
+            }
+        },
+        "customProperty.create": {
+            "type": "object",
+            "description": "Create new custom property",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "customProperty.create"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "name"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "choiceValues": {
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "objectTypes": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "App",
+                                    "AnalyticConnection",
+                                    "ContentLibrary",
+                                    "DataConnection",
+                                    "EngineService",
+                                    "Extension",
+                                    "ExternalProgramTask",
+                                    "ServerNodeConfiguration",
+                                    "PrintingService",
+                                    "ProxyService",
+                                    "ReloadTask",
+                                    "RepositoryService",
+                                    "SchedulerService",
+                                    "Stream",
+                                    "UserSyncTask",
+                                    "User",
+                                    "VirtualProxyConfig"
+                                ]
+                            }
+                        },
+                        "valueType": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "skip": {
+                "type": "boolean"
+            }
+        },
+        "customProperty.get": {
+            "type": "object",
+            "description": "Get instance of custom property(ies)",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "customProperty.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "customProperty.remove": {
+            "type": "object",
+            "description": "Remove custom property(ies)",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "customProperty.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the custom property"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "customProperty.update": {
+            "type": "object",
+            "description": "Update custom property(ies) properties",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "customProperty.update"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "choiceValues": {
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "objectTypes": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "App",
+                                    "AnalyticConnection",
+                                    "ContentLibrary",
+                                    "DataConnection",
+                                    "EngineService",
+                                    "Extension",
+                                    "ExternalProgramTask",
+                                    "ServerNodeConfiguration",
+                                    "PrintingService",
+                                    "ProxyService",
+                                    "ReloadTask",
+                                    "RepositoryService",
+                                    "SchedulerService",
+                                    "Stream",
+                                    "UserSyncTask",
+                                    "User",
+                                    "VirtualProxyConfig"
+                                ]
+                            }
+                        },
+                        "valueType": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the custom property to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "dataConnection.create": {
+            "type": "object",
+            "description": "Create new data connection",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "dataConnection.create"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "name",
+                        "connectionString"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "connectionString": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        },
+                        "username": {
+                            "type": "string"
+                        },
+                        "password": {
+                            "type": "string"
+                        },
+                        "architecture": {
+                            "type": "string",
+                            "enum": [
+                                "x86",
+                                "x64",
+                                "Undefined"
+                            ]
+                        },
+                        "logOn": {
+                            "type": "string",
+                            "enum": [
+                                "Current user",
+                                "Service user"
+                            ]
+                        },
+                        "tags": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "customProperties": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "skip": {
+                "type": "boolean"
+            }
+        },
+        "dataConnection.get": {
+            "type": "object",
+            "description": "Get instance of data connection/s",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "dataConnection.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "dataConnection.remove": {
+            "type": "object",
+            "description": "Remove data connection(s)",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "dataConnection.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
