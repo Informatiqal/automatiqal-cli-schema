@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "description": "Duplicate app/apps",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "app.copy"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "type": "string",
+            "description": "Filter to apply to retrieve the apps to update"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "App new name"
+                },
+                "includeCustomProperties": {
+                    "type": "boolean",
+                    "description": "Copy the custom properties as well"
+                }
+            }
+        }
+    },
+    "required": [
+        "name",
+        "operation"
+    ],
+    "oneOf": [
+        {
+            "required": [
+                "filter"
+            ],
+            "not": {
+                "required": [
+                    "source"
+                ]
+            }
+        },
+        {
+            "required": [
+                "source"
+            ],
+            "not": {
+                "required": [
+                    "filter"
+                ]
+            }
+        }
+    ]
+}

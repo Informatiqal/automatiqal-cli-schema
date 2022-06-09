@@ -1,0 +1,74 @@
+{
+    "type": "object",
+    "description": "Create new data connection",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "dataConnection.create"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "name",
+                "connectionString"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "connectionString": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "architecture": {
+                    "type": "string",
+                    "enum": [
+                        "x86",
+                        "x64",
+                        "Undefined"
+                    ]
+                },
+                "logOn": {
+                    "type": "string",
+                    "enum": [
+                        "Current user",
+                        "Service user"
+                    ]
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "skip": {
+        "type": "boolean"
+    }
+}

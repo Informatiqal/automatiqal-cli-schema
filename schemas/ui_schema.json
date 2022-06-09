@@ -18,102 +18,6 @@
         }
     },
     "tasks": {
-        "app.get": {
-            "description": "Get instance of app/apps",
-            "fields": {
-                "name": {
-                    "type": "string",
-                    "required": true
-                },
-                "skip": {
-                    "type": "boolean"
-                }
-            },
-            "filterOnly": true
-        },
-        "app.upload": {
-            "description": "Upload brand new app (qvf)",
-            "fields": {
-                "name": {
-                    "type": "string",
-                    "required": true
-                },
-                "skip": {
-                    "type": "boolean"
-                }
-            },
-            "details": {
-                "file": {
-                    "type": "string",
-                    "required": true
-                },
-                "name": {
-                    "type": "string",
-                    "required": true
-                }
-            }
-        },
-        "app.update": {
-            "description": "Update app/apps properties",
-            "fields": {
-                "name": {
-                    "type": "string",
-                    "required": true
-                },
-                "skip": {
-                    "type": "boolean"
-                }
-            },
-            "details": {
-                "name": {
-                    "type": "string"
-                },
-                "tags": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "filterAndSource": true
-        },
-        "app.remove": {
-            "description": "Remove app/apps",
-            "fields": {
-                "name": {
-                    "type": "string",
-                    "required": true
-                },
-                "skip": {
-                    "type": "boolean"
-                }
-            },
-            "filterAndSource": true
-        },
-        "app.publish": {
-            "description": "Publish app/apps to stream",
-            "fields": {
-                "name": {
-                    "type": "string",
-                    "required": true
-                },
-                "skip": {
-                    "type": "boolean"
-                }
-            },
-            "details": {
-                "name": {
-                    "type": "string",
-                    "description": "Name of the app after is published"
-                },
-                "stream": {
-                    "type": "string",
-                    "description": "Name of the stream where the app will be published",
-                    "required": true
-                }
-            },
-            "filterAndSource": true
-        },
         "app.copy": {
             "description": "Duplicate app/apps",
             "fields": {
@@ -156,6 +60,255 @@
                 "skipData": {
                     "type": "boolean",
                     "description": "Export without data"
+                }
+            },
+            "filterAndSource": true
+        },
+        "app.exportMany": {
+            "description": "Export apps",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "skipData": {
+                    "type": "boolean",
+                    "description": "Export without data"
+                }
+            },
+            "filterAndSource": true
+        },
+        "app.get": {
+            "description": "Get instance of app/apps",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
+        "app.getAll": {
+            "description": "Get instance of all apps",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "app.publish": {
+            "description": "Publish app/apps to stream",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the app after is published"
+                },
+                "stream": {
+                    "type": "string",
+                    "description": "Name of the stream where the app will be published",
+                    "required": true
+                }
+            },
+            "filterAndSource": true
+        },
+        "app.remove": {
+            "description": "Remove app/apps",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterAndSource": true
+        },
+        "app.switch": {
+            "description": "Publish an app by overwriting existing app",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "targetAppId": {
+                    "type": "string",
+                    "description": "Target app id",
+                    "required": true
+                }
+            }
+        },
+        "app.update": {
+            "description": "Update app/apps properties",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "name": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "filterAndSource": true
+        },
+        "app.upload": {
+            "description": "Upload brand new app (qvf)",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "file": {
+                    "type": "string",
+                    "required": true
+                },
+                "name": {
+                    "type": "string",
+                    "required": true
+                }
+            }
+        },
+        "app.uploadAndReplace": {
+            "description": "Upload new app and replace existing app",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "file": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "targetAppId": {
+                    "type": "string",
+                    "required": true
+                }
+            }
+        },
+        "dataConnection.create": {
+            "description": "Create new data connection",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                }
+            },
+            "details": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "connectionString": {
+                    "type": "string",
+                    "required": true
+                },
+                "type": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "architecture": {
+                    "type": "string",
+                    "enum": [
+                        "x86",
+                        "x64",
+                        "Undefined"
+                    ]
+                },
+                "logOn": {
+                    "type": "string",
+                    "enum": [
+                        "Current user",
+                        "Service user"
+                    ]
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "dataConnection.get": {
+            "description": "Get instance of data connection/s",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
+        "dataConnection.remove": {
+            "description": "Remove data connection(s)",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
                 }
             },
             "filterAndSource": true

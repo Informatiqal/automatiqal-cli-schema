@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "description": "Upload brand new app (qvf)",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "app.upload"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "file",
+                "name"
+            ],
+            "properties": {
+                "file": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

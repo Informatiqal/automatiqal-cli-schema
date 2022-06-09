@@ -18,6 +18,10 @@ Add the following line to the top of the runbook yaml file:
 
 `# yaml-language-server: $schema=https://github.com/Informatiqal/automatiqal-cli-schema/blob/main/schemas/runbook.json?raw=true`
 
+Or if the schema is downloaded locally:
+
+`# yaml-language-server: $schema=c:\path\to\runbook.json`
+
 ### User settings
 
 - `Ctrl + Shift + p`

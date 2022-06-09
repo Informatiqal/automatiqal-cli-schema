@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "description": "Get instance of all apps",
+    "required": [
+        "name",
+        "operation",
+        "filter"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "app.getAll"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

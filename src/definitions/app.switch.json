@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "description": "Publish an app by overwriting existing app",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "app.switch"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "targetAppId": {
+                    "type": "string",
+                    "description": "Target app id"
+                }
+            },
+            "required": [
+                "targetAppId"
+            ]
+        }
+    }
+}

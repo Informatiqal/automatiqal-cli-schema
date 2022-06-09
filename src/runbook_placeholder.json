@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "JSON Schema for Automatiqal runbook files",
+    "description": "Automatiqal JSON schema (@informatiqal)",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "name": {
+            "description": "Name of the runbook",
+            "type": "string"
+        },
+        "description": {
+            "type": "string",
+            "description": "Free text runbook description"
+        },
+        "edition": {
+            "description": "Target Qlik Sense environment type - windows or saas. Default is \"windows\"",
+            "type": "string",
+            "enum": [
+                "windows",
+                "saas"
+            ],
+            "contains": {
+                "const": "controls"
+            },
+            "additionalItems": false
+        },
+        "trace": {
+            "description": "Trace levels",
+            "type": "string",
+            "enum": [
+                "error",
+                "debug"
+            ],
+            "contains": {
+                "const": "controls"
+            },
+            "additionalItems": false
+        },
+        "environment": {
+            "type": "object",
+            "description": "Define the Qlik environment details (host, port, authentication etc.)",
+            "properties": {
+                "host": {
+                    "type": "string",
+                    "description": "Qlik Sense host name"
+                },
+                "port": {
+                    "type": "integer",
+                    "description": "Repository port (default 4242)",
+                    "default": 4242
+                },
+                "authentication": {
+                    "type": "object",
+                    "description": "Authentication information (certificates, jwt etc.)",
+                    "properties": {
+                        "cert": {
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "user_dir": {
+                            "type": "string"
+                        },
+                        "user_name": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "host",
+                "authentication"
+            ]
+        },
+        "tasks": {
+            "type": "array",
+            "description": "List of tasks to be executed in sequence",
+            "minItems": 1,
+            "items": {}
+        }
+    },
+    "required": [
+        "name",
+        "environment",
+        "tasks"
+    ],
+    "definitions": {}
+}

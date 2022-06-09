@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "description": "Upload new app and replace existing app",
+    "required": [
+        "name",
+        "file",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "file": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "app.switch"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "targetAppId": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "targetAppId"
+            ]
+        }
+    }
+}
