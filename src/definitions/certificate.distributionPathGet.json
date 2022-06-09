@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "description": "Get distribution certificate path",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "certificate.distributionPathGet"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

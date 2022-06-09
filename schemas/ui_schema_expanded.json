@@ -232,6 +232,55 @@
                 }
             }
         },
+        "certificate.distributionPathGet": {
+            "description": "Get distribution certificate path",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "certificate.generate": {
+            "description": "Generate new set of certificates",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "machineNames": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "required": true
+                },
+                "certificatePassword": {
+                    "type": "string"
+                },
+                "includeSecretsKey": {
+                    "type": "boolean"
+                },
+                "includeCa": {
+                    "type": "boolean"
+                },
+                "exportFormat": {
+                    "type": "string",
+                    "enum": [
+                        "Windows",
+                        "Pem"
+                    ]
+                }
+            }
+        },
         "customProperty.create": {
             "description": "Create new custom property",
             "fields": {

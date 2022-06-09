@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "description": "Generate new set of certificates",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "certificate.generate"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "machineNames": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "certificatePassword": {
+                    "type": "string"
+                },
+                "includeSecretsKey": {
+                    "type": "boolean"
+                },
+                "includeCa": {
+                    "type": "boolean"
+                },
+                "exportFormat": {
+                    "type": "string",
+                    "enum": [
+                        "Windows",
+                        "Pem"
+                    ]
+                }
+            },
+            "required": [
+                "machineNames"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ]
+}
