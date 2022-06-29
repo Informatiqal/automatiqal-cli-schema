@@ -1,0 +1,92 @@
+{
+    "type": "object",
+    "description": "Create new system rule",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "systemRule.create"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "name",
+                "category",
+                "rule",
+                "resourceFilter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "string",
+                    "enum": [
+                        "License",
+                        "Security",
+                        "Sync"
+                    ]
+                },
+                "rule": {
+                    "type": "string"
+                },
+                "resourceFilter": {
+                    "type": "string"
+                },
+                "actions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "None",
+                            "Create",
+                            "Read",
+                            "Update",
+                            "Delete",
+                            "Export",
+                            "Publish",
+                            "Change owner",
+                            "Change role",
+                            "Export data",
+                            "Offline access",
+                            "Distribute",
+                            "Duplicate",
+                            "Approve",
+                            "Allow access"
+                        ]
+                    }
+                },
+                "comment": {
+                    "type": "string"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

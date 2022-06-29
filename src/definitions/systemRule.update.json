@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "Remove app/apps",
+    "description": "Update system rule(s) properties",
     "properties": {
         "name": {
             "type": "string"
@@ -8,24 +8,33 @@
         "operation": {
             "type": "string",
             "enum": [
-                "app.remove"
+                "systemRule.update"
             ]
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
         },
         "skip": {
             "type": "boolean"
         },
         "filter": {
             "type": "string",
-            "description": "Filter to apply to retrieve the apps to update"
+            "description": "Filter to apply to retrieve the system rule(s) to update"
         },
         "source": {
             "type": "string",
             "description": "Name of previously defined tasks. Use the result of the task as source"
-        },
-        "options": {
-            "multiple": {
-                "type": "boolean"
-            }
         }
     },
     "required": [

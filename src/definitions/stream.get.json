@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "description": "Get instance of stream(s)",
+    "required": [
+        "name",
+        "operation",
+        "filter"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "stream.get"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "type": "string"
+        }
+    }
+}

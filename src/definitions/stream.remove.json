@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "Remove app/apps",
+    "description": "Remove stream/streams",
     "properties": {
         "name": {
             "type": "string"
@@ -8,7 +8,7 @@
         "operation": {
             "type": "string",
             "enum": [
-                "app.remove"
+                "stream.remove"
             ]
         },
         "skip": {
@@ -16,7 +16,7 @@
         },
         "filter": {
             "type": "string",
-            "description": "Filter to apply to retrieve the apps to update"
+            "description": "Filter to apply to retrieve the stream"
         },
         "source": {
             "type": "string",
@@ -30,8 +30,7 @@
     },
     "required": [
         "name",
-        "operation",
-        "details"
+        "operation"
     ],
     "oneOf": [
         {
