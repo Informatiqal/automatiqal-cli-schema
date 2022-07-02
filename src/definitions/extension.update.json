@@ -1,0 +1,71 @@
+{
+    "type": "object",
+    "description": "Update extension(s) properties",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "extension.update"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "Value in format: CustomPropertyName=value"
+                    }
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "type": "string",
+            "description": "Filter to apply to retrieve the extension(s) to update"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        }
+    },
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "oneOf": [
+        {
+            "required": [
+                "filter"
+            ],
+            "not": {
+                "required": [
+                    "source"
+                ]
+            }
+        },
+        {
+            "required": [
+                "source"
+            ],
+            "not": {
+                "required": [
+                    "filter"
+                ]
+            }
+        }
+    ]
+}

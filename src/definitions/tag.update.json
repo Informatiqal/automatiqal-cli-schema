@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "description": "Update user(s) properties",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "user.update"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "type": "string",
+            "description": "Filter to apply to retrieve the user(s) to update"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        }
+    },
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "oneOf": [
+        {
+            "required": [
+                "filter"
+            ],
+            "not": {
+                "required": [
+                    "source"
+                ]
+            }
+        },
+        {
+            "required": [
+                "source"
+            ],
+            "not": {
+                "required": [
+                    "filter"
+                ]
+            }
+        }
+    ]
+}

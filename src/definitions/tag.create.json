@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "description": "Create new tag",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "tag.create"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

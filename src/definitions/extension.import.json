@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "description": "Import new extension",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "extension.import"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "file"
+            ],
+            "properties": {
+                "file": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

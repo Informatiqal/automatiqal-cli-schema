@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "description": "Create new user",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "user.create"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "userId",
+                "userDirectory"
+            ],
+            "properties": {
+                "userId": {
+                    "type": "string"
+                },
+                "userDirectory": {
+                    "type": "string"
+                },
+                "roles": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
