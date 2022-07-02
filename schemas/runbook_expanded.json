@@ -141,6 +141,12 @@
                         "$ref": "#/definitions/dataConnection.remove"
                     },
                     {
+                        "$ref": "#/definitions/extension.import"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.update"
+                    },
+                    {
                         "$ref": "#/definitions/serviceStatus.get"
                     },
                     {
@@ -163,6 +169,24 @@
                     },
                     {
                         "$ref": "#/definitions/systemRule.update"
+                    },
+                    {
+                        "$ref": "#/definitions/tag.create"
+                    },
+                    {
+                        "$ref": "#/definitions/tag.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/tag.update"
+                    },
+                    {
+                        "$ref": "#/definitions/user.create"
+                    },
+                    {
+                        "$ref": "#/definitions/user.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/user.update"
                     }
                 ]
             }
@@ -1199,6 +1223,114 @@
                 }
             ]
         },
+        "extension.import": {
+            "type": "object",
+            "description": "Import new extension",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "extension.import"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "file"
+                    ],
+                    "properties": {
+                        "file": {
+                            "type": "string"
+                        },
+                        "password": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "extension.update": {
+            "type": "object",
+            "description": "Update extension(s) properties",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "extension.update"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "tags": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "customProperties": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "description": "Value in format: CustomPropertyName=value"
+                            }
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the extension(s) to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
         "serviceStatus.get": {
             "type": "object",
             "description": "Get status of service by service id",
@@ -1612,6 +1744,357 @@
                 "filter": {
                     "type": "string",
                     "description": "Filter to apply to retrieve the system rule(s) to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "tag.create": {
+            "type": "object",
+            "description": "Create new tag",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "tag.create"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "name"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "tag.remove": {
+            "type": "object",
+            "description": "Remove tag(s)",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "tag.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the tag"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "multiple": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "tag.update": {
+            "type": "object",
+            "description": "Update user(s) properties",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "user.update"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "name"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the user(s) to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "user.create": {
+            "type": "object",
+            "description": "Create new user",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "user.create"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "userId",
+                        "userDirectory"
+                    ],
+                    "properties": {
+                        "userId": {
+                            "type": "string"
+                        },
+                        "userDirectory": {
+                            "type": "string"
+                        },
+                        "roles": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "tags": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "customProperties": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "user.remove": {
+            "type": "object",
+            "description": "Remove user(s)",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "user.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the user"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "multiple": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
+        "user.update": {
+            "type": "object",
+            "description": "Update user(s) properties",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "user.update"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "roles": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "tags": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "customProperties": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "description": "Value in format: CustomPropertyName=value"
+                            }
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the user(s) to update"
                 },
                 "source": {
                     "type": "string",

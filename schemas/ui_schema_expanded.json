@@ -498,6 +498,55 @@
             },
             "filterAndSource": true
         },
+        "extension.import": {
+            "description": "Import new extension",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "file": {
+                    "type": "string",
+                    "required": true
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "extension.update": {
+            "description": "Update extension(s) properties",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "Value in format: CustomPropertyName=value"
+                    }
+                }
+            },
+            "filterAndSource": true
+        },
         "serviceStatus.get": {
             "description": "Get status of service by service id",
             "fields": {
@@ -716,6 +765,159 @@
                     "type": "array",
                     "items": {
                         "type": "string"
+                    }
+                }
+            },
+            "filterAndSource": true
+        },
+        "tag.create": {
+            "description": "Create new tag",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                }
+            }
+        },
+        "tag.remove": {
+            "description": "Remove tag(s)",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "options": {
+                    "multiple": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "filterAndSource": true
+        },
+        "tag.update": {
+            "description": "Update user(s) properties",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                }
+            },
+            "filterAndSource": true
+        },
+        "user.create": {
+            "description": "Create new user",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "userId": {
+                    "type": "string",
+                    "required": true
+                },
+                "userDirectory": {
+                    "type": "string",
+                    "required": true
+                },
+                "roles": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "user.remove": {
+            "description": "Remove user(s)",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "options": {
+                    "multiple": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "filterAndSource": true
+        },
+        "user.update": {
+            "description": "Update user(s) properties",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "name": {
+                    "type": "string"
+                },
+                "roles": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "Value in format: CustomPropertyName=value"
                     }
                 }
             },
