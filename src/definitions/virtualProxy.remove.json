@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "description": "Remove virtual proxy(ies",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "virtualProxy.remove"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "type": "string",
+            "description": "Filter to apply to retrieve the virtual proxy"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        },
+        "options": {
+            "multiple": {
+                "type": "boolean"
+            }
+        }
+    },
+    "required": [
+        "name",
+        "operation"
+    ],
+    "oneOf": [
+        {
+            "required": [
+                "filter"
+            ],
+            "not": {
+                "required": [
+                    "source"
+                ]
+            }
+        },
+        {
+            "required": [
+                "source"
+            ],
+            "not": {
+                "required": [
+                    "filter"
+                ]
+            }
+        }
+    ]
+}

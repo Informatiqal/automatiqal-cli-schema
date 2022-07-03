@@ -1,0 +1,204 @@
+{
+    "type": "object",
+    "description": "Update virtual proxy",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "virtualProxy.update"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "prefix": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "sessionCookieHeaderName": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "authenticationModuleRedirectUri": {
+                    "type": "string"
+                },
+                "windowsAuthenticationEnabledDevicePattern": {
+                    "type": "string"
+                },
+                "loadBalancingServerNodes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "websocketCrossOriginWhiteList": {
+                    "type": "string"
+                },
+                "additionalResponseHeaders": {
+                    "type": "string"
+                },
+                "anonymousAccessMode": {
+                    "type": "string",
+                    "enum": [
+                        "No anonymous",
+                        "Allow anonymous",
+                        "Always anonymous"
+                    ]
+                },
+                "authenticationMethod": {
+                    "type": "string",
+                    "enum": [
+                        "Ticket",
+                        "HeaderStaticUserDirectory",
+                        "HeaderDynamicUserDirectory",
+                        "static",
+                        "dynamic",
+                        "SAML",
+                        "JWT"
+                    ]
+                },
+                "hasSecureAttributeHttp": {
+                    "type": "boolean"
+                },
+                "sameSiteAttributeHttp": {
+                    "type": "string",
+                    "enum": [
+                        "No attribute",
+                        "None",
+                        "Lax",
+                        "Strict"
+                    ]
+                },
+                "hasSecureAttributeHttps": {
+                    "type": "boolean"
+                },
+                "sameSiteAttributeHttps": {
+                    "type": "string",
+                    "enum": [
+                        "No attribute",
+                        "None",
+                        "Lax",
+                        "Strict"
+                    ]
+                },
+                "headerAuthenticationHeaderName": {
+                    "type": "string"
+                },
+                "extendedSecurityEnvironment": {
+                    "type": "boolean"
+                },
+                "headerAuthenticationStaticUserDirectory": {
+                    "type": "string"
+                },
+                "headerAuthenticationDynamicUserDirectory": {
+                    "type": "string"
+                },
+                "samlMetadataIdP": {
+                    "type": "string"
+                },
+                "samlHostUri": {
+                    "type": "string"
+                },
+                "samlEntityId": {
+                    "type": "string"
+                },
+                "samlAttributeUserId": {
+                    "type": "string"
+                },
+                "samlAttributeUserDirectory": {
+                    "type": "string"
+                },
+                "samlAttributeMap": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "samlSlo": {
+                    "type": "boolean"
+                },
+                "jwtPublicKeyCertificate": {
+                    "type": "string"
+                },
+                "jwtAttributeUserId": {
+                    "type": "string"
+                },
+                "jwtAttributeUserDirectory": {
+                    "type": "string"
+                },
+                "jwtAttributeMap": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sessionInactivityTimeout": {
+                    "type": "integer"
+                },
+                "oidcConfigurationEndpointUri": {
+                    "type": "string"
+                },
+                "oidcClientId": {
+                    "type": "string"
+                },
+                "oidcClientSecret": {
+                    "type": "string"
+                },
+                "oidcRealm": {
+                    "type": "string"
+                },
+                "oidcAttributeSub": {
+                    "type": "string"
+                },
+                "oidcAttributeName": {
+                    "type": "string"
+                },
+                "oidcAttributeGroups": {
+                    "type": "string"
+                },
+                "oidcAttributeEmail": {
+                    "type": "string"
+                },
+                "oidcAttributeClientId": {
+                    "type": "string"
+                },
+                "oidcAttributePicture": {
+                    "type": "string"
+                },
+                "oidcScope": {
+                    "type": "string"
+                },
+                "oidcAttributeMap": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
