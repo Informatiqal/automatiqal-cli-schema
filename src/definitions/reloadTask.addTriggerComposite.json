@@ -1,0 +1,82 @@
+{
+    "type": "object",
+    "description": "Add composite trigger to reload task",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "reloadTask.addTriggerComposite"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "name",
+                "eventTasks"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "eventTasks": {
+                    "type": "object",
+                    "required": [
+                        "state"
+                    ],
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "description": "ID of the targeted reload task"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "state": {
+                            "type": "string",
+                            "enum": [
+                                "success",
+                                "fail"
+                            ]
+                        }
+                    },
+                    "oneOf": [
+                        {
+                            "required": [
+                                "id"
+                            ],
+                            "not": {
+                                "required": [
+                                    "name"
+                                ]
+                            }
+                        },
+                        {
+                            "required": [
+                                "name"
+                            ],
+                            "not": {
+                                "required": [
+                                    "idz"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
