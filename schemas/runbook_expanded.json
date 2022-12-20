@@ -133,6 +133,12 @@
                         "$ref": "#/definitions/certificate.generate"
                     },
                     {
+                        "$ref": "#/definitions/contentLibrary.get"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.getAll"
+                    },
+                    {
                         "$ref": "#/definitions/customProperty.create"
                     },
                     {
@@ -151,13 +157,37 @@
                         "$ref": "#/definitions/dataConnection.get"
                     },
                     {
+                        "$ref": "#/definitions/dataConnection.getAll"
+                    },
+                    {
                         "$ref": "#/definitions/dataConnection.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.get"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.getAll"
                     },
                     {
                         "$ref": "#/definitions/extension.import"
                     },
                     {
+                        "$ref": "#/definitions/extension.remove"
+                    },
+                    {
                         "$ref": "#/definitions/extension.update"
+                    },
+                    {
+                        "$ref": "#/definitions/externalTask.get"
+                    },
+                    {
+                        "$ref": "#/definitions/externalTask.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/node.get"
+                    },
+                    {
+                        "$ref": "#/definitions/node.getAll"
                     },
                     {
                         "$ref": "#/definitions/proxy.update"
@@ -193,6 +223,12 @@
                         "$ref": "#/definitions/systemRule.create"
                     },
                     {
+                        "$ref": "#/definitions/systemRule.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/systemRule"
+                    },
+                    {
                         "$ref": "#/definitions/systemRule.remove"
                     },
                     {
@@ -211,6 +247,12 @@
                         "$ref": "#/definitions/tag.update"
                     },
                     {
+                        "$ref": "#/definitions/task.get"
+                    },
+                    {
+                        "$ref": "#/definitions/task.getAll"
+                    },
+                    {
                         "$ref": "#/definitions/task.start"
                     },
                     {
@@ -223,6 +265,12 @@
                         "$ref": "#/definitions/user.create"
                     },
                     {
+                        "$ref": "#/definitions/user.get"
+                    },
+                    {
+                        "$ref": "#/definitions/user.getAll"
+                    },
+                    {
                         "$ref": "#/definitions/user.remove"
                     },
                     {
@@ -230,6 +278,12 @@
                     },
                     {
                         "$ref": "#/definitions/virtualProxy.create"
+                    },
+                    {
+                        "$ref": "#/definitions/virtualProxy.get"
+                    },
+                    {
+                        "$ref": "#/definitions/virtualProxy.getAll"
                     },
                     {
                         "$ref": "#/definitions/virtualProxy.remove"
@@ -879,6 +933,56 @@
                 "details"
             ]
         },
+        "contentLibrary.get": {
+            "type": "object",
+            "description": "Get instance of content library/libraries",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "contentLibrary.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "contentLibrary.getAll": {
+            "type": "object",
+            "description": "Get instance of all content libraries",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "contentLibrary.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
         "customProperty.create": {
             "type": "object",
             "description": "Create new custom property",
@@ -1226,6 +1330,29 @@
                 }
             }
         },
+        "dataConnection.getAll": {
+            "type": "object",
+            "description": "Get instance of all data connections",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "dataConnection.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
         "dataConnection.remove": {
             "type": "object",
             "description": "Remove data connection(s)",
@@ -1279,6 +1406,56 @@
                 }
             ]
         },
+        "extension.get": {
+            "type": "object",
+            "description": "Get instance of extension/extensions",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "extension.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "extension.getAll": {
+            "type": "object",
+            "description": "Get instance of all extensions",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "extension.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
         "extension.import": {
             "type": "object",
             "description": "Import new extension",
@@ -1315,6 +1492,63 @@
                     }
                 }
             }
+        },
+        "extension.remove": {
+            "type": "object",
+            "description": "Remove extension/extensions",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "extension.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the extensions to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "multiple": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
         },
         "extension.update": {
             "type": "object",
@@ -1386,6 +1620,106 @@
                     }
                 }
             ]
+        },
+        "externalTask.get": {
+            "type": "object",
+            "description": "Get instance of external task/tasks",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "externalTask.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "externalTask.getAll": {
+            "type": "object",
+            "description": "Get instance of all external tasks",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "externalTask.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "node.get": {
+            "type": "object",
+            "description": "Get instance of node/nodes",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "node.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "node.getAll": {
+            "type": "object",
+            "description": "Get instance of all nodes",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "node.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
         },
         "proxy.update": {
             "type": "object",
@@ -2200,6 +2534,56 @@
                 }
             }
         },
+        "systemRule.getAll": {
+            "type": "object",
+            "description": "Get instance of all systemRules",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "systemRule.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "systemRule": {
+            "type": "object",
+            "description": "Get instance of system rule/rules",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "systemRule.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
         "systemRule.remove": {
             "type": "object",
             "description": "Remove system rule",
@@ -2516,6 +2900,56 @@
                 }
             ]
         },
+        "task.get": {
+            "type": "object",
+            "description": "Get instance of task/tasks",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "task.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "task.getAll": {
+            "type": "object",
+            "description": "Get instance of all tasks",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "task.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
         "task.start": {
             "type": "object",
             "description": "Start task(s)",
@@ -2731,6 +3165,56 @@
                             }
                         }
                     }
+                }
+            }
+        },
+        "user.get": {
+            "type": "object",
+            "description": "Get instance of user/users",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "user.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "user.getAll": {
+            "type": "object",
+            "description": "Get instance of all users",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "user.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
                 }
             }
         },
@@ -3082,6 +3566,56 @@
                             }
                         }
                     }
+                }
+            }
+        },
+        "virtualProxy.get": {
+            "type": "object",
+            "description": "Get instance of virtual proxy/proxies",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "virtualProxy.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "virtualProxy.getAll": {
+            "type": "object",
+            "description": "Get instance of all virtual proxies",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "virtualProxy.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
                 }
             }
         },

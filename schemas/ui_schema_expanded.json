@@ -287,6 +287,31 @@
                 }
             }
         },
+        "contentLibrary.get": {
+            "description": "Get instance of content library/libraries",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
+        "contentLibrary.getAll": {
+            "description": "Get instance of all content libraries",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
         "customProperty.create": {
             "description": "Create new custom property",
             "fields": {
@@ -486,6 +511,18 @@
             },
             "filterOnly": true
         },
+        "dataConnection.getAll": {
+            "description": "Get instance of all data connections",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
         "dataConnection.remove": {
             "description": "Remove data connection(s)",
             "fields": {
@@ -498,6 +535,31 @@
                 }
             },
             "filterAndSource": true
+        },
+        "extension.get": {
+            "description": "Get instance of extension/extensions",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
+        "extension.getAll": {
+            "description": "Get instance of all extensions",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
         },
         "extension.import": {
             "description": "Import new extension",
@@ -519,6 +581,24 @@
                     "type": "string"
                 }
             }
+        },
+        "extension.remove": {
+            "description": "Remove extension/extensions",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "options": {
+                    "multiple": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "filterAndSource": true
         },
         "extension.update": {
             "description": "Update extension(s) properties",
@@ -547,6 +627,56 @@
                 }
             },
             "filterAndSource": true
+        },
+        "externalTask.get": {
+            "description": "Get instance of external task/tasks",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
+        "externalTask.getAll": {
+            "description": "Get instance of all external tasks",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "node.get": {
+            "description": "Get instance of node/nodes",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
+        "node.getAll": {
+            "description": "Get instance of all nodes",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
         },
         "proxy.update": {
             "description": "Update proxy service",
@@ -1088,6 +1218,31 @@
                 }
             }
         },
+        "systemRule.getAll": {
+            "description": "Get instance of all systemRules",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "systemRule": {
+            "description": "Get instance of system rule/rules",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
         "systemRule.remove": {
             "description": "Remove system rule",
             "fields": {
@@ -1206,6 +1361,31 @@
             },
             "filterAndSource": true
         },
+        "task.get": {
+            "description": "Get instance of task/tasks",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
+        "task.getAll": {
+            "description": "Get instance of all tasks",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            }
+        },
         "task.start": {
             "description": "Start task(s)",
             "fields": {
@@ -1285,6 +1465,31 @@
                     "items": {
                         "type": "string"
                     }
+                }
+            }
+        },
+        "user.get": {
+            "description": "Get instance of user/users",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
+        "user.getAll": {
+            "description": "Get instance of all users",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
                 }
             }
         },
@@ -1538,6 +1743,31 @@
                     "items": {
                         "type": "string"
                     }
+                }
+            }
+        },
+        "virtualProxy.get": {
+            "description": "Get instance of virtual proxy/proxies",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "filterOnly": true
+        },
+        "virtualProxy.getAll": {
+            "description": "Get instance of all virtual proxies",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
                 }
             }
         },

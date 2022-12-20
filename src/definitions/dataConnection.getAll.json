@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "description": "Get instance of all data connections",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "dataConnection.getAll"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}
