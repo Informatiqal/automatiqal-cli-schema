@@ -19,6 +19,26 @@
         "skip": {
             "type": "boolean"
         },
+        "options": {
+            "additionalProperties": false,
+            "properties": {
+                "multiple": {
+                    "type": "boolean"
+                },
+                "customPropertyOperation": {
+                    "$ref": "#/definitions/AddRemoveSet"
+                },
+                "tagOperation": {
+                    "$ref": "#/definitions/AddRemoveSet"
+                },
+                "appendTags": {
+                    "type": "boolean"
+                },
+                "whitelistOperation": {
+                    "$ref": "#/definitions/AddRemoveSet"
+                }
+            }
+        },
         "details": {
             "type": "object",
             "properties": {
@@ -56,7 +76,10 @@
                     }
                 },
                 "websocketCrossOriginWhiteList": {
-                    "type": "string"
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 },
                 "additionalResponseHeaders": {
                     "type": "string"

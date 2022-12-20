@@ -8,7 +8,9 @@
     ],
     "properties": {
         "name": {
-            "type": "string"
+            "type": "string",
+            "pattern": "^[^#]+$",
+            "errorMessage": "Task name should not contain # symbol"
         },
         "operation": {
             "type": "string",
@@ -61,7 +63,10 @@
                     }
                 },
                 "websocketCrossOriginWhiteList": {
-                    "type": "string"
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 },
                 "additionalResponseHeaders": {
                     "type": "string"

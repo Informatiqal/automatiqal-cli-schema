@@ -3,7 +3,8 @@
     "description": "Duplicate app/apps",
     "properties": {
         "name": {
-            "type": "string"
+            "type": "string",
+            "pattern": "^[^#]+$"
         },
         "operation": {
             "type": "string",

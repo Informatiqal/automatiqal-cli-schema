@@ -1,0 +1,109 @@
+{
+    "type": "object",
+    "description": "Update proxy service",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "proxy.update"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "listenPort": {
+                    "type": "integer"
+                },
+                "allowHttp": {
+                    "type": "boolean"
+                },
+                "unencryptedListenPort": {
+                    "type": "integer"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "authenticationListenPort": {
+                    "type": "integer"
+                },
+                "kerberosAuthentication": {
+                    "type": "integer"
+                },
+                "unencryptedAuthenticationListenPort": {
+                    "type": "integer"
+                },
+                "sslBrowserCertificateThumbprint": {
+                    "type": "string"
+                },
+                "keepAliveTimeoutSeconds": {
+                    "type": "integer"
+                },
+                "maxHeaderSizeBytes": {
+                    "type": "integer"
+                },
+                "maxHeaderLines": {
+                    "type": "integer"
+                },
+                "restListenPort": {
+                    "type": "integer"
+                },
+                "virtualProxies": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "type": "string",
+            "description": "Filter to apply to retrieve the apps to update"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        }
+    },
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "oneOf": [
+        {
+            "required": [
+                "filter"
+            ],
+            "not": {
+                "required": [
+                    "source"
+                ]
+            }
+        },
+        {
+            "required": [
+                "source"
+            ],
+            "not": {
+                "required": [
+                    "filter"
+                ]
+            }
+        }
+    ]
+}

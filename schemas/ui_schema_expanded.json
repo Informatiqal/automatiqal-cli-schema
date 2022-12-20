@@ -23,6 +23,7 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "pattern": "^[^#]+$",
                     "required": true
                 },
                 "skip": {
@@ -547,6 +548,72 @@
             },
             "filterAndSource": true
         },
+        "proxy.update": {
+            "description": "Update proxy service",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "listenPort": {
+                    "type": "integer"
+                },
+                "allowHttp": {
+                    "type": "boolean"
+                },
+                "unencryptedListenPort": {
+                    "type": "integer"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "authenticationListenPort": {
+                    "type": "integer"
+                },
+                "kerberosAuthentication": {
+                    "type": "integer"
+                },
+                "unencryptedAuthenticationListenPort": {
+                    "type": "integer"
+                },
+                "sslBrowserCertificateThumbprint": {
+                    "type": "string"
+                },
+                "keepAliveTimeoutSeconds": {
+                    "type": "integer"
+                },
+                "maxHeaderSizeBytes": {
+                    "type": "integer"
+                },
+                "maxHeaderLines": {
+                    "type": "integer"
+                },
+                "restListenPort": {
+                    "type": "integer"
+                },
+                "virtualProxies": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "filterAndSource": true
+        },
         "reloadTask.addTriggerComposite": {
             "description": "Add composite trigger to reload task",
             "fields": {
@@ -567,46 +634,52 @@
                     "type": "boolean"
                 },
                 "eventTasks": {
-                    "type": "object",
-                    "required": true,
-                    "properties": {
-                        "id": {
-                            "type": "string",
-                            "description": "ID of the targeted reload task"
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "state"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "ID of the targeted reload task"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string",
+                                "enum": [
+                                    "success",
+                                    "fail"
+                                ]
+                            }
                         },
-                        "name": {
-                            "type": "string"
-                        },
-                        "state": {
-                            "type": "string",
-                            "enum": [
-                                "success",
-                                "fail"
-                            ]
-                        }
-                    },
-                    "oneOf": [
-                        {
-                            "required": [
-                                "id"
-                            ],
-                            "not": {
+                        "oneOf": [
+                            {
+                                "required": [
+                                    "id"
+                                ],
+                                "not": {
+                                    "required": [
+                                        "name"
+                                    ]
+                                }
+                            },
+                            {
                                 "required": [
                                     "name"
-                                ]
+                                ],
+                                "not": {
+                                    "required": [
+                                        "idz"
+                                    ]
+                                }
                             }
-                        },
-                        {
-                            "required": [
-                                "name"
-                            ],
-                            "not": {
-                                "required": [
-                                    "idz"
-                                ]
-                            }
-                        }
-                    ]
+                        ]
+                    },
+                    "required": true
                 }
             }
         },
@@ -1075,6 +1148,27 @@
                 }
             }
         },
+        "tag.createMany": {
+            "description": "Create multiple new tag",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "names": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "required": true
+                }
+            }
+        },
         "tag.remove": {
             "description": "Remove tag(s)",
             "fields": {
@@ -1254,6 +1348,8 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "pattern": "^[^#]+$",
+                    "errorMessage": "Task name should not contain # symbol",
                     "required": true
                 },
                 "skip": {
@@ -1298,7 +1394,10 @@
                     }
                 },
                 "websocketCrossOriginWhiteList": {
-                    "type": "string"
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 },
                 "additionalResponseHeaders": {
                     "type": "string"
@@ -1469,6 +1568,26 @@
                 },
                 "skip": {
                     "type": "boolean"
+                },
+                "options": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        },
+                        "customPropertyOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "tagOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "appendTags": {
+                            "type": "boolean"
+                        },
+                        "whitelistOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        }
+                    }
                 }
             },
             "details": {
@@ -1506,7 +1625,10 @@
                     }
                 },
                 "websocketCrossOriginWhiteList": {
-                    "type": "string"
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 },
                 "additionalResponseHeaders": {
                     "type": "string"

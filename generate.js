@@ -35,6 +35,13 @@ async function generateRunbookSchema() {
 async function generateUISchema(runbookSchema) {
   const definitions = runbookSchema.definitions;
 
+  // delete utility/common definitions
+  // these definitions are not UI elements
+  const utilityDefinitions = ["AddRemoveSet"];
+  utilityDefinitions.forEach((def) => {
+    delete definitions[def];
+  });
+
   const runbook = {
     general: {
       name: {

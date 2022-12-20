@@ -30,12 +30,14 @@ Or if the schema is downloaded locally:
 - click on `JSON`
 - click on `Edit in settings.json` (`JSON: Schemas` section)
 - add new entry
+
   ```json
   {
     "fileMatch": ["/*.something.yaml"],
     "url": "https://github.com/Informatiqal/automatiqal-cli-schema/blob/main/schemas/runbook.json?raw=true"
   }
   ```
+
   `*.something.yaml` - the schema in this case will be applied to all files that have `something.yaml` in their name. Replace `something` with whatever you want.
 
 ### UI Schema

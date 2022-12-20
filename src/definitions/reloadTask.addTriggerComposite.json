@@ -33,48 +33,51 @@
                     "type": "boolean"
                 },
                 "eventTasks": {
-                    "type": "object",
-                    "required": [
-                        "state"
-                    ],
-                    "properties": {
-                        "id": {
-                            "type": "string",
-                            "description": "ID of the targeted reload task"
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "state"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "ID of the targeted reload task"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string",
+                                "enum": [
+                                    "success",
+                                    "fail"
+                                ]
+                            }
                         },
-                        "name": {
-                            "type": "string"
-                        },
-                        "state": {
-                            "type": "string",
-                            "enum": [
-                                "success",
-                                "fail"
-                            ]
-                        }
-                    },
-                    "oneOf": [
-                        {
-                            "required": [
-                                "id"
-                            ],
-                            "not": {
+                        "oneOf": [
+                            {
+                                "required": [
+                                    "id"
+                                ],
+                                "not": {
+                                    "required": [
+                                        "name"
+                                    ]
+                                }
+                            },
+                            {
                                 "required": [
                                     "name"
-                                ]
+                                ],
+                                "not": {
+                                    "required": [
+                                        "idz"
+                                    ]
+                                }
                             }
-                        },
-                        {
-                            "required": [
-                                "name"
-                            ],
-                            "not": {
-                                "required": [
-                                    "idz"
-                                ]
-                            }
-                        }
-                    ]
+                        ]
+                    }
                 }
             }
         }

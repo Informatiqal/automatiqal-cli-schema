@@ -3,8 +3,7 @@
     "description": "Get instance of all apps",
     "required": [
         "name",
-        "operation",
-        "filter"
+        "operation"
     ],
     "properties": {
         "name": {

@@ -55,10 +55,20 @@
                     "description": "Authentication information (certificates, jwt etc.)",
                     "properties": {
                         "cert": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Full path to certificate (cert.pem)\nc:\\path\\to\\cert.pem\nc:\\path\\to\\some-cert.pem",
+                            "examples": [
+                                "c:\\path\\to\\cert.pem",
+                                "c:\\path\\to\\some-cert.pem"
+                            ]
                         },
                         "key": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Full path to certificate key (cert_key.pem)",
+                            "examples": [
+                                "c:\\path\\to\\cert_key.pem",
+                                "c:\\path\\to\\key.pem"
+                            ]
                         },
                         "user_dir": {
                             "type": "string"
@@ -80,6 +90,9 @@
             "minItems": 1,
             "items": {
                 "anyOf": [
+                    {
+                        "$ref": "#/definitions/AddRemoveSet"
+                    },
                     {
                         "$ref": "#/definitions/app.copy"
                     },
@@ -147,6 +160,9 @@
                         "$ref": "#/definitions/extension.update"
                     },
                     {
+                        "$ref": "#/definitions/proxy.update"
+                    },
+                    {
                         "$ref": "#/definitions/reloadTask.addTriggerComposite"
                     },
                     {
@@ -184,6 +200,9 @@
                     },
                     {
                         "$ref": "#/definitions/tag.create"
+                    },
+                    {
+                        "$ref": "#/definitions/tag.createMany"
                     },
                     {
                         "$ref": "#/definitions/tag.remove"
@@ -228,12 +247,22 @@
         "tasks"
     ],
     "definitions": {
+        "AddRemoveSet": {
+            "type": "string",
+            "description": "set - replaces all existing values\nadd - append to the existing values\nremove - remove passed values",
+            "enum": [
+                "set",
+                "add",
+                "remove"
+            ]
+        },
         "app.copy": {
             "type": "object",
             "description": "Duplicate app/apps",
             "properties": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "pattern": "^[^#]+$"
                 },
                 "operation": {
                     "type": "string",
@@ -368,7 +397,7 @@
                 "operation": {
                     "type": "string",
                     "enum": [
-                        "app.export"
+                        "app.exportMany"
                     ]
                 },
                 "skip": {
@@ -451,8 +480,7 @@
             "description": "Get instance of all apps",
             "required": [
                 "name",
-                "operation",
-                "filter"
+                "operation"
             ],
             "properties": {
                 "name": {
@@ -571,8 +599,7 @@
             },
             "required": [
                 "name",
-                "operation",
-                "details"
+                "operation"
             ],
             "oneOf": [
                 {
@@ -976,8 +1003,7 @@
             },
             "required": [
                 "name",
-                "operation",
-                "details"
+                "operation"
             ],
             "oneOf": [
                 {
@@ -1361,6 +1387,115 @@
                 }
             ]
         },
+        "proxy.update": {
+            "type": "object",
+            "description": "Update proxy service",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "proxy.update"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "listenPort": {
+                            "type": "integer"
+                        },
+                        "allowHttp": {
+                            "type": "boolean"
+                        },
+                        "unencryptedListenPort": {
+                            "type": "integer"
+                        },
+                        "tags": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "customProperties": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "authenticationListenPort": {
+                            "type": "integer"
+                        },
+                        "kerberosAuthentication": {
+                            "type": "integer"
+                        },
+                        "unencryptedAuthenticationListenPort": {
+                            "type": "integer"
+                        },
+                        "sslBrowserCertificateThumbprint": {
+                            "type": "string"
+                        },
+                        "keepAliveTimeoutSeconds": {
+                            "type": "integer"
+                        },
+                        "maxHeaderSizeBytes": {
+                            "type": "integer"
+                        },
+                        "maxHeaderLines": {
+                            "type": "integer"
+                        },
+                        "restListenPort": {
+                            "type": "integer"
+                        },
+                        "virtualProxies": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
         "reloadTask.addTriggerComposite": {
             "type": "object",
             "description": "Add composite trigger to reload task",
@@ -1396,48 +1531,51 @@
                             "type": "boolean"
                         },
                         "eventTasks": {
-                            "type": "object",
-                            "required": [
-                                "state"
-                            ],
-                            "properties": {
-                                "id": {
-                                    "type": "string",
-                                    "description": "ID of the targeted reload task"
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "state"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "description": "ID of the targeted reload task"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "state": {
+                                        "type": "string",
+                                        "enum": [
+                                            "success",
+                                            "fail"
+                                        ]
+                                    }
                                 },
-                                "name": {
-                                    "type": "string"
-                                },
-                                "state": {
-                                    "type": "string",
-                                    "enum": [
-                                        "success",
-                                        "fail"
-                                    ]
-                                }
-                            },
-                            "oneOf": [
-                                {
-                                    "required": [
-                                        "id"
-                                    ],
-                                    "not": {
+                                "oneOf": [
+                                    {
+                                        "required": [
+                                            "id"
+                                        ],
+                                        "not": {
+                                            "required": [
+                                                "name"
+                                            ]
+                                        }
+                                    },
+                                    {
                                         "required": [
                                             "name"
-                                        ]
+                                        ],
+                                        "not": {
+                                            "required": [
+                                                "idz"
+                                            ]
+                                        }
                                     }
-                                },
-                                {
-                                    "required": [
-                                        "name"
-                                    ],
-                                    "not": {
-                                        "required": [
-                                            "idz"
-                                        ]
-                                    }
-                                }
-                            ]
+                                ]
+                            }
                         }
                     }
                 }
@@ -2220,6 +2358,43 @@
                 }
             }
         },
+        "tag.createMany": {
+            "type": "object",
+            "description": "Create multiple new tag",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "tag.createMany"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "names"
+                    ],
+                    "properties": {
+                        "names": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "tag.remove": {
             "type": "object",
             "description": "Remove tag(s)",
@@ -2706,7 +2881,9 @@
             ],
             "properties": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "pattern": "^[^#]+$",
+                    "errorMessage": "Task name should not contain # symbol"
                 },
                 "operation": {
                     "type": "string",
@@ -2759,7 +2936,10 @@
                             }
                         },
                         "websocketCrossOriginWhiteList": {
-                            "type": "string"
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
                         },
                         "additionalResponseHeaders": {
                             "type": "string"
@@ -2983,6 +3163,26 @@
                 "skip": {
                     "type": "boolean"
                 },
+                "options": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        },
+                        "customPropertyOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "tagOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "appendTags": {
+                            "type": "boolean"
+                        },
+                        "whitelistOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        }
+                    }
+                },
                 "details": {
                     "type": "object",
                     "properties": {
@@ -3020,7 +3220,10 @@
                             }
                         },
                         "websocketCrossOriginWhiteList": {
-                            "type": "string"
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
                         },
                         "additionalResponseHeaders": {
                             "type": "string"

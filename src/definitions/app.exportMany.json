@@ -8,7 +8,7 @@
         "operation": {
             "type": "string",
             "enum": [
-                "app.export"
+                "app.exportMany"
             ]
         },
         "skip": {

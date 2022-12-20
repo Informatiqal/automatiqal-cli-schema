@@ -1,0 +1,9 @@
+{
+    "type": "string",
+    "description": "set - replaces all existing values\nadd - append to the existing values\nremove - remove passed values",
+    "enum": [
+        "set",
+        "add",
+        "remove"
+    ]
+}

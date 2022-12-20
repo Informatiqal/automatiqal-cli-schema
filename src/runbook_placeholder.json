@@ -55,10 +55,20 @@
                     "description": "Authentication information (certificates, jwt etc.)",
                     "properties": {
                         "cert": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Full path to certificate (cert.pem)\nc:\\path\\to\\cert.pem\nc:\\path\\to\\some-cert.pem",
+                            "examples": [
+                                "c:\\path\\to\\cert.pem",
+                                "c:\\path\\to\\some-cert.pem"
+                            ]
                         },
                         "key": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Full path to certificate key (cert_key.pem)",
+                            "examples": [
+                                "c:\\path\\to\\cert_key.pem",
+                                "c:\\path\\to\\key.pem"
+                            ]
                         },
                         "user_dir": {
                             "type": "string"

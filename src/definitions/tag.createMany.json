@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "description": "Create multiple new tag",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "tag.createMany"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "names"
+            ],
+            "properties": {
+                "names": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

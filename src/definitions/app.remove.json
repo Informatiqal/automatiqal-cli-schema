@@ -30,8 +30,7 @@
     },
     "required": [
         "name",
-        "operation",
-        "details"
+        "operation"
     ],
     "oneOf": [
         {
