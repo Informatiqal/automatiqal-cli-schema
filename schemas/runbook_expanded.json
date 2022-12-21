@@ -235,6 +235,9 @@
                         "$ref": "#/definitions/node.getAll"
                     },
                     {
+                        "$ref": "#/definitions/ompositeTrigger.remove"
+                    },
+                    {
                         "$ref": "#/definitions/proxy.update"
                     },
                     {
@@ -1634,9 +1637,6 @@
                 },
                 "details": {
                     "type": "object",
-                    "required": [
-                        "name"
-                    ],
                     "properties": {
                         "name": {
                             "type": "string"
@@ -3192,6 +3192,63 @@
                     "type": "boolean"
                 }
             }
+        },
+        "ompositeTrigger.remove": {
+            "type": "object",
+            "description": "Remove composite trigger(s)",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "compositeTrigger.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the tag"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "multiple": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
         },
         "proxy.update": {
             "type": "object",

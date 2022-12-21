@@ -584,8 +584,7 @@
             },
             "details": {
                 "name": {
-                    "type": "string",
-                    "required": true
+                    "type": "string"
                 },
                 "owner": {
                     "type": "string"
@@ -1326,6 +1325,24 @@
                     "type": "boolean"
                 }
             }
+        },
+        "ompositeTrigger.remove": {
+            "description": "Remove composite trigger(s)",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "options": {
+                    "multiple": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "filterAndSource": true
         },
         "proxy.update": {
             "description": "Update proxy service",
