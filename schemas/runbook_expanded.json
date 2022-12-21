@@ -283,6 +283,9 @@
                         "$ref": "#/definitions/systemRule"
                     },
                     {
+                        "$ref": "#/definitions/systemRule.licenseCreate"
+                    },
+                    {
                         "$ref": "#/definitions/systemRule.remove"
                     },
                     {
@@ -4435,6 +4438,70 @@
                 },
                 "skip": {
                     "type": "boolean"
+                }
+            }
+        },
+        "systemRule.licenseCreate": {
+            "type": "object",
+            "description": "Create new license rule",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "systemRule.licenseCreate"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "name",
+                        "type",
+                        "rule"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Analyzer",
+                                "Professional"
+                            ]
+                        },
+                        "rule": {
+                            "type": "string"
+                        },
+                        "comment": {
+                            "type": "string"
+                        },
+                        "disabled": {
+                            "type": "boolean"
+                        },
+                        "tags": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "customProperties": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
                 }
             }
         },

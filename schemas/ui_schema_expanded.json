@@ -1973,6 +1973,54 @@
             },
             "filterOnly": true
         },
+        "systemRule.licenseCreate": {
+            "description": "Create new license rule",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                }
+            },
+            "details": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Analyzer",
+                        "Professional"
+                    ],
+                    "required": true
+                },
+                "rule": {
+                    "type": "string",
+                    "required": true
+                },
+                "comment": {
+                    "type": "string"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
         "systemRule.remove": {
             "description": "Remove system rule",
             "fields": {
