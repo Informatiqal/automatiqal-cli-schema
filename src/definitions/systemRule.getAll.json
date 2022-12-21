@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "description": "Get instance of all systemRules",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "systemRule.getAll"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

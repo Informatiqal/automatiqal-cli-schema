@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "description": "Create new external task",
+    "additionalProperties": false,
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "externalTask.create"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "additionalProperties": false,
+            "unevaluatedProperties": false,
+            "required": [
+                "name",
+                "path"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the external task"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "parameters": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

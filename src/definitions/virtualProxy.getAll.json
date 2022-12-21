@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "description": "Get instance of all virtual proxies",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "virtualProxy.getAll"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

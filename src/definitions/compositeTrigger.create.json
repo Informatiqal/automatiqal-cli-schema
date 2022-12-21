@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "description": "Create new composite trigger",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "compositeTrigger.create"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "eventTasks": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string",
+                                "enum": [
+                                    "success",
+                                    "fail"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ]
+}

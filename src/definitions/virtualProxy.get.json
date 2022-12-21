@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "description": "Get instance of virtual proxy/proxies",
+    "required": [
+        "name",
+        "operation",
+        "filter"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "virtualProxy.get"
+            ]
+        },
+        "filter": {
+            "type": "string"
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

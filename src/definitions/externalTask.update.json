@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "Update tags(s) properties",
+    "description": "Update external task/tasks properties",
     "properties": {
         "name": {
             "type": "string"
@@ -8,26 +8,56 @@
         "operation": {
             "type": "string",
             "enum": [
-                "tag.update"
+                "externalTask.update"
             ]
         },
         "details": {
             "type": "object",
-            "required": [
-                "name"
-            ],
             "properties": {
                 "name": {
                     "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "taskSessionTimeout": {
+                    "type": "integer"
+                },
+                "maxRetries": {
+                    "type": "integer"
+                },
+                "owner": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "integer"
+                },
+                "parameters": {
+                    "type": "integer"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 }
             }
+        },
+        "options": {
+            "$ref": "#/definitions/UpdateExtraOptions"
         },
         "skip": {
             "type": "boolean"
         },
         "filter": {
             "type": "string",
-            "description": "Filter to apply to retrieve the tag(s) to update"
+            "description": "Filter to apply to retrieve the external task(s) to update"
         },
         "source": {
             "type": "string",

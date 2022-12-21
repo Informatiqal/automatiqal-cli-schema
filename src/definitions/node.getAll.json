@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "description": "Get instance of all nodes",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "node.getAll"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

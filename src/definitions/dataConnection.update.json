@@ -1,0 +1,106 @@
+{
+    "type": "object",
+    "description": "Update data connection/connections properties",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "dataConnection.update"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "connectionString": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "owner": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "multiple": {
+                    "type": "boolean"
+                },
+                "customPropertyOperations": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ]
+                },
+                "tagOperations": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ]
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "type": "string",
+            "description": "Filter to apply to retrieve the data connection/s to update"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        }
+    },
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "oneOf": [
+        {
+            "required": [
+                "filter"
+            ],
+            "not": {
+                "required": [
+                    "source"
+                ]
+            }
+        },
+        {
+            "required": [
+                "source"
+            ],
+            "not": {
+                "required": [
+                    "filter"
+                ]
+            }
+        }
+    ]
+}
