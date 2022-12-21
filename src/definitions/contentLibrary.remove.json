@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "Update tags(s) properties",
+    "description": "Remove content library/libraries",
     "properties": {
         "name": {
             "type": "string"
@@ -8,36 +8,29 @@
         "operation": {
             "type": "string",
             "enum": [
-                "tag.update"
+                "contentLibrary.remove"
             ]
-        },
-        "details": {
-            "type": "object",
-            "required": [
-                "name"
-            ],
-            "properties": {
-                "name": {
-                    "type": "string"
-                }
-            }
         },
         "skip": {
             "type": "boolean"
         },
         "filter": {
             "type": "string",
-            "description": "Filter to apply to retrieve the tag(s) to update"
+            "description": "Filter to retrieve the content libraries to remove"
         },
         "source": {
             "type": "string",
             "description": "Name of previously defined tasks. Use the result of the task as source"
+        },
+        "options": {
+            "multiple": {
+                "type": "boolean"
+            }
         }
     },
     "required": [
         "name",
-        "operation",
-        "details"
+        "operation"
     ],
     "oneOf": [
         {

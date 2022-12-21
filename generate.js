@@ -22,6 +22,17 @@ async function generateRunbookSchema() {
     placeholder.definitions[definitionName] = definitionContent;
   }
 
+  const utilDefinitionFiles = fs.readdirSync("./src/util");
+
+  for (let util of utilDefinitionFiles) {
+    const utilDefinitionName = util.replace(".json", "");
+    const utilDefinitionContent = JSON.parse(
+      fs.readFileSync(`./src/util/${util}`)
+    );
+
+    placeholder.definitions[utilDefinitionName] = utilDefinitionContent;
+  }
+
   fs.writeFileSync(
     `./schemas/runbook_expanded.json`,
     JSON.stringify(placeholder, null, 4)

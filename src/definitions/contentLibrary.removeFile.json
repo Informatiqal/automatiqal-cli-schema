@@ -1,23 +1,29 @@
 {
     "type": "object",
-    "description": "Update tags(s) properties",
+    "description": "Remove file from content library",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
     "properties": {
         "name": {
             "type": "string"
         },
         "operation": {
             "type": "string",
+            "readOnly": true,
             "enum": [
-                "tag.update"
+                "contentLibrary.removeFile"
             ]
         },
         "details": {
             "type": "object",
             "required": [
-                "name"
+                "path"
             ],
             "properties": {
-                "name": {
+                "path": {
                     "type": "string"
                 }
             }
@@ -27,18 +33,13 @@
         },
         "filter": {
             "type": "string",
-            "description": "Filter to apply to retrieve the tag(s) to update"
+            "description": "Filter to apply to retrieve the content library"
         },
         "source": {
             "type": "string",
             "description": "Name of previously defined tasks. Use the result of the task as source"
         }
     },
-    "required": [
-        "name",
-        "operation",
-        "details"
-    ],
     "oneOf": [
         {
             "required": [

@@ -1,24 +1,37 @@
 {
     "type": "object",
-    "description": "Update tags(s) properties",
+    "description": "Import file for content library",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
     "properties": {
         "name": {
             "type": "string"
         },
         "operation": {
             "type": "string",
+            "readOnly": true,
             "enum": [
-                "tag.update"
+                "contentLibrary.importFile"
             ]
         },
         "details": {
             "type": "object",
             "required": [
-                "name"
+                "file",
+                "externalPath"
             ],
             "properties": {
-                "name": {
+                "file": {
                     "type": "string"
+                },
+                "externalPath": {
+                    "type": "string"
+                },
+                "overwrite": {
+                    "type": "boolean"
                 }
             }
         },
@@ -27,18 +40,13 @@
         },
         "filter": {
             "type": "string",
-            "description": "Filter to apply to retrieve the tag(s) to update"
+            "description": "Filter to apply to retrieve the content library"
         },
         "source": {
             "type": "string",
             "description": "Name of previously defined tasks. Use the result of the task as source"
         }
     },
-    "required": [
-        "name",
-        "operation",
-        "details"
-    ],
     "oneOf": [
         {
             "required": [
