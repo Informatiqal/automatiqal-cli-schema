@@ -18,17 +18,9 @@
             ]
         },
         "details": {
-            "type": "object",
-            "required": [
-                "files"
-            ],
-            "properties": {
-                "files": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
+            "type": "array",
+            "items": {
+                "type": "string"
             }
         },
         "skip": {

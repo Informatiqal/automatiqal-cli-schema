@@ -18,30 +18,22 @@
             ]
         },
         "details": {
-            "type": "object",
-            "required": [
-                "files"
-            ],
-            "properties": {
-                "files": {
-                    "type": "array",
-                    "required": [
-                        "file",
-                        "externalPath"
-                    ],
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "file": {
-                                "type": "string"
-                            },
-                            "externalPath": {
-                                "type": "string"
-                            },
-                            "overwrite": {
-                                "type": "boolean"
-                            }
-                        }
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "file",
+                    "externalPath"
+                ],
+                "properties": {
+                    "file": {
+                        "type": "string"
+                    },
+                    "externalPath": {
+                        "type": "string"
+                    },
+                    "overwrite": {
+                        "type": "boolean"
                     }
                 }
             }

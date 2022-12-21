@@ -104,18 +104,26 @@ async function generateUISchema(runbookSchema) {
 
       if (definition.properties.details) {
         result[name]["details"] = {};
-        Object.entries(definition.properties.details.properties).map(
-          ([detailKey, detailValue]) => {
-            result[name]["details"][detailKey] = detailValue;
 
-            if (
-              definition.properties.details.required &&
-              definition.properties.details.required.includes(detailKey)
-            ) {
-              result[name]["details"][detailKey]["required"] = true;
+        if (
+          definition.properties.details.type &&
+          definition.properties.details.type == "array"
+        ) {
+          // TODO: implement logic where details are pure array
+        } else {
+          Object.entries(definition.properties.details.properties).map(
+            ([detailKey, detailValue]) => {
+              result[name]["details"][detailKey] = detailValue;
+
+              if (
+                definition.properties.details.required &&
+                definition.properties.details.required.includes(detailKey)
+              ) {
+                result[name]["details"][detailKey]["required"] = true;
+              }
             }
-          }
-        );
+          );
+        }
       }
 
       if (definition.properties.filter && definition.properties.source)

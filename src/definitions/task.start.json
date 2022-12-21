@@ -3,8 +3,7 @@
     "description": "Start task(s)",
     "required": [
         "name",
-        "operation",
-        "details"
+        "operation"
     ],
     "properties": {
         "name": {

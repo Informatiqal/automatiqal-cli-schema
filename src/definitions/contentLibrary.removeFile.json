@@ -20,10 +20,10 @@
         "details": {
             "type": "object",
             "required": [
-                "path"
+                "externalPath"
             ],
             "properties": {
-                "path": {
+                "externalPath": {
                     "type": "string"
                 }
             }

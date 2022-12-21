@@ -8,7 +8,7 @@
         "operation": {
             "type": "string",
             "enum": [
-                "user.update"
+                "contentLibrary.update"
             ]
         },
         "details": {

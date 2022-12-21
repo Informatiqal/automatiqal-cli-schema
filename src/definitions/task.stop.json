@@ -3,8 +3,7 @@
     "description": "Stop task(s)",
     "required": [
         "name",
-        "operation",
-        "details"
+        "operation"
     ],
     "properties": {
         "name": {
