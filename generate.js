@@ -109,7 +109,11 @@ async function generateUISchema(runbookSchema) {
           definition.properties.details.type &&
           definition.properties.details.type == "array"
         ) {
-          // TODO: implement logic where details are pure array
+          Object.entries(definition.properties.details.items).map(
+            ([detailKey, detailValue]) => {
+              result[name]["details"][detailKey] = detailValue;
+            }
+          );
         } else {
           Object.entries(definition.properties.details.properties).map(
             ([detailKey, detailValue]) => {
