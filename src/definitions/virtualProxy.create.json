@@ -9,8 +9,7 @@
     "properties": {
         "name": {
             "type": "string",
-            "pattern": "^[^#]+$",
-            "errorMessage": "Task name should not contain # symbol"
+            "pattern": "^[^#]+$"
         },
         "operation": {
             "type": "string",

@@ -19,11 +19,7 @@
             "enum": [
                 "windows",
                 "saas"
-            ],
-            "contains": {
-                "const": "controls"
-            },
-            "additionalItems": false
+            ]
         },
         "trace": {
             "description": "Trace levels",
@@ -31,11 +27,7 @@
             "enum": [
                 "error",
                 "debug"
-            ],
-            "contains": {
-                "const": "controls"
-            },
-            "additionalItems": false
+            ]
         },
         "environment": {
             "type": "object",
@@ -131,6 +123,9 @@
                     },
                     {
                         "$ref": "#/definitions/compositeTrigger.create"
+                    },
+                    {
+                        "$ref": "#/definitions/compositeTrigger.remove"
                     },
                     {
                         "$ref": "#/definitions/compositeTrigger.update"
@@ -233,9 +228,6 @@
                     },
                     {
                         "$ref": "#/definitions/node.getAll"
-                    },
-                    {
-                        "$ref": "#/definitions/ompositeTrigger.remove"
                     },
                     {
                         "$ref": "#/definitions/proxy.update"
@@ -694,8 +686,11 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -1039,6 +1034,66 @@
                 "details"
             ]
         },
+        "compositeTrigger.remove": {
+            "type": "object",
+            "description": "Remove composite trigger(s)",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "compositeTrigger.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the tag"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "required": [
+                        "filter"
+                    ],
+                    "not": {
+                        "required": [
+                            "source"
+                        ]
+                    }
+                },
+                {
+                    "required": [
+                        "source"
+                    ],
+                    "not": {
+                        "required": [
+                            "filter"
+                        ]
+                    }
+                }
+            ]
+        },
         "compositeTrigger.update": {
             "type": "object",
             "description": "Update composite trigger(s) properties",
@@ -1201,7 +1256,7 @@
                         "files": {
                             "type": "array",
                             "items": {
-                                "type": "string",
+                                "type": "object",
                                 "properties": {
                                     "sourceFileName": {
                                         "type": "string"
@@ -1468,8 +1523,11 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -1756,6 +1814,7 @@
                             "type": "string"
                         },
                         "choiceValues": {
+                            "type": "array",
                             "items": {
                                 "type": "string"
                             }
@@ -1789,10 +1848,10 @@
                             "type": "string"
                         }
                     }
+                },
+                "skip": {
+                    "type": "boolean"
                 }
-            },
-            "skip": {
-                "type": "boolean"
             }
         },
         "customProperty.get": {
@@ -1897,6 +1956,7 @@
                             "type": "string"
                         },
                         "choiceValues": {
+                            "type": "array",
                             "items": {
                                 "type": "string"
                             }
@@ -2039,10 +2099,10 @@
                             }
                         }
                     }
+                },
+                "skip": {
+                    "type": "boolean"
                 }
-            },
-            "skip": {
-                "type": "boolean"
             }
         },
         "dataConnection.get": {
@@ -2365,8 +2425,11 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -2913,7 +2976,6 @@
                 "details": {
                     "type": "object",
                     "additionalProperties": false,
-                    "unevaluatedProperties": false,
                     "required": [
                         "name",
                         "path"
@@ -3020,8 +3082,11 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -3195,63 +3260,6 @@
                     "type": "boolean"
                 }
             }
-        },
-        "ompositeTrigger.remove": {
-            "type": "object",
-            "description": "Remove composite trigger(s)",
-            "properties": {
-                "name": {
-                    "type": "string"
-                },
-                "operation": {
-                    "type": "string",
-                    "enum": [
-                        "compositeTrigger.remove"
-                    ]
-                },
-                "skip": {
-                    "type": "boolean"
-                },
-                "filter": {
-                    "type": "string",
-                    "description": "Filter to apply to retrieve the tag"
-                },
-                "source": {
-                    "type": "string",
-                    "description": "Name of previously defined tasks. Use the result of the task as source"
-                },
-                "options": {
-                    "multiple": {
-                        "type": "boolean"
-                    }
-                }
-            },
-            "required": [
-                "name",
-                "operation"
-            ],
-            "oneOf": [
-                {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
-                },
-                {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
-                }
-            ]
         },
         "proxy.update": {
             "type": "object",
@@ -3902,14 +3910,14 @@
                             "type": "array",
                             "items": {
                                 "type": "string"
+                            },
+                            "appFilter": {
+                                "type": "string"
                             }
                         },
                         "customProperties": {
                             "type": "array",
                             "items": {
-                                "type": "string"
-                            },
-                            "appFilter": {
                                 "type": "string"
                             }
                         }
@@ -3942,8 +3950,11 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -4193,8 +4204,11 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -4530,8 +4544,11 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -4725,8 +4742,11 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -5161,8 +5181,11 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -5284,8 +5307,7 @@
             "properties": {
                 "name": {
                     "type": "string",
-                    "pattern": "^[^#]+$",
-                    "errorMessage": "Task name should not contain # symbol"
+                    "pattern": "^[^#]+$"
                 },
                 "operation": {
                     "type": "string",
@@ -5562,8 +5584,11 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },

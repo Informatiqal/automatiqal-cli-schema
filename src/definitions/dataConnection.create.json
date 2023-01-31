@@ -66,9 +66,9 @@
                     }
                 }
             }
+        },
+        "skip": {
+            "type": "boolean"
         }
-    },
-    "skip": {
-        "type": "boolean"
     }
 }

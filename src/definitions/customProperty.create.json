@@ -29,6 +29,7 @@
                     "type": "string"
                 },
                 "choiceValues": {
+                    "type": "array",
                     "items": {
                         "type": "string"
                     }
@@ -62,9 +63,9 @@
                     "type": "string"
                 }
             }
+        },
+        "skip": {
+            "type": "boolean"
         }
-    },
-    "skip": {
-        "type": "boolean"
     }
 }

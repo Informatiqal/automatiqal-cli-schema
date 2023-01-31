@@ -144,8 +144,11 @@
                     "type": "boolean"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -329,6 +332,27 @@
                 }
             }
         },
+        "compositeTrigger.remove": {
+            "description": "Remove composite trigger(s)",
+            "fields": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            },
+            "filterAndSource": true
+        },
         "compositeTrigger.update": {
             "description": "Update composite trigger(s) properties",
             "fields": {
@@ -419,7 +443,7 @@
                 "files": {
                     "type": "array",
                     "items": {
-                        "type": "string",
+                        "type": "object",
                         "properties": {
                             "sourceFileName": {
                                 "type": "string"
@@ -524,8 +548,11 @@
                     "type": "boolean"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -629,6 +656,9 @@
                 "name": {
                     "type": "string",
                     "required": true
+                },
+                "skip": {
+                    "type": "boolean"
                 }
             },
             "details": {
@@ -640,6 +670,7 @@
                     "type": "string"
                 },
                 "choiceValues": {
+                    "type": "array",
                     "items": {
                         "type": "string"
                     }
@@ -719,6 +750,7 @@
                     "type": "string"
                 },
                 "choiceValues": {
+                    "type": "array",
                     "items": {
                         "type": "string"
                     }
@@ -760,6 +792,9 @@
                 "name": {
                     "type": "string",
                     "required": true
+                },
+                "skip": {
+                    "type": "boolean"
                 }
             },
             "details": {
@@ -967,8 +1002,11 @@
                     "type": "boolean"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -1466,8 +1504,11 @@
                     "type": "boolean"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -1548,24 +1589,6 @@
                     "type": "boolean"
                 }
             }
-        },
-        "ompositeTrigger.remove": {
-            "description": "Remove composite trigger(s)",
-            "fields": {
-                "name": {
-                    "type": "string",
-                    "required": true
-                },
-                "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "multiple": {
-                        "type": "boolean"
-                    }
-                }
-            },
-            "filterAndSource": true
         },
         "proxy.update": {
             "description": "Update proxy service",
@@ -2112,14 +2135,14 @@
                     "type": "array",
                     "items": {
                         "type": "string"
+                    },
+                    "appFilter": {
+                        "type": "string"
                     }
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
-                        "type": "string"
-                    },
-                    "appFilter": {
                         "type": "string"
                     }
                 }
@@ -2136,8 +2159,11 @@
                     "type": "boolean"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -2261,8 +2287,11 @@
                     "type": "boolean"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -2459,8 +2488,11 @@
                     "type": "boolean"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -2540,8 +2572,11 @@
                     "type": "boolean"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -2709,8 +2744,11 @@
                     "type": "boolean"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },
@@ -2759,7 +2797,6 @@
                 "name": {
                     "type": "string",
                     "pattern": "^[^#]+$",
-                    "errorMessage": "Task name should not contain # symbol",
                     "required": true
                 },
                 "skip": {
@@ -2987,8 +3024,11 @@
                     "type": "boolean"
                 },
                 "options": {
-                    "multiple": {
-                        "type": "boolean"
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
                     }
                 }
             },

@@ -19,11 +19,7 @@
             "enum": [
                 "windows",
                 "saas"
-            ],
-            "contains": {
-                "const": "controls"
-            },
-            "additionalItems": false
+            ]
         },
         "trace": {
             "description": "Trace levels",
@@ -31,11 +27,7 @@
             "enum": [
                 "error",
                 "debug"
-            ],
-            "contains": {
-                "const": "controls"
-            },
-            "additionalItems": false
+            ]
         },
         "environment": {
             "type": "object",

@@ -23,7 +23,6 @@
         "details": {
             "type": "object",
             "additionalProperties": false,
-            "unevaluatedProperties": false,
             "required": [
                 "name",
                 "path"
