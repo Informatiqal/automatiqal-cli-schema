@@ -148,11 +148,30 @@ async function generateUISchema(runbookSchema) {
   );
 
   fs.writeFileSync("./schemas/ui_schema.json", JSON.stringify(runbook));
+
+  return runbook;
+}
+
+async function generateModuleFile(runbookSchema) {
+  fs.writeFileSync(
+    "./dist/index.js",
+    `export const automatiqalSchema=${JSON.stringify(runbookSchema)}`
+  );
+}
+
+async function appendUISchemaToModule(uiSchema) {
+  fs.appendFileSync(
+    "./dist/index.js",
+    `\n\nexport const automatiqalUISchema=${JSON.stringify(uiSchema)}`
+  );
 }
 
 (async function () {
   const runbookSchema = await generateRunbookSchema();
-  await generateUISchema(runbookSchema);
+  await generateModuleFile(runbookSchema);
+
+  const uiPseudoSchema = await generateUISchema(runbookSchema);
+  await appendUISchemaToModule(uiPseudoSchema);
 
   console.log("Done");
 })();

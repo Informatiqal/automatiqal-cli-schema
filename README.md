@@ -4,15 +4,28 @@
 
 This repository contains JSON schema that can be used when writing [Automatiqal CLI](https://github.com/Informatiqal/automatiqal-cli) runbooks.
 
+## Installation
+
+```shell
+npm install --save @informatiqal/automatiqal-schema
+```
+
+### Exports
+
+The package exports two constants:
+
+- `automatiqalSchema` - valid [JSON schema (Draft-07)](https://json-schema.org/)
+- `automatiqalUISchema` - pseudo schema that can be used in UI projects. **This is not a valid JSON schema**
+
 ## VSCode
 
 First make sure you have [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension installed. This extension will give YAML language support in VSCode
 
 After that there are two ways to use the schema: inline (local) and as user setting (global).
 
-### Inline
+### **Inline**
 
-Inline method is applied to each yaml runbook file.
+Inline method is applied to each individual yaml runbook file.
 
 Add the following line to the top of the runbook yaml file:
 
@@ -22,7 +35,7 @@ Or if the schema is downloaded locally:
 
 `# yaml-language-server: $schema=c:\path\to\runbook.json`
 
-### User settings
+### **User settings**
 
 - `Ctrl + Shift + p`
 - search for `Preferences: Open User Settings`
@@ -39,7 +52,3 @@ Or if the schema is downloaded locally:
   ```
 
   `*.something.yaml` - the schema in this case will be applied to all files that have `something.yaml` in their name. Replace `something` with whatever you want.
-
-### UI Schema
-
-`runbook.json` schema is used to produce `ui_schema.json`. This (simplified) schema can be used when creating UI on top of `Automatiqal`

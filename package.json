@@ -1,0 +1,36 @@
+{
+  "name": "@informatiqal/automatiqal-schema",
+  "version": "0.0.1",
+  "description": "Automatiqal runbooks JSON and pseudo UI schemas",
+  "author": {
+    "email": "info@informatiqal.com",
+    "name": "Informatiqal @informatiqal",
+    "url": "https://informatiqal.com"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "generate": "node ./src/generate.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "engineStrict": true,
+  "files": [
+    "dist",
+    "*.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "!Notes.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Informatiqal/automatiqal-cli-schema.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Informatiqal/automatiqal-cli-schema/issues"
+  },
+  "homepage": "https://github.com/Informatiqal/automatiqal-cli-schema#readme"
+}
