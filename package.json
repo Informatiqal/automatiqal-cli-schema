@@ -1,6 +1,6 @@
 {
   "name": "@informatiqal/automatiqal-schema",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Automatiqal runbooks JSON and pseudo UI schemas",
   "author": {
     "email": "info@informatiqal.com",
@@ -13,6 +13,7 @@
   },
   "license": "MIT",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "generate": "node ./src/generate.js"
