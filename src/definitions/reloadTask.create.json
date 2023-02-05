@@ -33,10 +33,10 @@
                     "type": "array",
                     "items": {
                         "type": "string"
-                    },
-                    "appFilter": {
-                        "type": "string"
                     }
+                },
+                "appFilter": {
+                    "type": "string"
                 },
                 "customProperties": {
                     "type": "array",
