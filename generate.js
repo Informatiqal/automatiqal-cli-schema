@@ -1,4 +1,4 @@
-const fs = require("fs");
+import fs from "fs";
 
 async function generateRunbookSchema() {
   const placeholder = JSON.parse(
