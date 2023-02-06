@@ -72,7 +72,7 @@
                                 ],
                                 "not": {
                                     "required": [
-                                        "idz"
+                                        "id"
                                     ]
                                 }
                             }

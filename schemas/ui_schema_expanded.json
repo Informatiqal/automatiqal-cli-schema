@@ -1715,7 +1715,7 @@
                                 ],
                                 "not": {
                                     "required": [
-                                        "idz"
+                                        "id"
                                     ]
                                 }
                             }
@@ -3046,6 +3046,7 @@
                     "type": "boolean"
                 },
                 "options": {
+                    "type": "object",
                     "additionalProperties": false,
                     "properties": {
                         "multiple": {
