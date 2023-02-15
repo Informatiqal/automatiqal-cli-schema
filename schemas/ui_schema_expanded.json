@@ -24,20 +24,24 @@
                 "name": {
                     "type": "string",
                     "pattern": "^[^#]+$",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
-                    "description": "App new name"
+                    "description": "App new name",
+                    "title": "Name"
                 },
                 "includeCustomProperties": {
                     "type": "boolean",
-                    "description": "Copy the custom properties as well"
+                    "description": "Copy the custom properties as well",
+                    "title": "Include Custom Properties"
                 }
             },
             "filterAndSource": true
@@ -47,20 +51,24 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "token": {
                     "type": "string",
-                    "description": "App new name"
+                    "description": "App new name",
+                    "title": "Token"
                 },
                 "skipData": {
                     "type": "boolean",
-                    "description": "Export without data"
+                    "description": "Export without data",
+                    "title": "Skip Data"
                 }
             },
             "filterAndSource": true
@@ -70,16 +78,19 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "skipData": {
                     "type": "boolean",
-                    "description": "Export without data"
+                    "description": "Export without data",
+                    "title": "Skip Data"
                 }
             },
             "filterAndSource": true
@@ -89,10 +100,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -102,10 +115,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -114,20 +129,24 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
-                    "description": "Name of the app after is published"
+                    "description": "Name of the app after is published",
+                    "title": "Name"
                 },
                 "stream": {
                     "type": "string",
                     "description": "Name of the stream where the app will be published",
+                    "title": "Stream",
                     "required": true
                 }
             },
@@ -138,18 +157,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -159,16 +178,19 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "targetAppId": {
                     "type": "string",
                     "description": "Target app id",
+                    "title": "Target App Id",
                     "required": true
                 }
             }
@@ -178,21 +200,25 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 }
             },
             "filterAndSource": true
@@ -202,19 +228,23 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "file": {
                     "type": "string",
+                    "title": "File",
                     "required": true
                 },
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 }
             }
@@ -224,19 +254,23 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "file": {
                     "type": "string",
+                    "title": "File",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "targetAppId": {
                     "type": "string",
+                    "title": "Target App Id",
                     "required": true
                 }
             }
@@ -246,10 +280,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -258,10 +294,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
@@ -270,23 +308,28 @@
                     "items": {
                         "type": "string"
                     },
+                    "title": "Machine Names",
                     "required": true
                 },
                 "certificatePassword": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Certificate Password"
                 },
                 "includeSecretsKey": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Include Secrets Key"
                 },
                 "includeCa": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Include Ca"
                 },
                 "exportFormat": {
                     "type": "string",
                     "enum": [
                         "Windows",
                         "Pem"
-                    ]
+                    ],
+                    "title": "Export Format"
                 }
             }
         },
@@ -295,19 +338,23 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "enabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Enabled"
                 },
                 "eventTasks": {
                     "type": "array",
@@ -328,7 +375,8 @@
                                 ]
                             }
                         }
-                    }
+                    },
+                    "title": "Event Tasks"
                 }
             }
         },
@@ -337,18 +385,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -358,18 +406,22 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name"
                 },
                 "enabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Enabled"
                 },
                 "eventTasks": {
                     "type": "array",
@@ -390,7 +442,8 @@
                                 ]
                             }
                         }
-                    }
+                    },
+                    "title": "Event Tasks"
                 }
             },
             "filterAndSource": true
@@ -400,31 +453,37 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "owner": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Owner"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             }
         },
@@ -433,10 +492,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
@@ -450,6 +511,7 @@
                             }
                         }
                     },
+                    "title": "Files",
                     "required": true
                 }
             },
@@ -460,10 +522,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -473,10 +537,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -485,23 +551,28 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "file": {
                     "type": "string",
+                    "title": "File",
                     "required": true
                 },
                 "externalPath": {
                     "type": "string",
+                    "title": "External Path",
                     "required": true
                 },
                 "overwrite": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Overwrite"
                 }
             },
             "filterAndSource": true
@@ -511,18 +582,29 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
-                "type": "object",
-                "required": [
-                    "file",
-                    "externalPath"
-                ],
+                "type": {
+                    "0": "o",
+                    "1": "b",
+                    "2": "j",
+                    "3": "e",
+                    "4": "c",
+                    "5": "t",
+                    "title": "Type"
+                },
+                "required": {
+                    "0": "file",
+                    "1": "externalPath",
+                    "title": "Required"
+                },
                 "properties": {
                     "file": {
                         "type": "string"
@@ -532,7 +614,8 @@
                     },
                     "overwrite": {
                         "type": "boolean"
-                    }
+                    },
+                    "title": "Properties"
                 }
             },
             "filterAndSource": true
@@ -542,18 +625,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -563,15 +646,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "externalPath": {
                     "type": "string",
+                    "title": "External Path",
                     "required": true
                 }
             },
@@ -582,14 +668,24 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
-                "type": "string"
+                "type": {
+                    "0": "s",
+                    "1": "t",
+                    "2": "r",
+                    "3": "i",
+                    "4": "n",
+                    "5": "g",
+                    "title": "Type"
+                }
             },
             "filterAndSource": true
         },
@@ -598,54 +694,60 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        },
-                        "customPropertyOperations": {
-                            "type": "string",
-                            "enum": [
-                                "add",
-                                "remove",
-                                "set"
-                            ]
-                        },
-                        "tagOperations": {
-                            "type": "string",
-                            "enum": [
-                                "add",
-                                "remove",
-                                "set"
-                            ]
-                        }
-                    }
-                },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name"
                 },
                 "owner": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Owner"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
+                },
+                "customPropertyOperations": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Custom Property Operations"
+                },
+                "tagOperations": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Tag Operations"
                 }
             },
             "filterAndSource": true
@@ -655,25 +757,30 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Description"
                 },
                 "choiceValues": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Choice Values"
                 },
                 "objectTypes": {
                     "type": "array",
@@ -698,10 +805,12 @@
                             "User",
                             "VirtualProxyConfig"
                         ]
-                    }
+                    },
+                    "title": "Object Types"
                 },
                 "valueType": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Value Type"
                 }
             }
         },
@@ -710,10 +819,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -723,10 +834,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterAndSource": true
@@ -736,24 +849,29 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name"
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Description"
                 },
                 "choiceValues": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Choice Values"
                 },
                 "objectTypes": {
                     "type": "array",
@@ -778,10 +896,12 @@
                             "User",
                             "VirtualProxyConfig"
                         ]
-                    }
+                    },
+                    "title": "Object Types"
                 },
                 "valueType": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Value Type"
                 }
             },
             "filterAndSource": true
@@ -791,29 +911,36 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "connectionString": {
                     "type": "string",
+                    "title": "Connection String",
                     "required": true
                 },
                 "type": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Type"
                 },
                 "username": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Username"
                 },
                 "password": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Password"
                 },
                 "architecture": {
                     "type": "string",
@@ -821,26 +948,30 @@
                         "x86",
                         "x64",
                         "Undefined"
-                    ]
+                    ],
+                    "title": "Architecture"
                 },
                 "logOn": {
                     "type": "string",
                     "enum": [
                         "Current user",
                         "Service user"
-                    ]
+                    ],
+                    "title": "Log On"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             }
         },
@@ -849,10 +980,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -862,10 +995,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -874,10 +1009,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterAndSource": true
@@ -887,60 +1024,68 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        },
-                        "customPropertyOperations": {
-                            "type": "string",
-                            "enum": [
-                                "add",
-                                "remove",
-                                "set"
-                            ]
-                        },
-                        "tagOperations": {
-                            "type": "string",
-                            "enum": [
-                                "add",
-                                "remove",
-                                "set"
-                            ]
-                        }
-                    }
-                },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "connectionString": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Connection String"
                 },
                 "username": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Username"
                 },
                 "password": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Password"
                 },
                 "owner": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Owner"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
+                },
+                "customPropertyOperations": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Custom Property Operations"
+                },
+                "tagOperations": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Tag Operations"
                 }
             },
             "filterAndSource": true
@@ -950,10 +1095,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -963,10 +1110,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -975,19 +1124,23 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "file": {
                     "type": "string",
+                    "title": "File",
                     "required": true
                 },
                 "password": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Password"
                 }
             }
         },
@@ -996,18 +1149,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -1017,10 +1170,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
@@ -1028,14 +1183,16 @@
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string",
                         "description": "Value in format: CustomPropertyName=value"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             },
             "filterAndSource": true
@@ -1045,15 +1202,17 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
-                "anyOf": [
-                    {
+                "anyOf": {
+                    "0": {
                         "type": "object",
                         "required": [
                             "name"
@@ -1088,7 +1247,7 @@
                             }
                         }
                     },
-                    {
+                    "1": {
                         "type": "object",
                         "required": [
                             "name",
@@ -1253,8 +1412,9 @@
                                 "type": "boolean"
                             }
                         }
-                    }
-                ]
+                    },
+                    "title": "Any Of"
+                }
             }
         },
         "externalTask.addTriggerSchema": {
@@ -1262,19 +1422,23 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "enabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Enabled"
                 },
                 "repeat": {
                     "type": "string",
@@ -1286,16 +1450,20 @@
                         "Weekly",
                         "Monthly"
                     ],
+                    "title": "Repeat",
                     "required": true
                 },
                 "repeatEvery": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Repeat Every"
                 },
                 "startDate": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Start Date"
                 },
                 "expirationDate": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Expiration Date"
                 },
                 "daysOfWeek": {
                     "type": "string",
@@ -1307,7 +1475,8 @@
                         "Friday",
                         "Saturday",
                         "Sunday"
-                    ]
+                    ],
+                    "title": "Days Of Week"
                 },
                 "daysOfMonth": {
                     "type": "integer",
@@ -1343,7 +1512,8 @@
                         29,
                         30,
                         31
-                    ]
+                    ],
+                    "title": "Days Of Month"
                 },
                 "timeZone": {
                     "type": "string",
@@ -1423,10 +1593,12 @@
                         "Pacific/Fiji",
                         "Pacific/Apia",
                         "Pacific/Tongatapu"
-                    ]
+                    ],
+                    "title": "Time Zone"
                 },
                 "daylightSavingTime": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Daylight Saving Time"
                 }
             }
         },
@@ -1435,36 +1607,43 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
                     "description": "Name of the external task",
+                    "title": "Name",
                     "required": true
                 },
                 "path": {
                     "type": "string",
+                    "title": "Path",
                     "required": true
                 },
                 "parameters": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Parameters"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             }
         },
@@ -1473,10 +1652,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -1486,10 +1667,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -1498,18 +1681,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -1519,48 +1702,80 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
-                "options": {
-                    "$ref": "#/definitions/UpdateExtraOptions"
-                },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name"
                 },
                 "enabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Enabled"
                 },
                 "taskSessionTimeout": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Task Session Timeout"
                 },
                 "maxRetries": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Max Retries"
                 },
                 "owner": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Owner"
                 },
                 "path": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Path"
                 },
                 "parameters": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Parameters"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
+                },
+                "customPropertyOperations": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Custom Property Operations"
+                },
+                "tagOperations": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Tag Operations"
                 }
             },
             "filterAndSource": true
@@ -1570,10 +1785,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -1583,10 +1800,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -1595,63 +1814,79 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "listenPort": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Listen Port"
                 },
                 "allowHttp": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Allow Http"
                 },
                 "unencryptedListenPort": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Unencrypted Listen Port"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 },
                 "authenticationListenPort": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Authentication Listen Port"
                 },
                 "kerberosAuthentication": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Kerberos Authentication"
                 },
                 "unencryptedAuthenticationListenPort": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Unencrypted Authentication Listen Port"
                 },
                 "sslBrowserCertificateThumbprint": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Ssl Browser Certificate Thumbprint"
                 },
                 "keepAliveTimeoutSeconds": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Keep Alive Timeout Seconds"
                 },
                 "maxHeaderSizeBytes": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Max Header Size Bytes"
                 },
                 "maxHeaderLines": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Max Header Lines"
                 },
                 "restListenPort": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Rest Listen Port"
                 },
                 "virtualProxies": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Virtual Proxies"
                 }
             },
             "filterAndSource": true
@@ -1661,19 +1896,23 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "enabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Enabled"
                 },
                 "eventTasks": {
                     "type": "array",
@@ -1721,6 +1960,7 @@
                             }
                         ]
                     },
+                    "title": "Event Tasks",
                     "required": true
                 }
             }
@@ -1730,15 +1970,17 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
-                "anyOf": [
-                    {
+                "anyOf": {
+                    "0": {
                         "type": "object",
                         "required": [
                             "name"
@@ -1773,7 +2015,7 @@
                             }
                         }
                     },
-                    {
+                    "1": {
                         "type": "object",
                         "required": [
                             "name",
@@ -1938,8 +2180,9 @@
                                 "type": "boolean"
                             }
                         }
-                    }
-                ]
+                    },
+                    "title": "Any Of"
+                }
             }
         },
         "reloadTask.addTriggerSchema": {
@@ -1947,19 +2190,23 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "enabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Enabled"
                 },
                 "repeat": {
                     "type": "string",
@@ -1971,16 +2218,20 @@
                         "Weekly",
                         "Monthly"
                     ],
+                    "title": "Repeat",
                     "required": true
                 },
                 "repeatEvery": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Repeat Every"
                 },
                 "startDate": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Start Date"
                 },
                 "expirationDate": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Expiration Date"
                 },
                 "daysOfWeek": {
                     "type": "string",
@@ -1992,7 +2243,8 @@
                         "Friday",
                         "Saturday",
                         "Sunday"
-                    ]
+                    ],
+                    "title": "Days Of Week"
                 },
                 "daysOfMonth": {
                     "type": "integer",
@@ -2028,7 +2280,8 @@
                         29,
                         30,
                         31
-                    ]
+                    ],
+                    "title": "Days Of Month"
                 },
                 "timeZone": {
                     "type": "string",
@@ -2108,10 +2361,12 @@
                         "Pacific/Fiji",
                         "Pacific/Apia",
                         "Pacific/Tongatapu"
-                    ]
+                    ],
+                    "title": "Time Zone"
                 },
                 "daylightSavingTime": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Daylight Saving Time"
                 }
             }
         },
@@ -2120,32 +2375,38 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "appFilter": {
                     "type": "string",
+                    "title": "App Filter",
                     "required": true
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             }
         },
@@ -2154,18 +2415,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -2175,48 +2436,80 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
-                "options": {
-                    "$ref": "#/definitions/UpdateExtraOptions"
-                },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name"
                 },
                 "enabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Enabled"
                 },
                 "taskSessionTimeout": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Task Session Timeout"
                 },
                 "maxRetries": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Max Retries"
                 },
                 "owner": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Owner"
                 },
                 "appId": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "App Id"
                 },
                 "appFilter": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "App Filter"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
+                },
+                "customPropertyOperations": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Custom Property Operations"
+                },
+                "tagOperations": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Tag Operations"
                 }
             },
             "filterAndSource": true
@@ -2226,10 +2519,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -2239,28 +2534,33 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             }
         },
@@ -2269,10 +2569,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -2282,18 +2584,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -2303,28 +2605,33 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string",
                         "description": "Value in format: CustomPropertyName=value"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             },
             "filterAndSource": true
@@ -2334,15 +2641,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "category": {
@@ -2352,14 +2662,17 @@
                         "Security",
                         "Sync"
                     ],
+                    "title": "Category",
                     "required": true
                 },
                 "rule": {
                     "type": "string",
+                    "title": "Rule",
                     "required": true
                 },
                 "resourceFilter": {
                     "type": "string",
+                    "title": "Resource Filter",
                     "required": true
                 },
                 "actions": {
@@ -2383,25 +2696,30 @@
                             "Approve",
                             "Allow access"
                         ]
-                    }
+                    },
+                    "title": "Actions"
                 },
                 "comment": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Comment"
                 },
                 "disabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Disabled"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             }
         },
@@ -2410,10 +2728,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -2422,10 +2742,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -2435,15 +2757,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "type": {
@@ -2452,29 +2777,35 @@
                         "Analyzer",
                         "Professional"
                     ],
+                    "title": "Type",
                     "required": true
                 },
                 "rule": {
                     "type": "string",
+                    "title": "Rule",
                     "required": true
                 },
                 "comment": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Comment"
                 },
                 "disabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Disabled"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             }
         },
@@ -2483,18 +2814,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -2504,21 +2835,25 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 }
             },
             "filterAndSource": true
@@ -2528,15 +2863,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 }
             }
@@ -2546,10 +2884,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
@@ -2558,6 +2898,7 @@
                     "items": {
                         "type": "string"
                     },
+                    "title": "Names",
                     "required": true
                 }
             }
@@ -2567,18 +2908,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -2588,15 +2929,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 }
             },
@@ -2607,10 +2951,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -2620,10 +2966,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -2632,10 +2980,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterAndSource": true
@@ -2645,10 +2995,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterAndSource": true
@@ -2658,10 +3010,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterAndSource": true
@@ -2671,41 +3025,49 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "userId": {
                     "type": "string",
+                    "title": "User Id",
                     "required": true
                 },
                 "userDirectory": {
                     "type": "string",
+                    "title": "User Directory",
                     "required": true
                 },
                 "roles": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Roles"
                 },
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             }
         },
@@ -2714,10 +3076,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -2727,10 +3091,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -2739,18 +3105,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -2760,34 +3126,40 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Name"
                 },
                 "roles": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Roles"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string",
                         "description": "Value in format: CustomPropertyName=value"
-                    }
+                    },
+                    "title": "Custom Properties"
                 }
             },
             "filterAndSource": true
@@ -2798,57 +3170,69 @@
                 "name": {
                     "type": "string",
                     "pattern": "^[^#]+$",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "prefix": {
                     "type": "string",
+                    "title": "Prefix",
                     "required": true
                 },
                 "description": {
                     "type": "string",
+                    "title": "Description",
                     "required": true
                 },
                 "sessionCookieHeaderName": {
                     "type": "string",
+                    "title": "Session Cookie Header Name",
                     "required": true
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 },
                 "authenticationModuleRedirectUri": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Authentication Module Redirect Uri"
                 },
                 "windowsAuthenticationEnabledDevicePattern": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Windows Authentication Enabled Device Pattern"
                 },
                 "loadBalancingServerNodes": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Load Balancing Server Nodes"
                 },
                 "websocketCrossOriginWhiteList": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Websocket Cross Origin White List"
                 },
                 "additionalResponseHeaders": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Additional Response Headers"
                 },
                 "anonymousAccessMode": {
                     "type": "string",
@@ -2856,7 +3240,8 @@
                         "No anonymous",
                         "Allow anonymous",
                         "Always anonymous"
-                    ]
+                    ],
+                    "title": "Anonymous Access Mode"
                 },
                 "authenticationMethod": {
                     "type": "string",
@@ -2868,10 +3253,12 @@
                         "dynamic",
                         "SAML",
                         "JWT"
-                    ]
+                    ],
+                    "title": "Authentication Method"
                 },
                 "hasSecureAttributeHttp": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Has Secure Attribute Http"
                 },
                 "sameSiteAttributeHttp": {
                     "type": "string",
@@ -2880,10 +3267,12 @@
                         "None",
                         "Lax",
                         "Strict"
-                    ]
+                    ],
+                    "title": "Same Site Attribute Http"
                 },
                 "hasSecureAttributeHttps": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Has Secure Attribute Https"
                 },
                 "sameSiteAttributeHttps": {
                     "type": "string",
@@ -2892,100 +3281,129 @@
                         "None",
                         "Lax",
                         "Strict"
-                    ]
+                    ],
+                    "title": "Same Site Attribute Https"
                 },
                 "headerAuthenticationHeaderName": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Header Authentication Header Name"
                 },
                 "extendedSecurityEnvironment": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Extended Security Environment"
                 },
                 "headerAuthenticationStaticUserDirectory": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Header Authentication Static User Directory"
                 },
                 "headerAuthenticationDynamicUserDirectory": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Header Authentication Dynamic User Directory"
                 },
                 "samlMetadataIdP": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Saml Metadata Id P"
                 },
                 "samlHostUri": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Saml Host Uri"
                 },
                 "samlEntityId": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Saml Entity Id"
                 },
                 "samlAttributeUserId": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Saml Attribute User Id"
                 },
                 "samlAttributeUserDirectory": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Saml Attribute User Directory"
                 },
                 "samlAttributeMap": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Saml Attribute Map"
                 },
                 "samlSlo": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Saml Slo"
                 },
                 "jwtPublicKeyCertificate": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Jwt Public Key Certificate"
                 },
                 "jwtAttributeUserId": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Jwt Attribute User Id"
                 },
                 "jwtAttributeUserDirectory": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Jwt Attribute User Directory"
                 },
                 "jwtAttributeMap": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Jwt Attribute Map"
                 },
                 "sessionInactivityTimeout": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Session Inactivity Timeout"
                 },
                 "oidcConfigurationEndpointUri": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Configuration Endpoint Uri"
                 },
                 "oidcClientId": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Client Id"
                 },
                 "oidcClientSecret": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Client Secret"
                 },
                 "oidcRealm": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Realm"
                 },
                 "oidcAttributeSub": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Sub"
                 },
                 "oidcAttributeName": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Name"
                 },
                 "oidcAttributeGroups": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Groups"
                 },
                 "oidcAttributeEmail": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Email"
                 },
                 "oidcAttributeClientId": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Client Id"
                 },
                 "oidcAttributePicture": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Picture"
                 },
                 "oidcScope": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Scope"
                 },
                 "oidcAttributeMap": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Oidc Attribute Map"
                 }
             }
         },
@@ -2994,10 +3412,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "filterOnly": true
@@ -3007,10 +3427,12 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             }
         },
@@ -3019,18 +3441,18 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
                 }
             },
             "filterAndSource": true
@@ -3040,75 +3462,66 @@
             "fields": {
                 "name": {
                     "type": "string",
+                    "title": "Name",
                     "required": true
                 },
                 "skip": {
-                    "type": "boolean"
-                },
-                "options": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "multiple": {
-                            "type": "boolean"
-                        },
-                        "customPropertyOperation": {
-                            "$ref": "#/definitions/AddRemoveSet"
-                        },
-                        "tagOperation": {
-                            "$ref": "#/definitions/AddRemoveSet"
-                        },
-                        "appendTags": {
-                            "type": "boolean"
-                        },
-                        "whitelistOperation": {
-                            "$ref": "#/definitions/AddRemoveSet"
-                        }
-                    }
+                    "type": "boolean",
+                    "title": "Skip"
                 }
             },
             "details": {
                 "prefix": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Prefix"
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Description"
                 },
                 "sessionCookieHeaderName": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Session Cookie Header Name"
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Tags"
                 },
                 "customProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Custom Properties"
                 },
                 "authenticationModuleRedirectUri": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Authentication Module Redirect Uri"
                 },
                 "windowsAuthenticationEnabledDevicePattern": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Windows Authentication Enabled Device Pattern"
                 },
                 "loadBalancingServerNodes": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Load Balancing Server Nodes"
                 },
                 "websocketCrossOriginWhiteList": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Websocket Cross Origin White List"
                 },
                 "additionalResponseHeaders": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Additional Response Headers"
                 },
                 "anonymousAccessMode": {
                     "type": "string",
@@ -3116,7 +3529,8 @@
                         "No anonymous",
                         "Allow anonymous",
                         "Always anonymous"
-                    ]
+                    ],
+                    "title": "Anonymous Access Mode"
                 },
                 "authenticationMethod": {
                     "type": "string",
@@ -3128,10 +3542,12 @@
                         "dynamic",
                         "SAML",
                         "JWT"
-                    ]
+                    ],
+                    "title": "Authentication Method"
                 },
                 "hasSecureAttributeHttp": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Has Secure Attribute Http"
                 },
                 "sameSiteAttributeHttp": {
                     "type": "string",
@@ -3140,10 +3556,12 @@
                         "None",
                         "Lax",
                         "Strict"
-                    ]
+                    ],
+                    "title": "Same Site Attribute Http"
                 },
                 "hasSecureAttributeHttps": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Has Secure Attribute Https"
                 },
                 "sameSiteAttributeHttps": {
                     "type": "string",
@@ -3152,107 +3570,174 @@
                         "None",
                         "Lax",
                         "Strict"
-                    ]
+                    ],
+                    "title": "Same Site Attribute Https"
                 },
                 "headerAuthenticationHeaderName": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Header Authentication Header Name"
                 },
                 "extendedSecurityEnvironment": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Extended Security Environment"
                 },
                 "headerAuthenticationStaticUserDirectory": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Header Authentication Static User Directory"
                 },
                 "headerAuthenticationDynamicUserDirectory": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Header Authentication Dynamic User Directory"
                 },
                 "samlMetadataIdP": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Saml Metadata Id P"
                 },
                 "samlHostUri": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Saml Host Uri"
                 },
                 "samlEntityId": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Saml Entity Id"
                 },
                 "samlAttributeUserId": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Saml Attribute User Id"
                 },
                 "samlAttributeUserDirectory": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Saml Attribute User Directory"
                 },
                 "samlAttributeMap": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Saml Attribute Map"
                 },
                 "samlSlo": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Saml Slo"
                 },
                 "jwtPublicKeyCertificate": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Jwt Public Key Certificate"
                 },
                 "jwtAttributeUserId": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Jwt Attribute User Id"
                 },
                 "jwtAttributeUserDirectory": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Jwt Attribute User Directory"
                 },
                 "jwtAttributeMap": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Jwt Attribute Map"
                 },
                 "sessionInactivityTimeout": {
-                    "type": "integer"
+                    "type": "integer",
+                    "title": "Session Inactivity Timeout"
                 },
                 "oidcConfigurationEndpointUri": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Configuration Endpoint Uri"
                 },
                 "oidcClientId": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Client Id"
                 },
                 "oidcClientSecret": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Client Secret"
                 },
                 "oidcRealm": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Realm"
                 },
                 "oidcAttributeSub": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Sub"
                 },
                 "oidcAttributeName": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Name"
                 },
                 "oidcAttributeGroups": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Groups"
                 },
                 "oidcAttributeEmail": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Email"
                 },
                 "oidcAttributeClientId": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Client Id"
                 },
                 "oidcAttributePicture": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Attribute Picture"
                 },
                 "oidcScope": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Oidc Scope"
                 },
                 "oidcAttributeMap": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "title": "Oidc Attribute Map"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
+                },
+                "customPropertyOperation": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Custom Property Operation"
+                },
+                "tagOperation": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Tag Operation"
+                },
+                "appendTags": {
+                    "type": "boolean",
+                    "title": "Append Tags"
+                },
+                "whitelistOperation": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Whitelist Operation"
                 }
             }
         },
         "UpdateExtraOptions": {
             "fields": {
                 "multiple": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "title": "Multiple"
                 },
                 "customPropertyOperations": {
                     "type": "string",
@@ -3260,7 +3745,8 @@
                         "add",
                         "remove",
                         "set"
-                    ]
+                    ],
+                    "title": "Custom Property Operations"
                 },
                 "tagOperations": {
                     "type": "string",
@@ -3268,7 +3754,8 @@
                         "add",
                         "remove",
                         "set"
-                    ]
+                    ],
+                    "title": "Tag Operations"
                 }
             }
         }

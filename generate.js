@@ -78,6 +78,7 @@ async function generateUISchema(runbookSchema) {
 
   let result = {};
 
+  // TODO: capture anyOf and oneOf
   Object.entries(definitions).map(([name, definition]) => {
     result[name] = {
       description: definition.description,
@@ -93,7 +94,7 @@ async function generateUISchema(runbookSchema) {
           p[0] != "source"
       )
       .map((f) => {
-        result[name].fields[f[0]] = f[1];
+        result[name].fields[f[0]] = { ...f[1], title: nameToTitle(f[0]) };
       });
 
     if (definition.required) {
@@ -111,13 +112,19 @@ async function generateUISchema(runbookSchema) {
         ) {
           Object.entries(definition.properties.details.items).map(
             ([detailKey, detailValue]) => {
-              result[name]["details"][detailKey] = detailValue;
+              result[name]["details"][detailKey] = {
+                ...detailValue,
+                title: nameToTitle(detailKey),
+              };
             }
           );
         } else {
           Object.entries(definition.properties.details.properties).map(
             ([detailKey, detailValue]) => {
-              result[name]["details"][detailKey] = detailValue;
+              result[name]["details"][detailKey] = {
+                ...detailValue,
+                title: nameToTitle(detailKey),
+              };
 
               if (
                 definition.properties.details.required &&
@@ -128,6 +135,63 @@ async function generateUISchema(runbookSchema) {
             }
           );
         }
+      }
+
+      if (definition.properties.options) {
+        if (definition.properties.options["$ref"]) {
+          definition.properties.options =
+            runbookSchema.definitions[
+              definition.properties.options["$ref"].replace(
+                "#/definitions/",
+                ""
+              )
+            ];
+        }
+
+        result[name]["options"] = {};
+
+        if (
+          definition.properties.options.type &&
+          definition.properties.options.type == "array"
+        ) {
+          Object.entries(definition.properties.options.items).map(
+            ([detailKey, detailValue]) => {
+              result[name]["options"][detailKey] = {
+                ...detailValue,
+                title: nameToTitle(detailKey),
+              };
+            }
+          );
+        } else {
+          Object.entries(definition.properties.options.properties).map(
+            ([detailKey, detailValue]) => {
+              // TODO: not great :(
+              if (
+                detailValue["$ref"] &&
+                detailValue["$ref"] == "#/definitions/AddRemoveSet"
+              ) {
+                detailValue = {
+                  type: "string",
+                  enum: ["add", "remove", "set"],
+                };
+              }
+
+              result[name]["options"][detailKey] = {
+                ...detailValue,
+                title: nameToTitle(detailKey),
+              };
+
+              if (
+                definition.properties.options.required &&
+                definition.properties.options.required.includes(detailKey)
+              ) {
+                result[name]["options"][detailKey]["required"] = true;
+              }
+            }
+          );
+        }
+
+        delete result[name].fields.options;
       }
 
       if (definition.properties.filter && definition.properties.source)
@@ -164,6 +228,13 @@ async function appendUISchemaToModule(uiSchema) {
     "./dist/index.js",
     `\n\nexport const automatiqalUISchema=${JSON.stringify(uiSchema)}`
   );
+}
+
+function nameToTitle(name) {
+  return name
+    .split(/(?=[A-Z])/)
+    .map((c) => c.charAt(0).toUpperCase() + c.substring(1))
+    .join(" ");
 }
 
 (async function () {
