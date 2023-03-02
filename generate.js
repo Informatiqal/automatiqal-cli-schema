@@ -1,11 +1,15 @@
 import fs from "fs";
 
+// TODO: too much is happening here. Split it at some point
 async function generateRunbookSchema() {
   const placeholder = JSON.parse(
     fs.readFileSync("./src/runbook_placeholder.json")
   );
 
-  placeholder.properties.tasks.items["anyOf"] = [];
+  placeholder.properties.tasks = {
+    $ref: "#/definitions/tasks",
+  };
+  placeholder.definitions.tasks.items["anyOf"] = [];
 
   const definitionFiles = fs.readdirSync("./src/definitions");
 
@@ -15,7 +19,17 @@ async function generateRunbookSchema() {
       fs.readFileSync(`./src/definitions/${definition}`)
     );
 
-    placeholder.properties.tasks.items.anyOf.push({
+    definitionContent.properties.onError = {
+      type: "object",
+      required: ["tasks"],
+      properties: {
+        tasks: {
+          $ref: "#/definitions/tasks",
+        },
+      },
+    };
+
+    placeholder.definitions.tasks.items.anyOf.push({
       $ref: `#/definitions/${definitionName}`,
     });
 
@@ -79,131 +93,139 @@ async function generateUISchema(runbookSchema) {
   let result = {};
 
   // TODO: capture anyOf and oneOf
-  Object.entries(definitions).map(([name, definition]) => {
-    result[name] = {
-      description: definition.description,
-      fields: {},
-    };
+  Object.entries(definitions)
+    .filter((d) => d[0] != "tasks")
+    .map(([name, definition]) => {
+      result[name] = {
+        description: definition.description,
+        fields: {},
+      };
 
-    Object.entries(definition.properties)
-      .filter(
-        (p) =>
-          p[0] != "operation" &&
-          p[0] != "details" &&
-          p[0] != "filter" &&
-          p[0] != "source"
-      )
-      .map((f) => {
-        result[name].fields[f[0]] = { ...f[1], title: nameToTitle(f[0]) };
-      });
+      let properties = definition.properties;
 
-    if (definition.required) {
-      Object.entries(result[name].fields).map(([k, v]) => {
-        if (definition.required.includes(k))
-          result[name].fields[k]["required"] = true;
-      });
-
-      if (definition.properties.details) {
-        result[name]["details"] = {};
-
-        if (
-          definition.properties.details.type &&
-          definition.properties.details.type == "array"
-        ) {
-          Object.entries(definition.properties.details.items).map(
-            ([detailKey, detailValue]) => {
-              result[name]["details"][detailKey] = {
-                ...detailValue,
-                title: nameToTitle(detailKey),
-              };
-            }
-          );
-        } else {
-          Object.entries(definition.properties.details.properties).map(
-            ([detailKey, detailValue]) => {
-              result[name]["details"][detailKey] = {
-                ...detailValue,
-                title: nameToTitle(detailKey),
-              };
-
-              if (
-                definition.properties.details.required &&
-                definition.properties.details.required.includes(detailKey)
-              ) {
-                result[name]["details"][detailKey]["required"] = true;
-              }
-            }
-          );
-        }
+      if (name == "tasks") {
+        properties = runbookSchema.definitions.tasks;
       }
 
-      if (definition.properties.options) {
-        if (definition.properties.options["$ref"]) {
-          definition.properties.options =
-            runbookSchema.definitions[
-              definition.properties.options["$ref"].replace(
-                "#/definitions/",
-                ""
-              )
-            ];
-        }
+      Object.entries(properties)
+        .filter(
+          (p) =>
+            p[0] != "operation" &&
+            p[0] != "details" &&
+            p[0] != "filter" &&
+            p[0] != "source"
+        )
+        .map((f) => {
+          result[name].fields[f[0]] = { ...f[1], title: nameToTitle(f[0]) };
+        });
 
-        result[name]["options"] = {};
+      if (definition.required) {
+        Object.entries(result[name].fields).map(([k, v]) => {
+          if (definition.required.includes(k))
+            result[name].fields[k]["required"] = true;
+        });
 
-        if (
-          definition.properties.options.type &&
-          definition.properties.options.type == "array"
-        ) {
-          Object.entries(definition.properties.options.items).map(
-            ([detailKey, detailValue]) => {
-              result[name]["options"][detailKey] = {
-                ...detailValue,
-                title: nameToTitle(detailKey),
-              };
-            }
-          );
-        } else {
-          Object.entries(definition.properties.options.properties).map(
-            ([detailKey, detailValue]) => {
-              // TODO: not great :(
-              if (
-                detailValue["$ref"] &&
-                detailValue["$ref"] == "#/definitions/AddRemoveSet"
-              ) {
-                detailValue = {
-                  type: "string",
-                  enum: ["add", "remove", "set"],
+        if (definition.properties.details) {
+          result[name]["details"] = {};
+
+          if (
+            definition.properties.details.type &&
+            definition.properties.details.type == "array"
+          ) {
+            Object.entries(definition.properties.details.items).map(
+              ([detailKey, detailValue]) => {
+                result[name]["details"][detailKey] = {
+                  ...detailValue,
+                  title: nameToTitle(detailKey),
                 };
               }
+            );
+          } else {
+            Object.entries(definition.properties.details.properties).map(
+              ([detailKey, detailValue]) => {
+                result[name]["details"][detailKey] = {
+                  ...detailValue,
+                  title: nameToTitle(detailKey),
+                };
 
-              result[name]["options"][detailKey] = {
-                ...detailValue,
-                title: nameToTitle(detailKey),
-              };
-
-              if (
-                definition.properties.options.required &&
-                definition.properties.options.required.includes(detailKey)
-              ) {
-                result[name]["options"][detailKey]["required"] = true;
+                if (
+                  definition.properties.details.required &&
+                  definition.properties.details.required.includes(detailKey)
+                ) {
+                  result[name]["details"][detailKey]["required"] = true;
+                }
               }
-            }
-          );
+            );
+          }
         }
 
-        delete result[name].fields.options;
+        if (definition.properties.options) {
+          if (definition.properties.options["$ref"]) {
+            definition.properties.options =
+              runbookSchema.definitions[
+                definition.properties.options["$ref"].replace(
+                  "#/definitions/",
+                  ""
+                )
+              ];
+          }
+
+          result[name]["options"] = {};
+
+          if (
+            definition.properties.options.type &&
+            definition.properties.options.type == "array"
+          ) {
+            Object.entries(definition.properties.options.items).map(
+              ([detailKey, detailValue]) => {
+                result[name]["options"][detailKey] = {
+                  ...detailValue,
+                  title: nameToTitle(detailKey),
+                };
+              }
+            );
+          } else {
+            Object.entries(definition.properties.options.properties).map(
+              ([detailKey, detailValue]) => {
+                // TODO: not great :(
+                if (
+                  detailValue["$ref"] &&
+                  detailValue["$ref"] == "#/definitions/AddRemoveSet"
+                ) {
+                  detailValue = {
+                    type: "string",
+                    enum: ["add", "remove", "set"],
+                  };
+                }
+
+                result[name]["options"][detailKey] = {
+                  ...detailValue,
+                  title: nameToTitle(detailKey),
+                };
+
+                if (
+                  definition.properties.options.required &&
+                  definition.properties.options.required.includes(detailKey)
+                ) {
+                  result[name]["options"][detailKey]["required"] = true;
+                }
+              }
+            );
+          }
+
+          delete result[name].fields.options;
+        }
+
+        if (definition.properties.filter && definition.properties.source)
+          result[name]["filterAndSource"] = true;
+
+        if (definition.properties.filter && !definition.properties.source)
+          result[name]["filterOnly"] = true;
+
+        if (!definition.properties.filter && definition.properties.source)
+          result[name]["sourceOnly"] = true;
       }
-
-      if (definition.properties.filter && definition.properties.source)
-        result[name]["filterAndSource"] = true;
-
-      if (definition.properties.filter && !definition.properties.source)
-        result[name]["filterOnly"] = true;
-
-      if (!definition.properties.filter && definition.properties.source)
-        result[name]["sourceOnly"] = true;
-    }
-  });
+    });
   runbook.tasks = { ...result };
 
   fs.writeFileSync(

@@ -88,5 +88,12 @@
         "environment",
         "tasks"
     ],
-    "definitions": {}
+    "definitions": {
+        "tasks": {
+            "type": "array",
+            "description": "List of tasks to be executed in sequence",
+            "minItems": 1,
+            "items": {}
+        }
+    }
 }
