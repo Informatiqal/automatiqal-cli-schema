@@ -24,7 +24,10 @@
             ],
             "properties": {
                 "file": {
-                    "type": "string"
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
                 },
                 "name": {
                     "type": "string"

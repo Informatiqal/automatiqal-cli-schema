@@ -358,7 +358,10 @@
             },
             "details": {
                 "file": {
-                    "type": "string",
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
                     "title": "File",
                     "required": true
                 },
@@ -378,7 +381,10 @@
                     "required": true
                 },
                 "file": {
-                    "type": "string",
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
                     "title": "File",
                     "required": true
                 },
@@ -813,7 +819,10 @@
             },
             "details": {
                 "file": {
-                    "type": "string",
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
                     "title": "File",
                     "required": true
                 },
@@ -871,7 +880,10 @@
                 },
                 "properties": {
                     "file": {
-                        "type": "string"
+                        "type": "array",
+                        "items": {
+                            "type": "integer"
+                        }
                     },
                     "externalPath": {
                         "type": "string"
@@ -1590,7 +1602,10 @@
             },
             "details": {
                 "file": {
-                    "type": "string",
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
                     "title": "File",
                     "required": true
                 },

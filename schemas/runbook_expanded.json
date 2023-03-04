@@ -952,7 +952,10 @@
                     ],
                     "properties": {
                         "file": {
-                            "type": "string"
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
                         },
                         "name": {
                             "type": "string"
@@ -988,7 +991,10 @@
                     "type": "string"
                 },
                 "file": {
-                    "type": "string"
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
                 },
                 "operation": {
                     "type": "string",
@@ -1601,7 +1607,10 @@
                     ],
                     "properties": {
                         "file": {
-                            "type": "string"
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
                         },
                         "externalPath": {
                             "type": "string"
@@ -1686,7 +1695,10 @@
                         ],
                         "properties": {
                             "file": {
-                                "type": "string"
+                                "type": "array",
+                                "items": {
+                                    "type": "integer"
+                                }
                             },
                             "externalPath": {
                                 "type": "string"
@@ -2801,7 +2813,10 @@
                     ],
                     "properties": {
                         "file": {
-                            "type": "string"
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
                         },
                         "password": {
                             "type": "string"

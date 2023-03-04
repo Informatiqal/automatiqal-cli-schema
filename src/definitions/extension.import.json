@@ -26,7 +26,10 @@
             ],
             "properties": {
                 "file": {
-                    "type": "string"
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
                 },
                 "password": {
                     "type": "string"
