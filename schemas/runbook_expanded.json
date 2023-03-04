@@ -952,10 +952,7 @@
                     ],
                     "properties": {
                         "file": {
-                            "type": "array",
-                            "items": {
-                                "type": "integer"
-                            }
+                            "type": "object"
                         },
                         "name": {
                             "type": "string"
@@ -991,10 +988,7 @@
                     "type": "string"
                 },
                 "file": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer"
-                    }
+                    "type": "object"
                 },
                 "operation": {
                     "type": "string",
@@ -1607,10 +1601,7 @@
                     ],
                     "properties": {
                         "file": {
-                            "type": "array",
-                            "items": {
-                                "type": "integer"
-                            }
+                            "type": "object"
                         },
                         "externalPath": {
                             "type": "string"
@@ -1695,10 +1686,7 @@
                         ],
                         "properties": {
                             "file": {
-                                "type": "array",
-                                "items": {
-                                    "type": "integer"
-                                }
+                                "type": "object"
                             },
                             "externalPath": {
                                 "type": "string"
@@ -2813,10 +2801,7 @@
                     ],
                     "properties": {
                         "file": {
-                            "type": "array",
-                            "items": {
-                                "type": "integer"
-                            }
+                            "type": "object"
                         },
                         "password": {
                             "type": "string"

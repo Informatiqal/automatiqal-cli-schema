@@ -11,10 +11,7 @@
             "type": "string"
         },
         "file": {
-            "type": "array",
-            "items": {
-                "type": "integer"
-            }
+            "type": "object"
         },
         "operation": {
             "type": "string",

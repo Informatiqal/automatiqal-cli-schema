@@ -27,10 +27,7 @@
                 ],
                 "properties": {
                     "file": {
-                        "type": "array",
-                        "items": {
-                            "type": "integer"
-                        }
+                        "type": "object"
                     },
                     "externalPath": {
                         "type": "string"
