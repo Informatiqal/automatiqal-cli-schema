@@ -35,6 +35,21 @@
         "skip": {
             "type": "boolean"
         },
+        "options": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "multiple": {
+                    "type": "boolean"
+                },
+                "customPropertyOperation": {
+                    "$ref": "#/definitions/AddRemoveSet"
+                },
+                "tagOperation": {
+                    "$ref": "#/definitions/AddRemoveSet"
+                }
+            }
+        },
         "filter": {
             "type": "string",
             "description": "Filter to apply to retrieve the stream(s) to update"

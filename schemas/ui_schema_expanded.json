@@ -358,7 +358,13 @@
             },
             "details": {
                 "file": {
-                    "type": "object",
+                    "type": [
+                        "object",
+                        "string"
+                    ],
+                    "message": {
+                        "type": ""
+                    },
                     "title": "File",
                     "required": true
                 },
@@ -3364,6 +3370,30 @@
                         "description": "Value in format: CustomPropertyName=value"
                     },
                     "title": "Custom Properties"
+                }
+            },
+            "options": {
+                "multiple": {
+                    "type": "boolean",
+                    "title": "Multiple"
+                },
+                "customPropertyOperation": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Custom Property Operation"
+                },
+                "tagOperation": {
+                    "type": "string",
+                    "enum": [
+                        "add",
+                        "remove",
+                        "set"
+                    ],
+                    "title": "Tag Operation"
                 }
             },
             "filterAndSource": true
