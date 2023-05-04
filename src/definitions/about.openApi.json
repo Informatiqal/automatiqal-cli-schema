@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "description": "Get OpenAPI definitions",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "about.openApi"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

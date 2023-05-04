@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "description": "Get enums information",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "about.enums"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "description": "Get API description",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "about.apiDescription"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

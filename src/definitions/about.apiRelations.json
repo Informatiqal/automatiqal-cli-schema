@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "description": "Get API relations",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "about.apiRelations"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}
