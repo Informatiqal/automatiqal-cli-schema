@@ -362,9 +362,6 @@
                         "object",
                         "string"
                     ],
-                    "message": {
-                        "type": ""
-                    },
                     "title": "File",
                     "required": true
                 },
@@ -2557,16 +2554,31 @@
                         },
                         "oneOf": [
                             {
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    }
+                                },
                                 "required": [
                                     "id"
                                 ],
                                 "not": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    },
                                     "required": [
                                         "name"
                                     ]
                                 }
                             },
                             {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
                                 "required": [
                                     "name"
                                 ],
@@ -4820,6 +4832,14 @@
                     "title": "Tag Operations"
                 }
             }
+        },
+        "OneOf_1": {
+            "fields": {},
+            "filterOnly": true
+        },
+        "OneOf_2": {
+            "fields": {},
+            "sourceOnly": true
         }
     }
 }

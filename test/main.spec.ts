@@ -1,5 +1,5 @@
 import Ajv from "ajv";
-import { expect } from "chai";
+import { describe, it, expect } from "vitest";
 import { automatiqalSchema } from "../dist/index.js";
 
 describe("Automatiqal Schema Tests", function () {
@@ -11,17 +11,19 @@ describe("Automatiqal Schema Tests", function () {
       allErrors: true,
       strict: "log",
       // until https://github.com/ajv-validator/ajv/issues/1571 is resolved
-      strictRequired: false,
+      allowUnionTypes: true,
+      strictRequired: "log",
       logger: {
         log: console.log.bind(console),
-        warn: (a) => {
+        warn: (a: never) => {
           warnings.push(a);
         },
-        error: (a) => {
+        error: (a: never) => {
           errors.push(a);
         },
       },
     });
+
     const validate = ajv.compile(automatiqalSchema);
 
     expect(errors.length).to.be.equal(0, `ERRORS: \n\n ${errors.join("\n")}`) &&

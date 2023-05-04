@@ -47,6 +47,37 @@ async function generateRunbookSchema() {
     placeholder.definitions[utilDefinitionName] = utilDefinitionContent;
   }
 
+  placeholder.definitions["OneOf_1"] = {
+    type: "object",
+    properties: {
+      filter: {
+        type: "string",
+      },
+    },
+    required: ["filter"],
+    not: {
+      properties: {
+        source: {
+          type: "string",
+        },
+      },
+      required: ["source"],
+    },
+  };
+
+  placeholder.definitions["OneOf_2"] = {
+    type: "object",
+    properties: {
+      source: {
+        type: "string",
+      },
+    },
+    required: ["source"],
+    not: {
+      required: ["filter"],
+    },
+  };
+
   fs.writeFileSync(
     `./schemas/runbook_expanded.json`,
     JSON.stringify(placeholder, null, 4)

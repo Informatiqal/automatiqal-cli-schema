@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema",
     "title": "JSON Schema for Automatiqal runbook files",
     "description": "Automatiqal JSON schema (@informatiqal)",
     "type": "object",

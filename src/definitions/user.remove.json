@@ -37,24 +37,10 @@
     ],
     "oneOf": [
         {
-            "required": [
-                "filter"
-            ],
-            "not": {
-                "required": [
-                    "source"
-                ]
-            }
+            "$ref": "#/definitions/OneOf_1"
         },
         {
-            "required": [
-                "source"
-            ],
-            "not": {
-                "required": [
-                    "filter"
-                ]
-            }
+            "$ref": "#/definitions/OneOf_2"
         }
     ]
 }

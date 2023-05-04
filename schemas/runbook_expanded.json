@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema",
     "title": "JSON Schema for Automatiqal runbook files",
     "description": "Automatiqal JSON schema (@informatiqal)",
     "type": "object",
@@ -409,24 +409,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -485,24 +471,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -557,24 +529,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -709,24 +667,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -780,24 +724,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -905,24 +835,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -955,10 +871,7 @@
                             "type": [
                                 "object",
                                 "string"
-                            ],
-                            "message": {
-                                "type": ""
-                            }
+                            ]
                         },
                         "name": {
                             "type": "string"
@@ -1247,24 +1160,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -1343,24 +1242,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -1487,24 +1372,10 @@
             },
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -1642,24 +1513,10 @@
             },
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -1728,24 +1585,10 @@
             },
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -1799,24 +1642,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -1875,24 +1704,10 @@
             },
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -1946,24 +1761,10 @@
             },
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -2057,24 +1858,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -2240,24 +2027,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -2349,24 +2122,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -2569,24 +2328,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -2686,24 +2431,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -2877,24 +2608,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -2959,24 +2676,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -3611,24 +3314,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -3716,24 +3405,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -3908,24 +3583,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -3988,16 +3649,31 @@
                                 },
                                 "oneOf": [
                                     {
+                                        "properties": {
+                                            "id": {
+                                                "type": "string"
+                                            }
+                                        },
                                         "required": [
                                             "id"
                                         ],
                                         "not": {
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string"
+                                                }
+                                            },
                                             "required": [
                                                 "name"
                                             ]
                                         }
                                     },
                                     {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            }
+                                        },
                                         "required": [
                                             "name"
                                         ],
@@ -4578,24 +4254,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -4683,24 +4345,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -4887,24 +4535,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -4987,24 +4621,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -5308,24 +4928,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -5386,24 +4992,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -5550,24 +5142,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -5625,24 +5203,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -5760,24 +5324,10 @@
             },
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -5823,24 +5373,10 @@
             },
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -5886,24 +5422,10 @@
             },
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -6099,24 +5621,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -6190,24 +5698,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -6557,24 +6051,10 @@
             ],
             "oneOf": [
                 {
-                    "required": [
-                        "filter"
-                    ],
-                    "not": {
-                        "required": [
-                            "source"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_1"
                 },
                 {
-                    "required": [
-                        "source"
-                    ],
-                    "not": {
-                        "required": [
-                            "filter"
-                        ]
-                    }
+                    "$ref": "#/definitions/OneOf_2"
                 }
             ]
         },
@@ -6848,6 +6328,43 @@
                         "set"
                     ]
                 }
+            }
+        },
+        "OneOf_1": {
+            "type": "object",
+            "properties": {
+                "filter": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "filter"
+            ],
+            "not": {
+                "properties": {
+                    "source": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "source"
+                ]
+            }
+        },
+        "OneOf_2": {
+            "type": "object",
+            "properties": {
+                "source": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "source"
+            ],
+            "not": {
+                "required": [
+                    "filter"
+                ]
             }
         }
     }
