@@ -93,6 +93,24 @@
             "items": {
                 "anyOf": [
                     {
+                        "$ref": "#/definitions/about.apiDefaults"
+                    },
+                    {
+                        "$ref": "#/definitions/about.apiDescription"
+                    },
+                    {
+                        "$ref": "#/definitions/about.apiRelations"
+                    },
+                    {
+                        "$ref": "#/definitions/about.enums"
+                    },
+                    {
+                        "$ref": "#/definitions/about.get"
+                    },
+                    {
+                        "$ref": "#/definitions/about.openApi"
+                    },
+                    {
                         "$ref": "#/definitions/app.copy"
                     },
                     {
@@ -351,6 +369,216 @@
                         "$ref": "#/definitions/virtualProxy.update"
                     }
                 ]
+            }
+        },
+        "about.apiDefaults": {
+            "type": "object",
+            "description": "Get API default for specific entity (app, stream etc.)",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "about.apiDescription"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "path"
+                    ],
+                    "properties": {
+                        "path": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "onError": {
+                    "type": "object",
+                    "required": [
+                        "tasks"
+                    ],
+                    "properties": {
+                        "tasks": {
+                            "$ref": "#/definitions/tasks"
+                        }
+                    }
+                }
+            }
+        },
+        "about.apiDescription": {
+            "type": "object",
+            "description": "Get API description",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "about.apiDescription"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "onError": {
+                    "type": "object",
+                    "required": [
+                        "tasks"
+                    ],
+                    "properties": {
+                        "tasks": {
+                            "$ref": "#/definitions/tasks"
+                        }
+                    }
+                }
+            }
+        },
+        "about.apiRelations": {
+            "type": "object",
+            "description": "Get API relations",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "about.apiRelations"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "onError": {
+                    "type": "object",
+                    "required": [
+                        "tasks"
+                    ],
+                    "properties": {
+                        "tasks": {
+                            "$ref": "#/definitions/tasks"
+                        }
+                    }
+                }
+            }
+        },
+        "about.enums": {
+            "type": "object",
+            "description": "Get enums information",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "about.enums"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "onError": {
+                    "type": "object",
+                    "required": [
+                        "tasks"
+                    ],
+                    "properties": {
+                        "tasks": {
+                            "$ref": "#/definitions/tasks"
+                        }
+                    }
+                }
+            }
+        },
+        "about.get": {
+            "type": "object",
+            "description": "Get about information",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "about.get"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "onError": {
+                    "type": "object",
+                    "required": [
+                        "tasks"
+                    ],
+                    "properties": {
+                        "tasks": {
+                            "$ref": "#/definitions/tasks"
+                        }
+                    }
+                }
+            }
+        },
+        "about.openApi": {
+            "type": "object",
+            "description": "Get OpenAPI definitions",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "about.openApi"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "onError": {
+                    "type": "object",
+                    "required": [
+                        "tasks"
+                    ],
+                    "properties": {
+                        "tasks": {
+                            "$ref": "#/definitions/tasks"
+                        }
+                    }
+                }
             }
         },
         "app.copy": {
