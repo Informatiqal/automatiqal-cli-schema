@@ -19,6 +19,11 @@ async function generateRunbookSchema() {
       fs.readFileSync(`./src/definitions/${definition}`)
     );
 
+    definitionContent.properties["description"] = {
+      type: "string",
+      description: "Task description (multiline is supported)",
+    };
+
     definitionContent.properties.onError = {
       $ref: `#/definitions/onError`,
     };
