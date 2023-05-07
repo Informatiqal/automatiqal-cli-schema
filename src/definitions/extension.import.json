@@ -26,7 +26,10 @@
             ],
             "properties": {
                 "file": {
-                    "type": "object"
+                    "type": [
+                        "object",
+                        "string"
+                    ]
                 },
                 "password": {
                     "type": "string"

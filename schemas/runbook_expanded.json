@@ -404,15 +404,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -437,15 +429,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -470,15 +454,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -503,15 +479,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -536,15 +504,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -569,15 +529,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -620,15 +572,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -682,15 +626,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -740,15 +676,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -790,15 +718,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -824,15 +744,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -877,15 +789,7 @@
                     ]
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -935,15 +839,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -994,15 +890,7 @@
                     ]
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -1045,15 +933,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -1110,15 +990,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -1159,15 +1031,7 @@
                     ]
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -1193,15 +1057,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -1252,15 +1108,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -1321,15 +1169,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -1371,15 +1211,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -1452,15 +1284,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -1525,15 +1349,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -1587,15 +1403,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "oneOf": [
@@ -1633,15 +1441,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -1667,15 +1467,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -1706,7 +1498,10 @@
                     ],
                     "properties": {
                         "file": {
-                            "type": "object"
+                            "type": [
+                                "object",
+                                "string"
+                            ]
                         },
                         "externalPath": {
                             "type": "string"
@@ -1728,15 +1523,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "oneOf": [
@@ -1777,7 +1564,10 @@
                         ],
                         "properties": {
                             "file": {
-                                "type": "object"
+                                "type": [
+                                    "object",
+                                    "string"
+                                ]
                             },
                             "externalPath": {
                                 "type": "string"
@@ -1800,15 +1590,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "oneOf": [
@@ -1853,15 +1635,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -1919,15 +1693,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "oneOf": [
@@ -1976,15 +1742,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "oneOf": [
@@ -2068,15 +1826,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -2163,15 +1913,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -2201,15 +1943,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -2238,15 +1972,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -2332,15 +2058,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -2430,15 +2148,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -2468,15 +2178,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -2502,15 +2204,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -2539,15 +2233,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -2641,15 +2327,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -2692,15 +2370,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -2726,15 +2396,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -2766,7 +2428,10 @@
                     ],
                     "properties": {
                         "file": {
-                            "type": "object"
+                            "type": [
+                                "object",
+                                "string"
+                            ]
                         },
                         "password": {
                             "type": "string"
@@ -2774,15 +2439,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -2819,15 +2476,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -2886,15 +2535,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -3136,15 +2777,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -3341,15 +2974,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -3408,15 +3033,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -3446,15 +3063,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -3480,15 +3089,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -3525,15 +3126,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -3615,15 +3208,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -3666,15 +3251,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -3700,15 +3277,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -3793,15 +3362,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -3917,15 +3478,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -4154,15 +3707,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -4359,15 +3904,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -4420,15 +3957,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -4465,15 +3994,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -4555,15 +4076,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -4606,15 +4119,7 @@
                     "type": "string"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -4663,15 +4168,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -4701,15 +4198,7 @@
                     "type": "string"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -4746,15 +4235,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -4831,15 +4312,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -4947,15 +4420,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -4981,15 +4446,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -5019,15 +4476,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -5094,15 +4543,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -5139,15 +4580,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -5202,15 +4635,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -5260,15 +4685,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -5308,15 +4725,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -5353,15 +4762,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -5413,15 +4814,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -5464,15 +4857,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -5498,15 +4883,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -5539,15 +4916,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "oneOf": [
@@ -5588,15 +4957,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "oneOf": [
@@ -5637,15 +4998,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "oneOf": [
@@ -5715,15 +5068,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -5753,15 +5098,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -5787,15 +5124,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -5832,15 +5161,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -5908,15 +5229,7 @@
                     "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -6145,15 +5458,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -6183,15 +5488,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -6217,15 +5514,7 @@
                     "type": "boolean"
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -6262,15 +5551,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             },
             "required": [
@@ -6513,15 +5794,7 @@
                     }
                 },
                 "onError": {
-                    "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
-                        }
-                    }
+                    "$ref": "#/definitions/onError"
                 }
             }
         },
@@ -6594,6 +5867,43 @@
                     "filter"
                 ]
             }
+        },
+        "onError": {
+            "oneOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "tasks": {
+                            "$ref": "#/definitions/tasks"
+                        }
+                    },
+                    "required": [
+                        "tasks"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "exit": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "exit"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "ignore": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "ignore"
+                    ]
+                }
+            ]
         }
     }
 }

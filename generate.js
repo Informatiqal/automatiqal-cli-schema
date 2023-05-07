@@ -20,13 +20,7 @@ async function generateRunbookSchema() {
     );
 
     definitionContent.properties.onError = {
-      type: "object",
-      required: ["tasks"],
-      properties: {
-        tasks: {
-          $ref: "#/definitions/tasks",
-        },
-      },
+      $ref: `#/definitions/onError`,
     };
 
     placeholder.definitions.tasks.items.anyOf.push({
@@ -76,6 +70,39 @@ async function generateRunbookSchema() {
     not: {
       required: ["filter"],
     },
+  };
+
+  placeholder.definitions["onError"] = {
+    // type: "object",
+    oneOf: [
+      {
+        type: "object",
+        properties: {
+          tasks: {
+            $ref: "#/definitions/tasks",
+          },
+        },
+        required: ["tasks"],
+      },
+      {
+        type: "object",
+        properties: {
+          exit: {
+            type: "boolean",
+          },
+        },
+        required: ["exit"],
+      },
+      {
+        type: "object",
+        properties: {
+          ignore: {
+            type: "boolean",
+          },
+        },
+        required: ["ignore"],
+      },
+    ],
   };
 
   fs.writeFileSync(
@@ -294,8 +321,8 @@ function nameToTitle(name) {
   const runbookSchema = await generateRunbookSchema();
   await generateModuleFile(runbookSchema);
 
-  const uiPseudoSchema = await generateUISchema(runbookSchema);
-  await appendUISchemaToModule(uiPseudoSchema);
+  // const uiPseudoSchema = await generateUISchema(runbookSchema);
+  // await appendUISchemaToModule(uiPseudoSchema);
 
   console.log("Done");
 })();

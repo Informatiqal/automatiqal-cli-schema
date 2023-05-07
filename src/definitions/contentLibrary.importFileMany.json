@@ -27,7 +27,10 @@
                 ],
                 "properties": {
                     "file": {
-                        "type": "object"
+                        "type": [
+                            "object",
+                            "string"
+                        ]
                     },
                     "externalPath": {
                         "type": "string"

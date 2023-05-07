@@ -32,14 +32,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -65,14 +70,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -91,14 +101,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -117,14 +132,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -143,14 +163,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -169,14 +194,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -196,14 +226,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -235,14 +270,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -274,14 +314,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -308,14 +353,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -335,14 +385,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -361,14 +416,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -401,14 +461,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -434,14 +499,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -468,14 +538,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -508,14 +583,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -554,14 +634,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -587,14 +672,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -613,14 +703,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -669,14 +764,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -728,14 +828,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -761,14 +866,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -820,14 +930,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -871,14 +986,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -913,14 +1033,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -940,14 +1065,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -966,14 +1096,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1009,14 +1144,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1064,14 +1204,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1097,14 +1242,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1131,14 +1281,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1169,14 +1324,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1244,14 +1404,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1318,14 +1483,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1345,14 +1515,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1372,14 +1547,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1446,14 +1626,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1527,14 +1712,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1554,14 +1744,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -1580,14 +1775,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1607,14 +1807,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1690,14 +1895,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1717,14 +1927,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -1743,14 +1958,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1780,14 +2000,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1813,14 +2038,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -1857,14 +2087,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -2089,14 +2324,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -2286,14 +2526,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -2343,14 +2588,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -2370,14 +2620,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -2396,14 +2651,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -2429,14 +2689,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -2524,14 +2789,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -2551,14 +2821,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -2577,14 +2852,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -2671,14 +2951,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -2772,14 +3057,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3004,14 +3294,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3201,14 +3496,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3253,14 +3553,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3286,14 +3591,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3381,14 +3691,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3408,14 +3723,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3455,14 +3775,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3482,14 +3807,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3515,14 +3845,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3587,14 +3922,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3686,14 +4026,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -3712,14 +4057,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3739,14 +4089,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3808,14 +4163,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3841,14 +4201,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3881,14 +4246,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3914,14 +4284,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3950,14 +4325,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -3983,14 +4363,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4017,14 +4402,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4044,14 +4434,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -4070,14 +4465,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4097,14 +4497,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4124,14 +4529,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4151,14 +4561,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4214,14 +4629,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4241,14 +4661,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -4267,14 +4692,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4300,14 +4730,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4356,14 +4791,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4610,14 +5050,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4637,14 +5082,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             }
@@ -4663,14 +5113,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
@@ -4696,14 +5151,19 @@
                 },
                 "onError": {
                     "type": "object",
-                    "required": [
-                        "tasks"
-                    ],
-                    "properties": {
-                        "tasks": {
-                            "$ref": "#/definitions/tasks"
+                    "oneOf": [
+                        {
+                            "tasks": {
+                                "$ref": "#/definitions/tasks"
+                            },
+                            "exit": {
+                                "type": "boolean"
+                            },
+                            "ignore": {
+                                "type": "boolean"
+                            }
                         }
-                    },
+                    ],
                     "title": "On Error"
                 }
             },
