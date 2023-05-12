@@ -3641,26 +3641,37 @@
                         "enabled": {
                             "type": "boolean"
                         },
-                        "eventTasks": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "string"
-                                    },
-                                    "name": {
-                                        "type": "string"
-                                    },
-                                    "state": {
-                                        "type": "string",
-                                        "enum": [
-                                            "success",
-                                            "fail"
-                                        ]
-                                    }
-                                }
-                            }
+                        "repeat": {
+                            "type": "string",
+                            "enum": [
+                                "Once",
+                                "Minute",
+                                "Hourly",
+                                "Daily",
+                                "Weekly",
+                                "Monthly"
+                            ]
+                        },
+                        "repeatEvery": {
+                            "type": "integer"
+                        },
+                        "startDate": {
+                            "type": "string"
+                        },
+                        "expirationDate": {
+                            "type": "string"
+                        },
+                        "daysOfWeek": {
+                            "$ref": "#/definitions/DaysOfWeek"
+                        },
+                        "daysOfMonth": {
+                            "$ref": "#/definitions/DaysOfMonth"
+                        },
+                        "timeZone": {
+                            "$ref": "#/definitions/TimeZones"
+                        },
+                        "daylightSavingTime": {
+                            "type": "boolean"
                         }
                     }
                 },
