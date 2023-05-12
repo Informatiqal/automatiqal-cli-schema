@@ -110,6 +110,10 @@ async function generateRunbookSchema() {
     ],
   };
 
+  placeholder.definitions["DaysOfWeek"] = definitionDaysOfWeek();
+  placeholder.definitions["DaysOfMonth"] = definitionDaysOfMonth();
+  placeholder.definitions["TimeZones"] = definitionDaysTimeZones();
+
   fs.writeFileSync(
     `./schemas/runbook_expanded.json`,
     JSON.stringify(placeholder, null, 4)
@@ -331,3 +335,117 @@ function nameToTitle(name) {
 
   console.log("Done");
 })();
+
+function definitionDaysOfWeek() {
+  return {
+    type: "array",
+    items: {
+      type: "string",
+      enum: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+    },
+  };
+}
+
+function definitionDaysOfMonth() {
+  return {
+    type: "array",
+    items: {
+      type: "integer",
+      enum: [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
+      ],
+    },
+  };
+}
+
+function definitionDaysTimeZones() {
+  return {
+    type: "string",
+    enum: [
+      "Pacific/Honolulu",
+      "America/Anchorage",
+      "America/Los_Angeles",
+      "America/Denver",
+      "America/Mazatlan",
+      "America/Phoenix",
+      "America/Belize",
+      "America/Chicago",
+      "America/Mexico_City",
+      "America/Regina",
+      "America/Bogota",
+      "America/Indianapolis",
+      "America/New_York",
+      "America/Caracas",
+      "America/Halifax",
+      "America/St_Johns",
+      "America/Buenos_Aires",
+      "America/Godthab",
+      "America/Santiago",
+      "America/Sao_Paulo",
+      "Atlantic/South_Georgia",
+      "Atlantic/Azores",
+      "Atlantic/Cape_Verde",
+      "UTC",
+      "Atlantic/Reykjavik",
+      "Africa/Casablanca",
+      "Europe/Dublin",
+      "Europe/Belgrade",
+      "Europe/Paris",
+      "Europe/Warsaw",
+      "Africa/Cairo",
+      "Africa/Harare",
+      "Asia/Jerusalem",
+      "Europe/Athens",
+      "Europe/Bucharest",
+      "Europe/Helsinki",
+      "Africa/Nairobi",
+      "Asia/Baghdad",
+      "Asia/Kuwait",
+      "Europe/Minsk",
+      "Europe/Moscow",
+      "Asia/Tehran",
+      "Asia/Baku",
+      "Asia/Muscat",
+      "Asia/Kabul",
+      "Asia/Karachi",
+      "Asia/Yekaterinburg",
+      "Asia/Calcutta",
+      "Asia/Colombo",
+      "Asia/Katmandu",
+      "Asia/Almaty",
+      "Asia/Dhaka",
+      "Asia/Rangoon",
+      "Asia/Bangkok",
+      "Asia/Krasnoyarsk",
+      "Asia/Hong_Kong",
+      "Asia/Irkutsk",
+      "Asia/Kuala_Lumpur",
+      "Asia/Taipei",
+      "Australia/Perth",
+      "Asia/Seoul",
+      "Asia/Tokyo",
+      "Asia/Yakutsk",
+      "Australia/Adelaide",
+      "Australia/Darwin",
+      "Asia/Vladivostok",
+      "Australia/Brisbane",
+      "Australia/Hobart",
+      "Australia/Sydney",
+      "Pacific/Guam",
+      "Pacific/Noumea",
+      "Pacific/Auckland",
+      "Pacific/Fiji",
+      "Pacific/Apia",
+      "Pacific/Tongatapu",
+    ],
+  };
+}

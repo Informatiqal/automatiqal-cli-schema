@@ -14,7 +14,9 @@
         "details": {
             "type": "object",
             "required": [
-                "name"
+                "name",
+                "eventTasks",
+                "task"
             ],
             "properties": {
                 "name": {
@@ -28,12 +30,6 @@
                     "items": {
                         "type": "object",
                         "properties": {
-                            "id": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
                             "state": {
                                 "type": "string",
                                 "enum": [
@@ -41,8 +37,101 @@
                                     "fail"
                                 ]
                             }
+                        },
+                        "oneOf": [
+                            {
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "id"
+                                ],
+                                "not": {
+                                    "properties": {
+                                        "filter": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "filter"
+                                    ]
+                                }
+                            },
+                            {
+                                "properties": {
+                                    "filter": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "filter"
+                                ],
+                                "not": {
+                                    "required": [
+                                        "id"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "timeConstraints": {
+                    "type": "object",
+                    "properties": {
+                        "days": {
+                            "type": "integer"
+                        },
+                        "hours": {
+                            "type": "integer"
+                        },
+                        "minutes": {
+                            "type": "integer"
+                        },
+                        "seconds": {
+                            "type": "integer"
                         }
                     }
+                },
+                "task": {
+                    "oneOf": [
+                        {
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "id"
+                            ],
+                            "not": {
+                                "properties": {
+                                    "filter": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "filter"
+                                ]
+                            }
+                        },
+                        {
+                            "properties": {
+                                "filter": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "filter"
+                            ],
+                            "not": {
+                                "required": [
+                                    "id"
+                                ]
+                            }
+                        }
+                    ]
                 }
             }
         },

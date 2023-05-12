@@ -1,0 +1,110 @@
+{
+    "type": "object",
+    "description": "Create new schema trigger",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "schemaTrigger.create"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "name",
+                "task",
+                "repeat"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "repeat": {
+                    "type": "string",
+                    "enum": [
+                        "Once",
+                        "Minute",
+                        "Hourly",
+                        "Daily",
+                        "Weekly",
+                        "Monthly"
+                    ]
+                },
+                "repeatEvery": {
+                    "type": "integer"
+                },
+                "startDate": {
+                    "type": "string"
+                },
+                "expirationDate": {
+                    "type": "string"
+                },
+                "daysOfWeek": {
+                    "$ref": "#/definitions/DaysOfWeek"
+                },
+                "daysOfMonth": {
+                    "$ref": "#/definitions/DaysOfMonth"
+                },
+                "timeZone": {
+                    "$ref": "#/definitions/TimeZones"
+                },
+                "daylightSavingTime": {
+                    "type": "boolean"
+                },
+                "task": {
+                    "oneOf": [
+                        {
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "id"
+                            ],
+                            "not": {
+                                "properties": {
+                                    "filter": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "filter"
+                                ]
+                            }
+                        },
+                        {
+                            "properties": {
+                                "filter": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "filter"
+                            ],
+                            "not": {
+                                "required": [
+                                    "id"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ]
+}
