@@ -97,6 +97,7 @@
                 "task": {
                     "oneOf": [
                         {
+                            "type": "object",
                             "properties": {
                                 "id": {
                                     "type": "string"
@@ -117,6 +118,7 @@
                             }
                         },
                         {
+                            "type": "object",
                             "properties": {
                                 "filter": {
                                     "type": "string"
