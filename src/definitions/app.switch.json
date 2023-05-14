@@ -32,5 +32,13 @@
                 "targetAppId"
             ]
         }
-    }
+    },
+    "oneOf": [
+        {
+            "$ref": "#/definitions/OneOf_1"
+        },
+        {
+            "$ref": "#/definitions/OneOf_2"
+        }
+    ]
 }
