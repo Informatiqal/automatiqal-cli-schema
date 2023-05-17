@@ -25,6 +25,7 @@ describe("Automatiqal Schema Tests", function () {
         },
       },
     });
+    // require("ajv-errors")(ajv /*, {singleError: true} */);
 
     validate = ajv.compile(automatiqalSchema);
   });

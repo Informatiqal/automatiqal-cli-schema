@@ -3,7 +3,7 @@
     "description": "Create new schema trigger",
     "properties": {
         "name": {
-            "type": "string"
+            "$ref": "#/definitions/TaskName"
         },
         "operation": {
             "type": "string",

@@ -3,7 +3,7 @@
     "description": "Remove system rule",
     "properties": {
         "name": {
-            "type": "string"
+            "$ref": "#/definitions/TaskName"
         },
         "operation": {
             "type": "string",

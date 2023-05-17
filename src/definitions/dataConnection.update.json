@@ -3,7 +3,7 @@
     "description": "Update data connection/connections properties",
     "properties": {
         "name": {
-            "type": "string"
+            "$ref": "#/definitions/TaskName"
         },
         "operation": {
             "type": "string",

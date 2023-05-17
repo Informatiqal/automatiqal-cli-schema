@@ -3,7 +3,7 @@
     "description": "Update content library/libraries properties",
     "properties": {
         "name": {
-            "type": "string"
+            "$ref": "#/definitions/TaskName"
         },
         "operation": {
             "type": "string",

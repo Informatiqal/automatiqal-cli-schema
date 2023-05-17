@@ -3,7 +3,7 @@
     "description": "Remove virtual proxy(ies",
     "properties": {
         "name": {
-            "type": "string"
+            "$ref": "#/definitions/TaskName"
         },
         "operation": {
             "type": "string",

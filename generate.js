@@ -113,6 +113,7 @@ async function generateRunbookSchema() {
   placeholder.definitions["DaysOfWeek"] = definitionDaysOfWeek();
   placeholder.definitions["DaysOfMonth"] = definitionDaysOfMonth();
   placeholder.definitions["TimeZones"] = definitionDaysTimeZones();
+  placeholder.definitions["TaskName"] = definitionTaskNameProperty();
 
   fs.writeFileSync(
     `./schemas/runbook_expanded.json`,
@@ -447,5 +448,14 @@ function definitionDaysTimeZones() {
       "Pacific/Apia",
       "Pacific/Tongatapu",
     ],
+  };
+}
+
+function definitionTaskNameProperty() {
+  return {
+    type: "string",
+    description: "Unique name of the task. It should not contain #",
+    pattern: "^[^#]*$",
+    errorMessage: "Task name should not contain #",
   };
 }

@@ -8,8 +8,7 @@
     ],
     "properties": {
         "name": {
-            "type": "string",
-            "pattern": "^[^#]+$"
+            "$ref": "#/definitions/TaskName"
         },
         "operation": {
             "type": "string",
