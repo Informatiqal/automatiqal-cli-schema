@@ -25,6 +25,17 @@
                 }
             }
         },
+        "options": {
+            "type": "object",
+            "properties": {
+                "multiple": {
+                    "type": "boolean"
+                },
+                "tagOperation": {
+                    "$ref": "#/definitions/AddRemoveSet"
+                }
+            }
+        },        
         "skip": {
             "type": "boolean"
         },

@@ -32,9 +32,6 @@
                 "tagOperation": {
                     "$ref": "#/definitions/AddRemoveSet"
                 },
-                "appendTags": {
-                    "type": "boolean"
-                },
                 "whitelistOperation": {
                     "$ref": "#/definitions/AddRemoveSet"
                 }

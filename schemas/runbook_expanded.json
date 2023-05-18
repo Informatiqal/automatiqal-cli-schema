@@ -978,6 +978,20 @@
                         }
                     }
                 },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        },
+                        "customPropertyOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "tagOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        }
+                    }
+                },
                 "skip": {
                     "type": "boolean"
                 },
@@ -2012,21 +2026,11 @@
                         "multiple": {
                             "type": "boolean"
                         },
-                        "customPropertyOperations": {
-                            "type": "string",
-                            "enum": [
-                                "add",
-                                "remove",
-                                "set"
-                            ]
+                        "customPropertyOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
                         },
-                        "tagOperations": {
-                            "type": "string",
-                            "enum": [
-                                "add",
-                                "remove",
-                                "set"
-                            ]
+                        "tagOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
                         }
                     }
                 },
@@ -2549,21 +2553,11 @@
                         "multiple": {
                             "type": "boolean"
                         },
-                        "customPropertyOperations": {
-                            "type": "string",
-                            "enum": [
-                                "add",
-                                "remove",
-                                "set"
-                            ]
+                        "customPropertyOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
                         },
-                        "tagOperations": {
-                            "type": "string",
-                            "enum": [
-                                "add",
-                                "remove",
-                                "set"
-                            ]
+                        "tagOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
                         }
                     }
                 },
@@ -2792,6 +2786,20 @@
                                 "type": "string",
                                 "description": "Value in format: CustomPropertyName=value"
                             }
+                        }
+                    }
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        },
+                        "customPropertyOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "tagOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
                         }
                     }
                 },
@@ -3225,6 +3233,20 @@
                             "items": {
                                 "type": "string"
                             }
+                        }
+                    }
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        },
+                        "customPropertyOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "tagOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
                         }
                     }
                 },
@@ -4289,6 +4311,17 @@
                         }
                     }
                 },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        },
+                        "tagOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        }
+                    }
+                },
                 "skip": {
                     "type": "boolean"
                 },
@@ -4939,6 +4972,20 @@
                         }
                     }
                 },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        },
+                        "customPropertyOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "tagOperation": {
+                            "$ref": "#/definitions/AddRemoveSet"
+                        }
+                    }
+                },
                 "skip": {
                     "type": "boolean"
                 },
@@ -5342,9 +5389,6 @@
                         "tagOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
                         },
-                        "appendTags": {
-                            "type": "boolean"
-                        },
                         "whitelistOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
                         }
@@ -5558,21 +5602,11 @@
                 "multiple": {
                     "type": "boolean"
                 },
-                "customPropertyOperations": {
-                    "type": "string",
-                    "enum": [
-                        "add",
-                        "remove",
-                        "set"
-                    ]
+                "customPropertyOperation": {
+                    "$ref": "#/definitions/AddRemoveSet"
                 },
-                "tagOperations": {
-                    "type": "string",
-                    "enum": [
-                        "add",
-                        "remove",
-                        "set"
-                    ]
+                "tagOperation": {
+                    "$ref": "#/definitions/AddRemoveSet"
                 }
             }
         },
@@ -5786,6 +5820,7 @@
         },
         "TaskName": {
             "type": "string",
+            "description": "Unique name of the task. It should not contain #",
             "pattern": "^[^#]*$",
             "errorMessage": "Task name should not contain #"
         }

@@ -67,6 +67,20 @@
                 }
             }
         },
+        "options": {
+            "type": "object",
+            "properties": {
+                "multiple": {
+                    "type": "boolean"
+                },
+                "customPropertyOperation": {
+                    "$ref": "#/definitions/AddRemoveSet"
+                },
+                "tagOperation": {
+                    "$ref": "#/definitions/AddRemoveSet"
+                }
+            }
+        },
         "skip": {
             "type": "boolean"
         },

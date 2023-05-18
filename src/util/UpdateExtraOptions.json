@@ -4,21 +4,11 @@
         "multiple": {
             "type": "boolean"
         },
-        "customPropertyOperations": {
-            "type": "string",
-            "enum": [
-                "add",
-                "remove",
-                "set"
-            ]
+        "customPropertyOperation": {
+            "$ref": "#/definitions/AddRemoveSet"
         },
-        "tagOperations": {
-            "type": "string",
-            "enum": [
-                "add",
-                "remove",
-                "set"
-            ]
+        "tagOperation": {
+            "$ref": "#/definitions/AddRemoveSet"
         }
     }
 }
