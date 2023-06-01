@@ -611,7 +611,7 @@
         },
         "app.export": {
             "type": "object",
-            "description": "Export app/apps",
+            "description": "Export app",
             "properties": {
                 "name": {
                     "$ref": "#/definitions/TaskName"
@@ -635,10 +635,13 @@
                 },
                 "details": {
                     "type": "object",
+                    "required": [
+                        "location"
+                    ],
                     "properties": {
-                        "token": {
+                        "location": {
                             "type": "string",
-                            "description": "App new name"
+                            "description": "The folder path where the app will be downloaded"
                         },
                         "skipData": {
                             "type": "boolean",
@@ -693,7 +696,14 @@
                 },
                 "details": {
                     "type": "object",
+                    "required": [
+                        "location"
+                    ],
                     "properties": {
+                        "location": {
+                            "type": "string",
+                            "description": "The folder path where the apps will be downloaded"
+                        },
                         "skipData": {
                             "type": "boolean",
                             "description": "Export without data"
@@ -1581,8 +1591,12 @@
                             "items": {
                                 "type": "object",
                                 "properties": {
-                                    "sourceFileName": {
-                                        "type": "string"
+                                    "sourceFileNames": {
+                                        "type": "array",
+                                        "minItems": 1,
+                                        "items": {
+                                            "type": "string"
+                                        }
                                     }
                                 }
                             }
