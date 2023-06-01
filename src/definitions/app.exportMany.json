@@ -24,7 +24,14 @@
         },
         "details": {
             "type": "object",
+            "required": [
+                "location"
+            ],
             "properties": {
+                "location": {
+                    "type": "string",
+                    "description": "The folder path where the apps will be downloaded"
+                },
                 "skipData": {
                     "type": "boolean",
                     "description": "Export without data"

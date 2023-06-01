@@ -28,8 +28,12 @@
                     "items": {
                         "type": "object",
                         "properties": {
-                            "sourceFileName": {
-                                "type": "string"
+                            "sourceFileNames": {
+                                "type": "array",
+                                "minItems": 1,
+                                "items": {
+                                    "type": "string"
+                                }
                             }
                         }
                     }

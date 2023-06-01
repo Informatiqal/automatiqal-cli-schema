@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "Export app/apps",
+    "description": "Export app",
     "properties": {
         "name": {
             "$ref": "#/definitions/TaskName"
@@ -24,10 +24,13 @@
         },
         "details": {
             "type": "object",
+            "required": [
+                "location"
+            ],
             "properties": {
-                "token": {
+                "location": {
                     "type": "string",
-                    "description": "App new name"
+                    "description": "The folder path where the app will be downloaded"
                 },
                 "skipData": {
                     "type": "boolean",
