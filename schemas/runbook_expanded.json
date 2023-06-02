@@ -659,7 +659,8 @@
             },
             "required": [
                 "name",
-                "operation"
+                "operation",
+                "details"
             ],
             "oneOf": [
                 {
