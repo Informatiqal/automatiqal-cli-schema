@@ -162,6 +162,9 @@
                         "$ref": "#/definitions/contentLibrary.create"
                     },
                     {
+                        "$ref": "#/definitions/contentLibrary.export"
+                    },
+                    {
                         "$ref": "#/definitions/contentLibrary.exportMany"
                     },
                     {
@@ -1562,6 +1565,68 @@
                 }
             }
         },
+        "contentLibrary.export": {
+            "type": "object",
+            "description": "Export single file from content library",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "contentLibrary.export"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "location",
+                        "sourceFileName"
+                    ],
+                    "properties": {
+                        "location": {
+                            "type": "string"
+                        },
+                        "sourceFileName": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the content library"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
         "contentLibrary.exportMany": {
             "type": "object",
             "description": "Export multiple files from content library",
@@ -1584,22 +1649,18 @@
                 "details": {
                     "type": "object",
                     "required": [
-                        "files"
+                        "location",
+                        "sourceFileNames"
                     ],
                     "properties": {
-                        "files": {
+                        "location": {
+                            "type": "string"
+                        },
+                        "sourceFileNames": {
                             "type": "array",
+                            "minItems": 1,
                             "items": {
-                                "type": "object",
-                                "properties": {
-                                    "sourceFileNames": {
-                                        "type": "array",
-                                        "minItems": 1,
-                                        "items": {
-                                            "type": "string"
-                                        }
-                                    }
-                                }
+                                "type": "string"
                             }
                         }
                     }

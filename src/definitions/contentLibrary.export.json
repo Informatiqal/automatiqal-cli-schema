@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "Export multiple files from content library",
+    "description": "Export single file from content library",
     "required": [
         "name",
         "operation",
@@ -14,25 +14,21 @@
             "type": "string",
             "readOnly": true,
             "enum": [
-                "contentLibrary.exportMany"
+                "contentLibrary.export"
             ]
         },
         "details": {
             "type": "object",
             "required": [
                 "location",
-                "sourceFileNames"
+                "sourceFileName"
             ],
             "properties": {
                 "location": {
                     "type": "string"
                 },
-                "sourceFileNames": {
-                    "type": "array",
-                    "minItems": 1,
-                    "items": {
-                        "type": "string"
-                    }
+                "sourceFileName": {
+                    "type": "string"
                 }
             }
         },
