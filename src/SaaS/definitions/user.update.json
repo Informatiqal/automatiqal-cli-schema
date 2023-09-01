@@ -1,0 +1,76 @@
+{
+    "type": "object",
+    "description": "Update existing user",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "user.update"
+            ]
+        },
+        "details": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "anyOf": [
+                            {
+                                "enum": [
+                                    "name",
+                                    "assignedRoles",
+                                    "inviteExpiry",
+                                    "zoneinfo",
+                                    "locale",
+                                    "preferredZoneinfo",
+                                    "preferredLocale",
+                                    "status"
+                                ]
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "op": {
+                        "type": "string",
+                        "enum": [
+                            "add",
+                            "replace",
+                            "renew"
+                        ]
+                    },
+                    "value": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}
