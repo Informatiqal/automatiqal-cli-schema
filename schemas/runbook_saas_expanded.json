@@ -129,6 +129,18 @@
                     },
                     {
                         "$ref": "#/definitions/app.update"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.get"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.update"
                     }
                 ]
             }
@@ -164,7 +176,7 @@
                 },
                 "details": {
                     "type": "object",
-                    "description": [
+                    "required": [
                         "tenantId"
                     ],
                     "properties": {
@@ -221,7 +233,7 @@
                 },
                 "details": {
                     "type": "object",
-                    "description": [
+                    "required": [
                         "tenantId",
                         "config"
                     ],
@@ -254,14 +266,6 @@
                         }
                     }
                 },
-                "oneOf": [
-                    {
-                        "$ref": "#/definitions/OneOf_1"
-                    },
-                    {
-                        "$ref": "#/definitions/OneOf_2"
-                    }
-                ],
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
@@ -269,7 +273,15 @@
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
-            }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
         },
         "apiKey.create": {
             "type": "object",
@@ -469,7 +481,7 @@
                 },
                 "details": {
                     "type": "object",
-                    "description": [
+                    "required": [
                         "name"
                     ],
                     "properties": {
@@ -1139,6 +1151,275 @@
                         "ownerId": {
                             "type": "string"
                         }
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "extension.get": {
+            "type": "object",
+            "description": "Get instance of extension/extensions",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "extension.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "extension.getAll": {
+            "type": "object",
+            "description": "Get instance of all extensions",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "extension.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "extension.remove": {
+            "type": "object",
+            "description": "Remove extension/extensions",
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "extension.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the extensions to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "extension.update": {
+            "type": "object",
+            "description": "Update extension(s) properties",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "extension.update"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "file": {
+                            "type": [
+                                "string",
+                                "object"
+                            ]
+                        },
+                        "details": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "string"
+                                },
+                                "tags": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "author": {
+                                    "type": "string"
+                                },
+                                "bundle": {
+                                    "type": "object",
+                                    "required": [
+                                        "id",
+                                        "name"
+                                    ],
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "userId": {
+                                    "type": "string"
+                                },
+                                "bundled": {
+                                    "type": "boolean"
+                                },
+                                "license": {
+                                    "type": "string"
+                                },
+                                "preview": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                },
+                                "checksum": {
+                                    "type": "string"
+                                },
+                                "homepage": {
+                                    "type": "string"
+                                },
+                                "keywords": {
+                                    "type": "string"
+                                },
+                                "loadpath": {
+                                    "type": "string"
+                                },
+                                "supplier": {
+                                    "type": "string"
+                                },
+                                "tenantId": {
+                                    "type": "string"
+                                },
+                                "supernova": {
+                                    "type": "boolean"
+                                },
+                                "deprecated": {
+                                    "type": "string"
+                                },
+                                "repository": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "qextVersion": {
+                                    "type": "string"
+                                },
+                                "qextFilename": {
+                                    "type": "string"
+                                },
+                                "dependencies": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "skip": {
+                        "type": "boolean"
+                    },
+                    "filter": {
+                        "type": "string",
+                        "description": "Filter to apply to retrieve the extension(s) to update"
+                    },
+                    "source": {
+                        "type": "string",
+                        "description": "Name of previously defined tasks. Use the result of the task as source"
                     }
                 },
                 "description": {

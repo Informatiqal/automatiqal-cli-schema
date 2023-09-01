@@ -29,7 +29,7 @@
         },
         "details": {
             "type": "object",
-            "description": [
+            "required": [
                 "tenantId"
             ],
             "properties": {

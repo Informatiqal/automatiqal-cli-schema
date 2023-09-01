@@ -29,7 +29,7 @@
         },
         "details": {
             "type": "object",
-            "description": [
+            "required": [
                 "tenantId",
                 "config"
             ],
@@ -61,14 +61,14 @@
                     }
                 }
             }
+        }
+    },
+    "oneOf": [
+        {
+            "$ref": "#/definitions/OneOf_1"
         },
-        "oneOf": [
-            {
-                "$ref": "#/definitions/OneOf_1"
-            },
-            {
-                "$ref": "#/definitions/OneOf_2"
-            }
-        ]
-    }
+        {
+            "$ref": "#/definitions/OneOf_2"
+        }
+    ]
 }

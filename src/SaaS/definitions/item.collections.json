@@ -1,10 +1,9 @@
 {
     "type": "object",
-    "description": "Update API key",
+    "description": "Get item collections",
     "required": [
         "name",
-        "operation",
-        "details"
+        "operation"
     ],
     "properties": {
         "name": {
@@ -12,31 +11,21 @@
         },
         "operation": {
             "type": "string",
+            "readOnly": true,
             "enum": [
-                "apiKey.update"
+                "item.collections"
             ]
         },
         "skip": {
             "type": "boolean"
         },
         "filter": {
-            "description": "Filter to apply to retrieve the apps to update",
-            "type": "string"
+            "type": "string",
+            "description": "Filter to apply to retrieve the extension(s) to update"
         },
         "source": {
             "type": "string",
             "description": "Name of previously defined tasks. Use the result of the task as source"
-        },
-        "details": {
-            "type": "object",
-            "required": [
-                "name"
-            ],
-            "properties": {
-                "description": {
-                    "type": "string"
-                }
-            }
         }
     },
     "oneOf": [
