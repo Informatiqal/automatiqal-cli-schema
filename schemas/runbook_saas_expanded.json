@@ -248,7 +248,28 @@
                         "$ref": "#/definitions/webHook.getAll"
                     },
                     {
+                        "$ref": "#/definitions/webHook.patch"
+                    },
+                    {
                         "$ref": "#/definitions/webHook.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/webHook.update"
+                    },
+                    {
+                        "$ref": "#/definitions/webIntegration.create"
+                    },
+                    {
+                        "$ref": "#/definitions/webIntegration.get"
+                    },
+                    {
+                        "$ref": "#/definitions/webIntegration.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/webIntegration.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/webIntegration.update"
                     }
                 ]
             }
@@ -3294,6 +3315,14 @@
                 "skip": {
                     "type": "boolean"
                 },
+                "filter": {
+                    "description": "Filter to apply to retrieve the apps to update",
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
@@ -3301,7 +3330,15 @@
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
-            }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
         },
         "webHook.create": {
             "type": "object",
@@ -3469,6 +3506,102 @@
                 }
             }
         },
+        "webHook.patch": {
+            "type": "object",
+            "description": "Patch existing web hook",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "webHook.patch"
+                    ]
+                },
+                "details": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "path": {
+                                "anyOf": [
+                                    {
+                                        "enum": [
+                                            "name",
+                                            "description",
+                                            "url",
+                                            "eventTypes",
+                                            "headers",
+                                            "enabled",
+                                            "secret"
+                                        ]
+                                    },
+                                    {
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "op": {
+                                "type": "string",
+                                "enum": [
+                                    "add",
+                                    "replace",
+                                    "renew"
+                                ]
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "integer"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "description": "Filter to apply to retrieve the apps to update",
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
         "webHook.remove": {
             "type": "object",
             "description": "Remove web hook",
@@ -3513,6 +3646,357 @@
                 "name",
                 "operation"
             ],
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "webHook.update": {
+            "type": "object",
+            "description": "Update existing web hook",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "webHook.update"
+                    ]
+                },
+                "details": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "level": {
+                                "type": "string",
+                                "enum": [
+                                    "tenant",
+                                    "user"
+                                ]
+                            },
+                            "filter": {
+                                "type": "string"
+                            },
+                            "secret": {
+                                "type": "string"
+                            },
+                            "enabled": {
+                                "type": "boolean"
+                            },
+                            "ownerId": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "disabledReason": {
+                                "type": "string"
+                            },
+                            "disabledReasonCode": {
+                                "type": "string"
+                            },
+                            "eventTypes": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "title": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "headers": {
+                                "type": "object",
+                                "patternProperties": {
+                                    "^.*$": {
+                                        "anyOf": [
+                                            {
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "description": "Filter to apply to retrieve the apps to update",
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "webIntegration.create": {
+            "type": "object",
+            "description": "Create new web integration",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "webIntegration.create"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "name"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "validOrigins": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "webIntegration.get": {
+            "type": "object",
+            "description": "Get instance of web integration",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "webIntegration.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "webIntegration.getAll": {
+            "type": "object",
+            "description": "Get instance of all web integrations",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "webIntegration.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "webIntegration.remove": {
+            "type": "object",
+            "description": "Remove web integration",
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "webIntegration.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "webIntegration.update": {
+            "type": "object",
+            "description": "Update existing web integration",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "webIntegration.update"
+                    ]
+                },
+                "details": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "type": "string"
+                            },
+                            "path": {
+                                "anyOf": [
+                                    {
+                                        "enum": [
+                                            "name",
+                                            "validOrigins"
+                                        ]
+                                    },
+                                    {
+                                        "type": "string"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "description": "Filter to apply to retrieve the apps to update",
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
             "oneOf": [
                 {
                     "$ref": "#/definitions/OneOf_1"
