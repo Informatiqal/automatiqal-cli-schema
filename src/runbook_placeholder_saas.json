@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "JSON Schema for Automatiqal runbook files",
+    "description": "Automatiqal JSON schema (@informatiqal)",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "name": {
+            "description": "Name of the runbook",
+            "type": "string"
+        },
+        "description": {
+            "type": "string",
+            "description": "Free text runbook description"
+        },
+        "edition": {
+            "description": "Target Qlik Sense environment type - saas. Default is \"saas\"",
+            "type": "string",
+            "enum": [
+                "saas"
+            ]
+        },
+        "trace": {
+            "description": "Trace levels",
+            "type": "string",
+            "enum": [
+                "error",
+                "debug"
+            ]
+        },
+        "environment": {
+            "type": "object",
+            "description": "Define the Qlik environment details (host, port, authentication etc.)",
+            "properties": {
+                "host": {
+                    "type": "string",
+                    "description": "Qlik Sense host name"
+                },
+                "port": {
+                    "type": "integer",
+                    "description": "Qlik Sense port (default 443)",
+                    "default": 443
+                },
+                "authentication": {
+                    "type": "object",
+                    "description": "Authentication information (certificates, jwt etc.)",
+                    "properties": {
+                        "apiKey": {
+                            "type": "string",
+                            "description": "API key value"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "host",
+                "authentication"
+            ]
+        },
+        "tasks": {
+            "type": "array",
+            "description": "List of tasks to be executed in sequence",
+            "minItems": 1,
+            "items": {}
+        }
+    },
+    "required": [
+        "name",
+        "environment",
+        "tasks"
+    ],
+    "definitions": {
+        "tasks": {
+            "type": "array",
+            "description": "List of tasks to be executed in sequence",
+            "minItems": 1,
+            "items": {}
+        }
+    }
+}

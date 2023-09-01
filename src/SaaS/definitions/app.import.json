@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "description": "Upload brand new app (qvf)",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "app.import"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "file"
+            ],
+            "properties": {
+                "file": {
+                    "type": [
+                        "object",
+                        "string"
+                    ]
+                },
+                "name": {
+                    "type": "string"
+                },
+                "spaceId": {
+                    "type": "string"
+                },
+                "mode": {
+                    "type": "string",
+                    "enum": [
+                        "New",
+                        "AutoReplace"
+                    ]
+                },
+                "appId": {
+                    "type": "string"
+                },
+                "fallbackName": {
+                    "type": "string"
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}
