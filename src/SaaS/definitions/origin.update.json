@@ -1,0 +1,101 @@
+{
+    "type": "object",
+    "description": "Update existing origin",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "origin.update"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "origin"
+            ],
+            "properties": {
+                "origin": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "childSrc": {
+                    "type": "boolean"
+                },
+                "connectSrc": {
+                    "type": "boolean"
+                },
+                "connectSrcWSS": {
+                    "type": "boolean"
+                },
+                "fontSrc": {
+                    "type": "boolean"
+                },
+                "formAction": {
+                    "type": "boolean"
+                },
+                "frameAncestors": {
+                    "type": "boolean"
+                },
+                "frameSrc": {
+                    "type": "boolean"
+                },
+                "imgSrc": {
+                    "type": "boolean"
+                },
+                "mediaSrc": {
+                    "type": "boolean"
+                },
+                "objectSrc": {
+                    "type": "boolean"
+                },
+                "scriptSrc": {
+                    "type": "boolean"
+                },
+                "styleSrc": {
+                    "type": "boolean"
+                },
+                "workerSrc": {
+                    "type": "boolean"
+                },
+                "createdDate": {
+                    "type": "string"
+                },
+                "modifiedDate": {
+                    "type": "string"
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "description": "Filter to apply to retrieve the apps to update",
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        }
+    },
+    "oneOf": [
+        {
+            "$ref": "#/definitions/OneOf_1"
+        },
+        {
+            "$ref": "#/definitions/OneOf_2"
+        }
+    ]
+}

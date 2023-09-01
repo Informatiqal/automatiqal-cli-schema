@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "description": "Get instance of origin",
+    "required": [
+        "name",
+        "operation",
+        "filter"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "origin.get"
+            ]
+        },
+        "filter": {
+            "type": "string"
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

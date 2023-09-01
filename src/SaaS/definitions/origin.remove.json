@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "Remove API key",
+    "description": "Remove origin",
     "properties": {
         "name": {
             "$ref": "#/definitions/TaskName"
@@ -8,7 +8,7 @@
         "operation": {
             "type": "string",
             "enum": [
-                "apiKey.remove"
+                "origin.remove"
             ]
         },
         "skip": {

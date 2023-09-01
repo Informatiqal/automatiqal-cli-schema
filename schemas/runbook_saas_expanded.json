@@ -137,10 +137,40 @@
                         "$ref": "#/definitions/extension.getAll"
                     },
                     {
+                        "$ref": "#/definitions/extension.import"
+                    },
+                    {
                         "$ref": "#/definitions/extension.remove"
                     },
                     {
                         "$ref": "#/definitions/extension.update"
+                    },
+                    {
+                        "$ref": "#/definitions/item.collections"
+                    },
+                    {
+                        "$ref": "#/definitions/item.get"
+                    },
+                    {
+                        "$ref": "#/definitions/item.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/item.publishedItems"
+                    },
+                    {
+                        "$ref": "#/definitions/origin.create"
+                    },
+                    {
+                        "$ref": "#/definitions/origin.get"
+                    },
+                    {
+                        "$ref": "#/definitions/origin.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/origin.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/origin.update"
                     }
                 ]
             }
@@ -399,7 +429,7 @@
         },
         "apiKey.remove": {
             "type": "object",
-            "description": "Remove app/apps",
+            "description": "Remove API key",
             "properties": {
                 "name": {
                     "$ref": "#/definitions/TaskName"
@@ -407,7 +437,7 @@
                 "operation": {
                     "type": "string",
                     "enum": [
-                        "app.remove"
+                        "apiKey.remove"
                     ]
                 },
                 "skip": {
@@ -938,7 +968,7 @@
         },
         "app.remove": {
             "type": "object",
-            "description": "Remove API key",
+            "description": "Remove app/apps",
             "properties": {
                 "name": {
                     "$ref": "#/definitions/TaskName"
@@ -946,7 +976,7 @@
                 "operation": {
                     "type": "string",
                     "enum": [
-                        "apiKey.remove"
+                        "app.remove"
                     ]
                 },
                 "skip": {
@@ -1234,6 +1264,166 @@
                 }
             }
         },
+        "extension.import": {
+            "type": "object",
+            "description": "Import extension",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "extension.import"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "file",
+                        "details"
+                    ],
+                    "properties": {
+                        "file": {
+                            "type": [
+                                "string",
+                                "object"
+                            ]
+                        },
+                        "details": {
+                            "type": "object",
+                            "required": [
+                                "name",
+                                "type"
+                            ],
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "string"
+                                },
+                                "tags": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "author": {
+                                    "type": "string"
+                                },
+                                "bundle": {
+                                    "type": "object",
+                                    "required": [
+                                        "id",
+                                        "name"
+                                    ],
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "userId": {
+                                    "type": "string"
+                                },
+                                "bundled": {
+                                    "type": "boolean"
+                                },
+                                "license": {
+                                    "type": "string"
+                                },
+                                "preview": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                },
+                                "checksum": {
+                                    "type": "string"
+                                },
+                                "homepage": {
+                                    "type": "string"
+                                },
+                                "keywords": {
+                                    "type": "string"
+                                },
+                                "loadpath": {
+                                    "type": "string"
+                                },
+                                "supplier": {
+                                    "type": "string"
+                                },
+                                "tenantId": {
+                                    "type": "string"
+                                },
+                                "supernova": {
+                                    "type": "boolean"
+                                },
+                                "deprecated": {
+                                    "type": "string"
+                                },
+                                "repository": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "qextVersion": {
+                                    "type": "string"
+                                },
+                                "qextFilename": {
+                                    "type": "string"
+                                },
+                                "dependencies": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "skip": {
+                        "type": "boolean"
+                    },
+                    "filter": {
+                        "type": "string",
+                        "description": "Filter to apply to retrieve the extension(s) to update"
+                    },
+                    "source": {
+                        "type": "string",
+                        "description": "Name of previously defined tasks. Use the result of the task as source"
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
         "extension.remove": {
             "type": "object",
             "description": "Remove extension/extensions",
@@ -1421,6 +1611,479 @@
                         "type": "string",
                         "description": "Name of previously defined tasks. Use the result of the task as source"
                     }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "item.collections": {
+            "type": "object",
+            "description": "Get item collections",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "item.collections"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the extension(s) to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "item.get": {
+            "type": "object",
+            "description": "Get instance of an item",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "item.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "item.getAll": {
+            "type": "object",
+            "description": "Get instance of all items",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "item.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "item.publishedItems": {
+            "type": "object",
+            "description": "Finds and returns the published items for a given item",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "item.publishedItems"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the extension(s) to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "origin.create": {
+            "type": "object",
+            "description": "Generate new origin",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "origin.create"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "origin"
+                    ],
+                    "properties": {
+                        "origin": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "childSrc": {
+                            "type": "boolean"
+                        },
+                        "connectSrc": {
+                            "type": "boolean"
+                        },
+                        "connectSrcWSS": {
+                            "type": "boolean"
+                        },
+                        "fontSrc": {
+                            "type": "boolean"
+                        },
+                        "formAction": {
+                            "type": "boolean"
+                        },
+                        "frameAncestors": {
+                            "type": "boolean"
+                        },
+                        "frameSrc": {
+                            "type": "boolean"
+                        },
+                        "imgSrc": {
+                            "type": "boolean"
+                        },
+                        "mediaSrc": {
+                            "type": "boolean"
+                        },
+                        "objectSrc": {
+                            "type": "boolean"
+                        },
+                        "scriptSrc": {
+                            "type": "boolean"
+                        },
+                        "styleSrc": {
+                            "type": "boolean"
+                        },
+                        "workerSrc": {
+                            "type": "boolean"
+                        },
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "origin.get": {
+            "type": "object",
+            "description": "Get instance of origin",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "origin.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "origin.getAll": {
+            "type": "object",
+            "description": "Get instance of all origins",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "origin.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "origin.remove": {
+            "type": "object",
+            "description": "Remove origin",
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "origin.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the apps to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "origin.update": {
+            "type": "object",
+            "description": "Update existing origin",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "origin.update"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "origin"
+                    ],
+                    "properties": {
+                        "origin": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "childSrc": {
+                            "type": "boolean"
+                        },
+                        "connectSrc": {
+                            "type": "boolean"
+                        },
+                        "connectSrcWSS": {
+                            "type": "boolean"
+                        },
+                        "fontSrc": {
+                            "type": "boolean"
+                        },
+                        "formAction": {
+                            "type": "boolean"
+                        },
+                        "frameAncestors": {
+                            "type": "boolean"
+                        },
+                        "frameSrc": {
+                            "type": "boolean"
+                        },
+                        "imgSrc": {
+                            "type": "boolean"
+                        },
+                        "mediaSrc": {
+                            "type": "boolean"
+                        },
+                        "objectSrc": {
+                            "type": "boolean"
+                        },
+                        "scriptSrc": {
+                            "type": "boolean"
+                        },
+                        "styleSrc": {
+                            "type": "boolean"
+                        },
+                        "workerSrc": {
+                            "type": "boolean"
+                        },
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "description": "Filter to apply to retrieve the apps to update",
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "description": {
                     "type": "string",
