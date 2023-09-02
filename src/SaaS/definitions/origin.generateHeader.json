@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "description": "Retrieves the CSP header for a tenant",
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "origin.generateHeader"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "name",
+        "operation"
+    ]
+}

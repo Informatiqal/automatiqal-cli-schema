@@ -1,7 +1,131 @@
 import fs from "fs";
 
+// TODO: most of it is copy/paste. generalize it please
+async function generateSaaSRunbookSchema() {
+  const placeholder = JSON.parse(
+    fs.readFileSync("./src/runbook_placeholder_saas.json")
+  );
+
+  placeholder.properties.tasks = {
+    $ref: "#/definitions/tasks",
+  };
+  placeholder.definitions.tasks.items["anyOf"] = [];
+
+  const definitionFiles = fs.readdirSync("./src/SaaS/definitions");
+
+  for (let definition of definitionFiles) {
+    const definitionName = definition.replace(".json", "");
+    let definitionContent = JSON.parse(
+      fs.readFileSync(`./src/SaaS/definitions/${definition}`)
+    );
+
+    // some (most) of the definitions will be same as QSEoW ones
+    // and instead of duplicate the QSEoW definitions
+    // just put reference to the QSEoW definition and load it form there
+    if (definitionContent["#reference#"])
+      definitionContent = JSON.parse(
+        fs.readFileSync(
+          `./src/QSEoW/definitions/${definitionContent["#reference#"]}.json`
+        )
+      );
+
+    definitionContent.properties["description"] = {
+      type: "string",
+      description: "Task description (multiline is supported)",
+    };
+
+    definitionContent.properties.onError = {
+      $ref: `#/definitions/onError`,
+    };
+
+    placeholder.definitions.tasks.items.anyOf.push({
+      $ref: `#/definitions/${definitionName}`,
+    });
+
+    placeholder.definitions[definitionName] = definitionContent;
+  }
+
+  // no utils for SaaS ... yet
+  // const utilDefinitionFiles = fs.readdirSync("./src/QSEoW/util");
+
+  placeholder.definitions["OneOf_1"] = {
+    type: "object",
+    properties: {
+      filter: {
+        type: "string",
+      },
+    },
+    required: ["filter"],
+    not: {
+      properties: {
+        source: {
+          type: "string",
+        },
+      },
+      required: ["source"],
+    },
+  };
+
+  placeholder.definitions["OneOf_2"] = {
+    type: "object",
+    properties: {
+      source: {
+        type: "string",
+      },
+    },
+    required: ["source"],
+    not: {
+      required: ["filter"],
+    },
+  };
+
+  placeholder.definitions["onError"] = {
+    // type: "object",
+    oneOf: [
+      {
+        type: "object",
+        properties: {
+          tasks: {
+            $ref: "#/definitions/tasks",
+          },
+        },
+        required: ["tasks"],
+      },
+      {
+        type: "object",
+        properties: {
+          exit: {
+            type: "boolean",
+          },
+        },
+        required: ["exit"],
+      },
+      {
+        type: "object",
+        properties: {
+          ignore: {
+            type: "boolean",
+          },
+        },
+        required: ["ignore"],
+      },
+    ],
+  };
+
+  placeholder.definitions["TaskName"] = definitionTaskNameProperty();
+
+  fs.writeFileSync(
+    `./schemas/runbook_saas_expanded.json`,
+    JSON.stringify(placeholder, null, 4)
+  );
+
+  fs.writeFileSync(`./schemas/runbook_saas.json`, JSON.stringify(placeholder));
+
+  return placeholder;
+}
+
 // TODO: too much is happening here. Split it at some point
-async function generateRunbookSchema() {
+async function generateWindowsRunbookSchema() {
   const placeholder = JSON.parse(
     fs.readFileSync("./src/runbook_placeholder.json")
   );
@@ -11,12 +135,12 @@ async function generateRunbookSchema() {
   };
   placeholder.definitions.tasks.items["anyOf"] = [];
 
-  const definitionFiles = fs.readdirSync("./src/definitions");
+  const definitionFiles = fs.readdirSync("./src/QSEoW/definitions");
 
   for (let definition of definitionFiles) {
     const definitionName = definition.replace(".json", "");
     const definitionContent = JSON.parse(
-      fs.readFileSync(`./src/definitions/${definition}`)
+      fs.readFileSync(`./src/QSEoW/definitions/${definition}`)
     );
 
     definitionContent.properties["description"] = {
@@ -35,12 +159,12 @@ async function generateRunbookSchema() {
     placeholder.definitions[definitionName] = definitionContent;
   }
 
-  const utilDefinitionFiles = fs.readdirSync("./src/util");
+  const utilDefinitionFiles = fs.readdirSync("./src/QSEoW/util");
 
   for (let util of utilDefinitionFiles) {
     const utilDefinitionName = util.replace(".json", "");
     const utilDefinitionContent = JSON.parse(
-      fs.readFileSync(`./src/util/${util}`)
+      fs.readFileSync(`./src/QSEoW/util/${util}`)
     );
 
     placeholder.definitions[utilDefinitionName] = utilDefinitionContent;
@@ -306,17 +430,20 @@ async function generateUISchema(runbookSchema) {
   return runbook;
 }
 
-async function generateModuleFile(runbookSchema) {
-  fs.writeFileSync(
-    "./dist/index.js",
-    `export const automatiqalSchema=${JSON.stringify(runbookSchema)}`
-  );
-}
-
 async function appendUISchemaToModule(uiSchema) {
   fs.appendFileSync(
     "./dist/index.js",
     `\n\nexport const automatiqalUISchema=${JSON.stringify(uiSchema)}`
+  );
+}
+
+async function generateModuleFile(windowsSchema, saasSchema) {
+  fs.writeFileSync(
+    "./dist/index.js",
+    `export const automatiqalWindowsSchema=${JSON.stringify(
+      windowsSchema
+    )};export const automatiqalSaaSSchema=${JSON.stringify(saasSchema)};
+    `
   );
 }
 
@@ -326,16 +453,6 @@ function nameToTitle(name) {
     .map((c) => c.charAt(0).toUpperCase() + c.substring(1))
     .join(" ");
 }
-
-(async function () {
-  const runbookSchema = await generateRunbookSchema();
-  await generateModuleFile(runbookSchema);
-
-  // const uiPseudoSchema = await generateUISchema(runbookSchema);
-  // await appendUISchemaToModule(uiPseudoSchema);
-
-  console.log("Done");
-})();
 
 function definitionDaysOfWeek() {
   return {
@@ -459,3 +576,15 @@ function definitionTaskNameProperty() {
     errorMessage: "Task name should not contain #",
   };
 }
+
+(async function () {
+  const windowsSchema = await generateWindowsRunbookSchema();
+  const saasSchema = await generateSaaSRunbookSchema();
+  
+  await generateModuleFile(windowsSchema, saasSchema);
+
+  // const uiPseudoSchema = await generateUISchema(runbookSchema);
+  // await appendUISchemaToModule(uiPseudoSchema);
+
+  console.log("Done");
+})();

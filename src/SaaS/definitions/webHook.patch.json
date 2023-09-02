@@ -1,0 +1,89 @@
+{
+    "type": "object",
+    "description": "Patch existing web hook",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "webHook.patch"
+            ]
+        },
+        "details": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "anyOf": [
+                            {
+                                "enum": [
+                                    "name",
+                                    "description",
+                                    "url",
+                                    "eventTypes",
+                                    "headers",
+                                    "enabled",
+                                    "secret"
+                                ]
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "op": {
+                        "type": "string",
+                        "enum": [
+                            "add",
+                            "replace",
+                            "renew"
+                        ]
+                    },
+                    "value": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "boolean"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "description": "Filter to apply to retrieve entity to update",
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        }
+    },
+    "oneOf": [
+        {
+            "$ref": "#/definitions/OneOf_1"
+        },
+        {
+            "$ref": "#/definitions/OneOf_2"
+        }
+    ]
+}

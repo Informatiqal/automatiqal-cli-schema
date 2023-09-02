@@ -1,5 +1,5 @@
 .npmrc
-test.yaml
+test*.yaml
 test1.yaml
 runbook_copy.json
 # Logs

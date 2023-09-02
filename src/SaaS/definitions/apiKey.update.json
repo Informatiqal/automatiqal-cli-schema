@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "description": "Update API key",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "apiKey.update"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "description": "Filter to apply to retrieve entity to update",
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "description"
+            ],
+            "properties": {
+                "description": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "oneOf": [
+        {
+            "$ref": "#/definitions/OneOf_1"
+        },
+        {
+            "$ref": "#/definitions/OneOf_2"
+        }
+    ]
+}

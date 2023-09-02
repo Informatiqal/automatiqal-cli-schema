@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "description": "Generate new API key",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "apiKey.create"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "description"
+            ],
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "sub": {
+                    "type": "string"
+                },
+                "subType": {
+                    "type": "string"
+                },
+                "expiry": {
+                    "type": "string"
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "description": "Start reload",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "reload.start"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "appId"
+            ],
+            "properties": {
+                "appId": {
+                    "type": "string"
+                },
+                "partial": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

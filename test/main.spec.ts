@@ -1,14 +1,21 @@
 import Ajv from "ajv";
 import { describe, it, expect, beforeEach, beforeAll } from "vitest";
-import { automatiqalSchema } from "../dist/index.js";
+import {
+  automatiqalSaaSSchema,
+  automatiqalWindowsSchema,
+} from "../dist/index.js";
+import ajvErrors from "ajv-errors";
 
 let ajv;
 let errors = [];
 let warnings = [];
 let validate;
+let validate1;
 
 describe("Automatiqal Schema Tests", function () {
   beforeAll(async () => {
+
+
     ajv = new Ajv({
       allErrors: true,
       strict: "log",
@@ -26,8 +33,10 @@ describe("Automatiqal Schema Tests", function () {
       },
     });
     // require("ajv-errors")(ajv /*, {singleError: true} */);
+    ajvErrors(ajv);
 
-    validate = ajv.compile(automatiqalSchema);
+    validate = ajv.compile(automatiqalWindowsSchema);
+    // validate1 = ajv.compile(automatiqalSaaSSchema);
   });
 
   it("No schema errors or warnings", async () => {
@@ -51,6 +60,8 @@ describe("Automatiqal Schema Tests", function () {
         authentication: {
           user_dir: `SOME_DIRECTORY`,
           user_name: `SOME_USER`,
+          cert: "",
+          key: ""
         },
       },
       tasks: [],

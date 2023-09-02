@@ -1,0 +1,69 @@
+{
+    "type": "object",
+    "description": "Publish app to MANAGED space",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "app.publish"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "description": "Filter to apply to retrieve entity to update",
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "spaceId"
+            ],
+            "properties": {
+                "spaceId": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "string",
+                    "enum": [
+                        "source",
+                        "target"
+                    ]
+                },
+                "appName": {
+                    "type": "string"
+                },
+                "moveApp": {
+                    "type": "boolean"
+                },
+                "originAppId": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "oneOf": [
+        {
+            "$ref": "#/definitions/OneOf_1"
+        },
+        {
+            "$ref": "#/definitions/OneOf_2"
+        }
+    ]
+}

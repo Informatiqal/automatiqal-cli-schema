@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "description": "Get item collections",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "item.collections"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "type": "string",
+            "description": "Filter to apply to retrieve the extension(s) to update"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        }
+    },
+    "oneOf": [
+        {
+            "$ref": "#/definitions/OneOf_1"
+        },
+        {
+            "$ref": "#/definitions/OneOf_2"
+        }
+    ]
+}

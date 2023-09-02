@@ -1,10 +1,9 @@
 {
     "type": "object",
-    "description": "Publish an app by overwriting existing app",
+    "description": "Export app (qvf)",
     "required": [
         "name",
-        "operation",
-        "details"
+        "operation"
     ],
     "properties": {
         "name": {
@@ -12,25 +11,28 @@
         },
         "operation": {
             "type": "string",
-            "readOnly": true,
             "enum": [
-                "app.switch"
+                "app.export"
             ]
         },
         "skip": {
             "type": "boolean"
         },
+        "filter": {
+            "description": "Filter to apply to retrieve entity to update",
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        },        
         "details": {
             "type": "object",
             "properties": {
-                "targetAppId": {
-                    "type": "string",
-                    "description": "Target app id"
+                "noData": {
+                    "type": "boolean"
                 }
-            },
-            "required": [
-                "targetAppId"
-            ]
+            }
         }
     },
     "oneOf": [

@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "description": "Create new user",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "user.create"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "tenantId",
+                "subject",
+                "name"
+            ],
+            "properties": {
+                "tenantId": {
+                    "type": "string"
+                },
+                "subject": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "picture": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "assignedRoles": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

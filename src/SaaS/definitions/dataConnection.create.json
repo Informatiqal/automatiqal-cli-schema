@@ -1,0 +1,89 @@
+{
+    "type": "object",
+    "description": "Create new data connection",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "dataConnection.create"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "qName",
+                "qConnectStatement",
+                "qType"
+            ],
+            "properties": {
+                "qName": {
+                    "type": "string"
+                },
+                "qConnectStatement": {
+                    "type": "string"
+                },
+                "qType": {
+                    "type": "string"
+                },
+                "datasourceID": {
+                    "type": "string"
+                },
+                "owner": {
+                    "type": "string"
+                },
+                "qID": {
+                    "type": "string"
+                },
+                "qLogOn": {
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "qEngineObjectID": {
+                    "type": "string"
+                },
+                "qArchitecture": {
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "qCredentialsID": {
+                    "type": "string"
+                },
+                "qCredentialsName": {
+                    "type": "string"
+                },
+                "qUsername": {
+                    "type": "string"
+                },
+                "qPassword": {
+                    "type": "string"
+                },
+                "qSeparateCredentials": {
+                    "type": "string"
+                },
+                "space": {
+                    "type": "string"
+                },
+                "qConnectionSecret": {
+                    "type": "string"
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

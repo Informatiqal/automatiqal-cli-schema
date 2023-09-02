@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "description": "Create new space",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "space.create"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "name",
+                "type"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "data",
+                        "managed",
+                        "shared"
+                    ]
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

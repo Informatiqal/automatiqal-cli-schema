@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "description": "Retrieves the assignments of the space",
+    "required": [
+        "name",
+        "operation",
+        "filter"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "space.assignments"
+            ]
+        },
+        "filter": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "multiple": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    },
+    "oneOf": [
+        {
+            "$ref": "#/definitions/OneOf_1"
+        },
+        {
+            "$ref": "#/definitions/OneOf_2"
+        }
+    ]
+}
