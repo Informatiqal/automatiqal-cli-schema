@@ -16,7 +16,7 @@
         },
         "filter": {
             "type": "string",
-            "description": "Filter to apply to retrieve the apps to update"
+            "description": "Filter to apply to retrieve entity to update"
         },
         "source": {
             "type": "string",

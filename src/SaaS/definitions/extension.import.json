@@ -128,18 +128,18 @@
                         }
                     }
                 }
-            },
-            "skip": {
-                "type": "boolean"
-            },
-            "filter": {
-                "type": "string",
-                "description": "Filter to apply to retrieve the extension(s) to update"
-            },
-            "source": {
-                "type": "string",
-                "description": "Name of previously defined tasks. Use the result of the task as source"
             }
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "type": "string",
+            "description": "Filter to apply to retrieve the extension(s) to update"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
         }
     },
     "oneOf": [

@@ -296,7 +296,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -353,7 +353,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -544,7 +544,7 @@
                 },
                 "filter": {
                     "type": "string",
-                    "description": "Filter to apply to retrieve the apps to update"
+                    "description": "Filter to apply to retrieve entity to update"
                 },
                 "source": {
                     "type": "string",
@@ -601,7 +601,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -611,7 +611,7 @@
                 "details": {
                     "type": "object",
                     "required": [
-                        "name"
+                        "description"
                     ],
                     "properties": {
                         "description": {
@@ -658,7 +658,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -715,7 +715,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -830,7 +830,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -1011,7 +1011,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -1139,7 +1139,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -1185,7 +1185,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -1258,7 +1258,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -1587,7 +1587,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -1805,18 +1805,18 @@
                                 }
                             }
                         }
-                    },
-                    "skip": {
-                        "type": "boolean"
-                    },
-                    "filter": {
-                        "type": "string",
-                        "description": "Filter to apply to retrieve the extension(s) to update"
-                    },
-                    "source": {
-                        "type": "string",
-                        "description": "Name of previously defined tasks. Use the result of the task as source"
                     }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the extension(s) to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "description": {
                     "type": "string",
@@ -2010,18 +2010,18 @@
                                 }
                             }
                         }
-                    },
-                    "skip": {
-                        "type": "boolean"
-                    },
-                    "filter": {
-                        "type": "string",
-                        "description": "Filter to apply to retrieve the extension(s) to update"
-                    },
-                    "source": {
-                        "type": "string",
-                        "description": "Name of previously defined tasks. Use the result of the task as source"
                     }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the extension(s) to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
                 },
                 "description": {
                     "type": "string",
@@ -2399,7 +2399,7 @@
                 },
                 "filter": {
                     "type": "string",
-                    "description": "Filter to apply to retrieve the apps to update"
+                    "description": "Filter to apply to retrieve entity to update"
                 },
                 "source": {
                     "type": "string",
@@ -2518,7 +2518,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -2547,8 +2547,7 @@
             "description": "Cancel reload",
             "required": [
                 "name",
-                "operation",
-                "details"
+                "operation"
             ],
             "properties": {
                 "name": {
@@ -2564,7 +2563,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -2960,7 +2959,7 @@
                 },
                 "filter": {
                     "type": "string",
-                    "description": "Filter to apply to retrieve the apps to update"
+                    "description": "Filter to apply to retrieve entity to update"
                 },
                 "source": {
                     "type": "string",
@@ -3031,7 +3030,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -3316,7 +3315,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -3578,7 +3577,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -3620,7 +3619,7 @@
                 },
                 "filter": {
                     "type": "string",
-                    "description": "Filter to apply to retrieve the apps to update"
+                    "description": "Filter to apply to retrieve entity to update"
                 },
                 "source": {
                     "type": "string",
@@ -3748,7 +3747,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {
@@ -3901,7 +3900,7 @@
                 },
                 "filter": {
                     "type": "string",
-                    "description": "Filter to apply to retrieve the apps to update"
+                    "description": "Filter to apply to retrieve entity to update"
                 },
                 "source": {
                     "type": "string",
@@ -3982,7 +3981,7 @@
                     "type": "boolean"
                 },
                 "filter": {
-                    "description": "Filter to apply to retrieve the apps to update",
+                    "description": "Filter to apply to retrieve entity to update",
                     "type": "string"
                 },
                 "source": {

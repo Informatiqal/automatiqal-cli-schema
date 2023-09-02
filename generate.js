@@ -1,5 +1,6 @@
 import fs from "fs";
 
+// TODO: most of it is copy/paste. generalize it please
 async function generateSaaSRunbookSchema() {
   const placeholder = JSON.parse(
     fs.readFileSync("./src/runbook_placeholder_saas.json")
@@ -577,10 +578,10 @@ function definitionTaskNameProperty() {
 }
 
 (async function () {
-  // const windowsSchema = await generateWindowsRunbookSchema();
+  const windowsSchema = await generateWindowsRunbookSchema();
   const saasSchema = await generateSaaSRunbookSchema();
-  // const saasSchema = {};
-  // await generateModuleFile(windowsSchema, saasSchema);
+  
+  await generateModuleFile(windowsSchema, saasSchema);
 
   // const uiPseudoSchema = await generateUISchema(runbookSchema);
   // await appendUISchemaToModule(uiPseudoSchema);

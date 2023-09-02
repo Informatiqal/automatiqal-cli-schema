@@ -73,7 +73,7 @@
             "type": "boolean"
         },
         "filter": {
-            "description": "Filter to apply to retrieve the apps to update",
+            "description": "Filter to apply to retrieve entity to update",
             "type": "string"
         },
         "source": {

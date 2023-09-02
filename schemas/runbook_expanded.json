@@ -955,15 +955,7 @@
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
-            },
-            "oneOf": [
-                {
-                    "$ref": "#/definitions/OneOf_1"
-                },
-                {
-                    "$ref": "#/definitions/OneOf_2"
-                }
-            ]
+            }
         },
         "app.update": {
             "type": "object",
