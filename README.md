@@ -12,10 +12,11 @@ npm install --save @informatiqal/automatiqal-schema
 
 ### Exports
 
-The package exports two constants:
+The package exports three constants:
 
-- `automatiqalSchema` - valid [JSON schema (Draft-07)](https://json-schema.org/)
-- `automatiqalUISchema` - pseudo schema that can be used in UI projects. **This is not a valid JSON schema**
+- `automatiqalWindowsSchema` - valid [JSON schema (Draft-07)](https://json-schema.org/) for interacting with QSEoW
+- `automatiqalSaaSSchema` - valid [JSON schema (Draft-07)](https://json-schema.org/) for interacting with Qlik Cloud/SaaS
+- `automatiqalUISchema` - pseudo schema that can be used in UI projects. **This is not a valid JSON schema** and its under development so please do not use
 
 ## VSCode
 
@@ -29,7 +30,11 @@ Inline method is applied to each individual yaml runbook file.
 
 Add the following line to the top of the runbook yaml file:
 
-`# yaml-language-server: $schema=https://github.com/Informatiqal/automatiqal-cli-schema/blob/main/schemas/runbook.json?raw=true`
+- for QSEoW
+    `# yaml-language-server: $schema=https://github.com/Informatiqal/automatiqal-cli-schema/blob/main/schemas/runbook.json?raw=true`
+
+- for SaaS
+    `# yaml-language-server: $schema=https://github.com/Informatiqal/automatiqal-cli-schema/blob/main/schemas/runbook_saas.json?raw=true`
 
 Or if the schema is downloaded locally:
 
