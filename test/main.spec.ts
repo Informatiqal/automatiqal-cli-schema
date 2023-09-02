@@ -60,6 +60,8 @@ describe("Automatiqal Schema Tests", function () {
         authentication: {
           user_dir: `SOME_DIRECTORY`,
           user_name: `SOME_USER`,
+          cert: "",
+          key: ""
         },
       },
       tasks: [],
