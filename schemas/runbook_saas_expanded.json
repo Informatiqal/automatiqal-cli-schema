@@ -64,7 +64,8 @@
     "required": [
         "name",
         "environment",
-        "tasks"
+        "tasks",
+        "edition"
     ],
     "definitions": {
         "tasks": {
