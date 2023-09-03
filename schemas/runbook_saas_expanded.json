@@ -1698,7 +1698,7 @@
                     "type": "object",
                     "required": [
                         "file",
-                        "details"
+                        "data"
                     ],
                     "properties": {
                         "file": {
@@ -1707,7 +1707,7 @@
                                 "object"
                             ]
                         },
-                        "details": {
+                        "data": {
                             "type": "object",
                             "required": [
                                 "name",
@@ -1811,14 +1811,6 @@
                 "skip": {
                     "type": "boolean"
                 },
-                "filter": {
-                    "type": "string",
-                    "description": "Filter to apply to retrieve the extension(s) to update"
-                },
-                "source": {
-                    "type": "string",
-                    "description": "Name of previously defined tasks. Use the result of the task as source"
-                },
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
@@ -1826,15 +1818,7 @@
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
-            },
-            "oneOf": [
-                {
-                    "$ref": "#/definitions/OneOf_1"
-                },
-                {
-                    "$ref": "#/definitions/OneOf_2"
-                }
-            ]
+            }
         },
         "extension.remove": {
             "type": "object",
