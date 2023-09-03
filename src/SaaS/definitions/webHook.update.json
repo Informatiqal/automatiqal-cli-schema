@@ -17,71 +17,68 @@
             ]
         },
         "details": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "url": {
-                        "type": "string"
-                    },
-                    "name": {
-                        "type": "string"
-                    },
-                    "level": {
-                        "type": "string",
-                        "enum": [
-                            "tenant",
-                            "user"
-                        ]
-                    },
-                    "filter": {
-                        "type": "string"
-                    },
-                    "secret": {
-                        "type": "string"
-                    },
-                    "enabled": {
-                        "type": "boolean"
-                    },
-                    "ownerId": {
-                        "type": "string"
-                    },
-                    "description": {
-                        "type": "string"
-                    },
-                    "disabledReason": {
-                        "type": "string"
-                    },
-                    "disabledReasonCode": {
-                        "type": "string"
-                    },
-                    "eventTypes": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "title": {
-                                    "type": "string"
-                                },
-                                "name": {
-                                    "type": "string"
-                                },
-                                "description": {
-                                    "type": "string"
-                                }
+            "type": "object",
+            "properties": {
+                "url": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "level": {
+                    "type": "string",
+                    "enum": [
+                        "tenant",
+                        "user"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "secret": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "ownerId": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "disabledReason": {
+                    "type": "string"
+                },
+                "disabledReasonCode": {
+                    "type": "string"
+                },
+                "eventTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
                             }
                         }
-                    },
-                    "headers": {
-                        "type": "object",
-                        "patternProperties": {
-                            "^.*$": {
-                                "anyOf": [
-                                    {
-                                        "type": "string"
-                                    }
-                                ]
-                            }
+                    }
+                },
+                "headers": {
+                    "type": "object",
+                    "patternProperties": {
+                        "^.*$": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                }
+                            ]
                         }
                     }
                 }
