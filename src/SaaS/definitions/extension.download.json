@@ -1,6 +1,6 @@
 {
     "type": "object",
-    "description": "Export app (qvf)",
+    "description": "Download extension",
     "required": [
         "name",
         "operation"
@@ -12,7 +12,7 @@
         "operation": {
             "type": "string",
             "enum": [
-                "app.export"
+                "extension.download"
             ]
         },
         "skip": {

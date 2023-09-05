@@ -147,6 +147,9 @@
                         "$ref": "#/definitions/dataConnection.update"
                     },
                     {
+                        "$ref": "#/definitions/extension.download"
+                    },
+                    {
                         "$ref": "#/definitions/extension.get"
                     },
                     {
@@ -840,7 +843,13 @@
                 },
                 "details": {
                     "type": "object",
+                    "required": [
+                        "location"
+                    ],
                     "properties": {
+                        "location": {
+                            "type": "string"
+                        },
                         "noData": {
                             "type": "boolean"
                         }
@@ -1594,6 +1603,65 @@
                 "source": {
                     "type": "string",
                     "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "extension.download": {
+            "type": "object",
+            "description": "Download extension",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "extension.download"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "description": "Filter to apply to retrieve entity to update",
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "location"
+                    ],
+                    "properties": {
+                        "location": {
+                            "type": "string"
+                        },
+                        "noData": {
+                            "type": "boolean"
+                        }
+                    }
                 },
                 "description": {
                     "type": "string",
