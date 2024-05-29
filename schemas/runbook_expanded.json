@@ -1117,6 +1117,20 @@
                         },
                         "name": {
                             "type": "string"
+                        },
+                        "tags": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "customProperties": {
+                            "type": "array",
+                            "title": "Custom properties names and values. In format: name=some value here",
+                            "items": {
+                                "type": "string",
+                                "pattern": "^([a-zA-Z0-9_]+=[a-zA-Z0-9_. -=]+)$"
+                            }
                         }
                     }
                 },
@@ -2542,6 +2556,17 @@
                 "skip": {
                     "type": "boolean"
                 },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "unmaskSecrets": {
+                            "type": "boolean"
+                        },
+                        "multiple": {
+                            "type": "boolean"
+                        }
+                    }
+                },
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
@@ -2571,6 +2596,14 @@
                 },
                 "skip": {
                     "type": "boolean"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "unmaskSecrets": {
+                            "type": "boolean"
+                        }
+                    }
                 },
                 "description": {
                     "type": "string",

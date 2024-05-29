@@ -1383,7 +1383,7 @@
                             "type": "string"
                         },
                         "qSeparateCredentials": {
-                            "type": "string"
+                            "type": "boolean"
                         },
                         "space": {
                             "type": "string"
@@ -1395,6 +1395,14 @@
                 },
                 "skip": {
                     "type": "boolean"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "unmaskSecrets": {
+                            "type": "boolean"
+                        }
+                    }
                 },
                 "description": {
                     "type": "string",
@@ -1430,6 +1438,17 @@
                 "skip": {
                     "type": "boolean"
                 },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "unmaskSecrets": {
+                            "type": "boolean"
+                        },
+                        "multiple": {
+                            "type": "boolean"
+                        }
+                    }
+                },
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
@@ -1459,6 +1478,14 @@
                 },
                 "skip": {
                     "type": "boolean"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "unmaskSecrets": {
+                            "type": "boolean"
+                        }
+                    }
                 },
                 "description": {
                     "type": "string",
@@ -1603,6 +1630,17 @@
                 "source": {
                     "type": "string",
                     "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "unmaskSecrets": {
+                            "type": "boolean"
+                        },
+                        "multiple": {
+                            "type": "boolean"
+                        }
+                    }
                 },
                 "description": {
                     "type": "string",
@@ -3859,6 +3897,14 @@
                 "skip": {
                     "type": "boolean"
                 },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "unmaskSecrets": {
+                            "type": "boolean"
+                        }
+                    }
+                },
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
@@ -3893,6 +3939,14 @@
                 "skip": {
                     "type": "boolean"
                 },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "unmaskSecrets": {
+                            "type": "boolean"
+                        }
+                    }
+                },
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
@@ -3922,6 +3976,14 @@
                 },
                 "skip": {
                     "type": "boolean"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "unmaskSecrets": {
+                            "type": "boolean"
+                        }
+                    }
                 },
                 "description": {
                     "type": "string",
@@ -4037,6 +4099,17 @@
                 "source": {
                     "type": "string",
                     "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "unmaskSecrets": {
+                            "type": "boolean"
+                        },
+                        "multiple": {
+                            "type": "boolean"
+                        }
+                    }
                 },
                 "description": {
                     "type": "string",
