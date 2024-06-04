@@ -197,6 +197,9 @@
                         "$ref": "#/definitions/app.uploadAndReplace"
                     },
                     {
+                        "$ref": "#/definitions/app.uploadMany"
+                    },
+                    {
                         "$ref": "#/definitions/certificate.distributionPathGet"
                     },
                     {
@@ -1181,6 +1184,86 @@
                     "required": [
                         "targetAppId"
                     ]
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "app.uploadMany": {
+            "type": "object",
+            "description": "Upload multiple new apps (qvf)",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "app.uploadMany"
+                    ]
+                },
+                "details": {
+                    "oneOf": [
+                        {
+                            "type": "array",
+                            "title": "IMPORTANT! Use this way only when using Automatiqal package directly!",
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "file",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "file": {
+                                        "type": [
+                                            "object",
+                                            "string"
+                                        ]
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "tags": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "customProperties": {
+                                        "type": "array",
+                                        "title": "Custom properties names and values. In format: name=some value here",
+                                        "items": {
+                                            "type": "string",
+                                            "pattern": "^([a-zA-Z0-9_]+=[a-zA-Z0-9_. -=]+)$"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "title": "IMPORTANT! Use this way ONLY when calling from CLI!",
+                            "properties": {
+                                "location": {
+                                    "type": "string",
+                                    "description": "Folder where the qvf(s) are located"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
                 },
                 "description": {
                     "type": "string",
