@@ -1,6 +1,6 @@
 {
   "name": "@informatiqal/automatiqal-schema",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "Automatiqal runbooks JSON and pseudo UI schemas",
   "author": {
     "email": "info@informatiqal.com",
