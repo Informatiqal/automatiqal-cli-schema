@@ -72,7 +72,7 @@
                     "type": "string"
                 },
                 "qSeparateCredentials": {
-                    "type": "string"
+                    "type": "boolean"
                 },
                 "space": {
                     "type": "string"
@@ -84,6 +84,14 @@
         },
         "skip": {
             "type": "boolean"
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "unmaskSecrets": {
+                    "type": "boolean"
+                }
+            }
         }
     }
 }

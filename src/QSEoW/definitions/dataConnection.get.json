@@ -22,6 +22,17 @@
         },
         "skip": {
             "type": "boolean"
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "unmaskSecrets": {
+                    "type": "boolean"
+                },
+                "multiple": {
+                    "type": "boolean"
+                }
+            }
         }
     }
 }

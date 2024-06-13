@@ -29,6 +29,15 @@
                     "type": "string"
                 }
             }
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "multiple": {
+                    "type": "boolean",
+                    "description": "Default is false. If set to true then if there is already an tag with the same name the command will create new one"
+                }
+            }
         }
     }
 }

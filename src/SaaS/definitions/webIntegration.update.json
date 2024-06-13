@@ -50,6 +50,17 @@
         "source": {
             "type": "string",
             "description": "Name of previously defined tasks. Use the result of the task as source"
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "unmaskSecrets": {
+                    "type": "boolean"
+                },
+                "multiple": {
+                    "type": "boolean"
+                }
+            }
         }
     },
     "oneOf": [
