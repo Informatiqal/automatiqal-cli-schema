@@ -11,7 +11,7 @@ async function generateSaaSRunbookSchema() {
   };
   placeholder.definitions.tasks.items["anyOf"] = [];
 
-  const definitionFiles = fs.readdirSync("./src/SaaS/definitions");
+  const definitionFiles = JSON.parse(fs.readdirSync("./src/SaaS/definitions"));
 
   for (let definition of definitionFiles) {
     const definitionName = definition.replace(".json", "");
@@ -130,6 +130,8 @@ async function generateWindowsRunbookSchema() {
     fs.readFileSync("./src/runbook_placeholder.json")
   );
 
+  // const loopProperty = JSON.parse(fs.readFileSync("./src/QSEoW/util/Loop.json"));
+
   placeholder.properties.tasks = {
     $ref: "#/definitions/tasks",
   };
@@ -147,6 +149,8 @@ async function generateWindowsRunbookSchema() {
       type: "string",
       description: "Task description (multiline is supported)",
     };
+
+    definitionContent.properties["loop"] = { $ref: `#/definitions/Loop` }
 
     definitionContent.properties.onError = {
       $ref: `#/definitions/onError`,
@@ -355,10 +359,10 @@ async function generateUISchema(runbookSchema) {
           if (definition.properties.options["$ref"]) {
             definition.properties.options =
               runbookSchema.definitions[
-                definition.properties.options["$ref"].replace(
-                  "#/definitions/",
-                  ""
-                )
+              definition.properties.options["$ref"].replace(
+                "#/definitions/",
+                ""
+              )
               ];
           }
 
@@ -438,13 +442,21 @@ async function appendUISchemaToModule(uiSchema) {
 }
 
 async function generateModuleFile(windowsSchema, saasSchema) {
+  // fs.writeFileSync(
+  //   "./dist/index.js",
+  //   `export const automatiqalWindowsSchema=${JSON.stringify(
+  //     windowsSchema
+  //   )};export const automatiqalSaaSSchema=${JSON.stringify(saasSchema)};
+  //   `
+  // );
+
   fs.writeFileSync(
     "./dist/index.js",
     `export const automatiqalWindowsSchema=${JSON.stringify(
       windowsSchema
-    )};export const automatiqalSaaSSchema=${JSON.stringify(saasSchema)};
+    )};
     `
-  );
+  );  
 }
 
 function nameToTitle(name) {
@@ -579,9 +591,10 @@ function definitionTaskNameProperty() {
 
 (async function () {
   const windowsSchema = await generateWindowsRunbookSchema();
-  const saasSchema = await generateSaaSRunbookSchema();
-  
-  await generateModuleFile(windowsSchema, saasSchema);
+  // const saasSchema = await generateSaaSRunbookSchema();
+
+  // await generateModuleFile(windowsSchema, saasSchema);
+  await generateModuleFile(windowsSchema);
 
   // const uiPseudoSchema = await generateUISchema(runbookSchema);
   // await appendUISchemaToModule(uiPseudoSchema);

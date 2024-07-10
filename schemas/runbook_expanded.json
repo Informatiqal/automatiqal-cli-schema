@@ -460,6 +460,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -488,6 +491,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -518,6 +524,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -546,6 +555,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -576,6 +588,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -604,6 +619,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -650,6 +668,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -711,6 +732,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -774,6 +798,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -820,6 +847,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -849,6 +879,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -898,6 +931,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -953,6 +989,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -1007,6 +1046,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1068,6 +1110,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1144,6 +1189,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -1188,6 +1236,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1269,6 +1320,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -1298,6 +1352,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1353,6 +1410,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1510,6 +1570,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -1555,6 +1618,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1633,6 +1699,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -1702,6 +1771,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -1755,6 +1827,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1822,6 +1897,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -1864,6 +1942,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -1893,6 +1974,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1953,6 +2037,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2025,6 +2112,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -2073,6 +2163,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2136,6 +2229,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -2188,6 +2284,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2266,6 +2365,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2358,6 +2460,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -2392,6 +2497,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -2424,6 +2532,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2514,6 +2625,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2609,6 +2723,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -2654,6 +2771,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -2692,6 +2812,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -2724,6 +2847,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2813,6 +2939,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -2860,6 +2989,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -2889,6 +3021,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2937,6 +3072,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -2977,6 +3115,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3055,6 +3196,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -3131,6 +3275,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -3165,6 +3312,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -3194,6 +3344,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3235,6 +3388,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3322,6 +3478,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -3369,6 +3528,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -3398,6 +3560,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3502,6 +3667,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -3572,6 +3740,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -3612,6 +3783,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3698,6 +3872,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3826,6 +4003,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -3871,6 +4051,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3960,6 +4143,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -4006,6 +4192,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4060,6 +4249,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -4093,6 +4285,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4134,6 +4329,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4215,6 +4413,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4328,6 +4529,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -4357,6 +4561,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4391,6 +4598,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4463,6 +4673,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -4503,6 +4716,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4574,6 +4790,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -4637,6 +4856,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -4681,6 +4903,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -4721,6 +4946,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4778,6 +5006,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -4825,6 +5056,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -4854,6 +5088,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4891,6 +5128,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4937,6 +5177,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -4981,6 +5224,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5056,6 +5302,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -5090,6 +5339,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -5119,6 +5371,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5160,6 +5415,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5246,6 +5504,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5479,6 +5740,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -5513,6 +5777,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -5542,6 +5809,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5583,6 +5853,9 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5828,6 +6101,9 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
@@ -5840,6 +6116,38 @@
                 "set",
                 "add",
                 "remove"
+            ]
+        },
+        "Loop": {
+            "description": "Array of values. The task will be ran N number of times, depending on the count of values specified. Check the documentation for more info about this property ",
+            "type": "array",
+            "minItems": 1,
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "type": [
+                            "string",
+                            "number",
+                            "boolean"
+                        ]
+                    }
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "patternProperties": {
+                            "^.*$": {
+                                "type": [
+                                    "string",
+                                    "number",
+                                    "boolean"
+                                ]
+                            }
+                        }
+                    }
+                }
             ]
         },
         "UpdateExtraOptions": {
