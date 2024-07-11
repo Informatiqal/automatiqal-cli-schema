@@ -11,7 +11,7 @@ async function generateSaaSRunbookSchema() {
   };
   placeholder.definitions.tasks.items["anyOf"] = [];
 
-  const definitionFiles = JSON.parse(fs.readdirSync("./src/SaaS/definitions"));
+  const definitionFiles = fs.readdirSync("./src/SaaS/definitions");
 
   for (let definition of definitionFiles) {
     const definitionName = definition.replace(".json", "");
@@ -448,21 +448,21 @@ async function appendUISchemaToModule(uiSchema) {
 }
 
 async function generateModuleFile(windowsSchema, saasSchema) {
-  // fs.writeFileSync(
-  //   "./dist/index.js",
-  //   `export const automatiqalWindowsSchema=${JSON.stringify(
-  //     windowsSchema
-  //   )};export const automatiqalSaaSSchema=${JSON.stringify(saasSchema)};
-  //   `
-  // );
-
   fs.writeFileSync(
     "./dist/index.js",
     `export const automatiqalWindowsSchema=${JSON.stringify(
       windowsSchema
-    )};
+    )};export const automatiqalSaaSSchema=${JSON.stringify(saasSchema)};
     `
   );
+
+  // fs.writeFileSync(
+  //   "./dist/index.js",
+  //   `export const automatiqalWindowsSchema=${JSON.stringify(
+  //     windowsSchema
+  //   )};
+  //   `
+  // );
 }
 
 function nameToTitle(name) {
@@ -597,10 +597,10 @@ function definitionTaskNameProperty() {
 
 (async function () {
   const windowsSchema = await generateWindowsRunbookSchema();
-  // const saasSchema = await generateSaaSRunbookSchema();
+  const saasSchema = await generateSaaSRunbookSchema();
 
-  // await generateModuleFile(windowsSchema, saasSchema);
-  await generateModuleFile(windowsSchema);
+  await generateModuleFile(windowsSchema, saasSchema);
+  // await generateModuleFile(windowsSchema);
 
   // const uiPseudoSchema = await generateUISchema(runbookSchema);
   // await appendUISchemaToModule(uiPseudoSchema);
