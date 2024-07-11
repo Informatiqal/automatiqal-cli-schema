@@ -9,6 +9,9 @@
         },
         "tagOperation": {
             "$ref": "#/definitions/AddRemoveSet"
+        },
+        "loopParallel": {
+            "type": "boolean"
         }
     }
 }

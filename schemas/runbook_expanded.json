@@ -982,6 +982,9 @@
                     "properties": {
                         "multiple": {
                             "type": "boolean"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -1093,6 +1096,9 @@
                         },
                         "tagOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -1611,6 +1617,9 @@
                     "type": "object",
                     "properties": {
                         "multiple": {
+                            "type": "boolean"
+                        },
+                        "loopParallel": {
                             "type": "boolean"
                         }
                     }
@@ -2157,6 +2166,9 @@
                     "properties": {
                         "multiple": {
                             "type": "boolean"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -2348,6 +2360,9 @@
                         },
                         "tagOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -2764,6 +2779,9 @@
                         },
                         "multiple": {
                             "type": "boolean"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -2804,6 +2822,9 @@
                     "type": "object",
                     "properties": {
                         "unmaskSecrets": {
+                            "type": "boolean"
+                        },
+                        "loopParallel": {
                             "type": "boolean"
                         }
                     }
@@ -2921,6 +2942,9 @@
                         },
                         "tagOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -3109,6 +3133,9 @@
                     "properties": {
                         "multiple": {
                             "type": "boolean"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -3178,6 +3205,9 @@
                         },
                         "tagOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -3381,6 +3411,9 @@
                     "type": "object",
                     "properties": {
                         "multiple": {
+                            "type": "boolean"
+                        },
+                        "loopParallel": {
                             "type": "boolean"
                         }
                     }
@@ -3649,6 +3682,9 @@
                         },
                         "tagOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -3776,6 +3812,9 @@
                     "type": "object",
                     "properties": {
                         "multiple": {
+                            "type": "boolean"
+                        },
+                        "loopParallel": {
                             "type": "boolean"
                         }
                     }
@@ -4044,6 +4083,9 @@
                     "type": "object",
                     "properties": {
                         "multiple": {
+                            "type": "boolean"
+                        },
+                        "loopParallel": {
                             "type": "boolean"
                         }
                     }
@@ -4323,6 +4365,9 @@
                     "properties": {
                         "multiple": {
                             "type": "boolean"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -4399,6 +4444,9 @@
                         },
                         "tagOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -4710,6 +4758,9 @@
                     "properties": {
                         "multiple": {
                             "type": "boolean"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -4772,6 +4823,9 @@
                         },
                         "tagOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -4849,6 +4903,9 @@
                         "multiple": {
                             "type": "boolean",
                             "description": "Default is false. If set to true then if there is already an tag with the same name the command will create new one"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -4939,6 +4996,9 @@
                     "type": "object",
                     "properties": {
                         "multiple": {
+                            "type": "boolean"
+                        },
+                        "loopParallel": {
                             "type": "boolean"
                         }
                     }
@@ -5409,6 +5469,9 @@
                     "properties": {
                         "multiple": {
                             "type": "boolean"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -5487,6 +5550,9 @@
                         },
                         "tagOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -5847,6 +5913,9 @@
                     "properties": {
                         "multiple": {
                             "type": "boolean"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -5910,6 +5979,9 @@
                         },
                         "whitelistOperation": {
                             "$ref": "#/definitions/AddRemoveSet"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
                         }
                     }
                 },
@@ -6161,6 +6233,9 @@
                 },
                 "tagOperation": {
                     "$ref": "#/definitions/AddRemoveSet"
+                },
+                "loopParallel": {
+                    "type": "boolean"
                 }
             }
         },

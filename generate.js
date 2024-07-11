@@ -160,6 +160,12 @@ async function generateWindowsRunbookSchema() {
       $ref: `#/definitions/${definitionName}`,
     });
 
+    if (definitionContent.properties &&
+      definitionContent.properties.options &&
+      !definitionContent.properties.options.hasOwnProperty("$ref")) {
+      definitionContent.properties.options.properties["loopParallel"] = { type: "boolean" }
+    }
+
     placeholder.definitions[definitionName] = definitionContent;
   }
 
@@ -456,7 +462,7 @@ async function generateModuleFile(windowsSchema, saasSchema) {
       windowsSchema
     )};
     `
-  );  
+  );
 }
 
 function nameToTitle(name) {
