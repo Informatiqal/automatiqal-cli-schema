@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+        "import": {
+            "type": "string",
+            "description": "Used only in CLI! Path to file with tasks to Include"
+        }
+    },
+    "title": "IMPORTANT! Use this way ONLY when calling from CLI!"
+}

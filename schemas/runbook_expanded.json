@@ -305,6 +305,9 @@
                         "$ref": "#/definitions/externalTask.update"
                     },
                     {
+                        "$ref": "#/definitions/import"
+                    },
+                    {
                         "$ref": "#/definitions/node.get"
                     },
                     {
@@ -3532,6 +3535,26 @@
                 }
             ]
         },
+        "import": {
+            "type": "object",
+            "properties": {
+                "import": {
+                    "type": "string",
+                    "description": "Used only in CLI! Path to file with tasks to Include"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "title": "IMPORTANT! Use this way ONLY when calling from CLI!"
+        },
         "node.get": {
             "type": "object",
             "description": "Get instance of node/nodes",
@@ -6276,13 +6299,300 @@
                 ]
             }
         },
+        "Tasks_Without_Import": {
+            "type": "array",
+            "minITems": 1,
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "#/definitions/about.apiDefaults"
+                    },
+                    {
+                        "$ref": "#/definitions/about.apiDescription"
+                    },
+                    {
+                        "$ref": "#/definitions/about.apiRelations"
+                    },
+                    {
+                        "$ref": "#/definitions/about.enums"
+                    },
+                    {
+                        "$ref": "#/definitions/about.get"
+                    },
+                    {
+                        "$ref": "#/definitions/about.openApi"
+                    },
+                    {
+                        "$ref": "#/definitions/app.copy"
+                    },
+                    {
+                        "$ref": "#/definitions/app.export"
+                    },
+                    {
+                        "$ref": "#/definitions/app.exportMany"
+                    },
+                    {
+                        "$ref": "#/definitions/app.get"
+                    },
+                    {
+                        "$ref": "#/definitions/app.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/app.publish"
+                    },
+                    {
+                        "$ref": "#/definitions/app.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/app.switch"
+                    },
+                    {
+                        "$ref": "#/definitions/app.update"
+                    },
+                    {
+                        "$ref": "#/definitions/app.upload"
+                    },
+                    {
+                        "$ref": "#/definitions/app.uploadAndReplace"
+                    },
+                    {
+                        "$ref": "#/definitions/app.uploadMany"
+                    },
+                    {
+                        "$ref": "#/definitions/certificate.distributionPathGet"
+                    },
+                    {
+                        "$ref": "#/definitions/certificate.generate"
+                    },
+                    {
+                        "$ref": "#/definitions/compositeTrigger.create"
+                    },
+                    {
+                        "$ref": "#/definitions/compositeTrigger.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/compositeTrigger.update"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.create"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.export"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.exportMany"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.get"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.importFile"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.importFileMany"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.removeFile"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.removeFileMany"
+                    },
+                    {
+                        "$ref": "#/definitions/contentLibrary.update"
+                    },
+                    {
+                        "$ref": "#/definitions/customProperty.create"
+                    },
+                    {
+                        "$ref": "#/definitions/customProperty.get"
+                    },
+                    {
+                        "$ref": "#/definitions/customProperty.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/customProperty.update"
+                    },
+                    {
+                        "$ref": "#/definitions/dataConnection.create"
+                    },
+                    {
+                        "$ref": "#/definitions/dataConnection.get"
+                    },
+                    {
+                        "$ref": "#/definitions/dataConnection.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/dataConnection.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/dataConnection.update"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.get"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.import"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/extension.update"
+                    },
+                    {
+                        "$ref": "#/definitions/externalTask.create"
+                    },
+                    {
+                        "$ref": "#/definitions/externalTask.get"
+                    },
+                    {
+                        "$ref": "#/definitions/externalTask.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/externalTask.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/externalTask.update"
+                    },
+                    {
+                        "$ref": "#/definitions/import"
+                    },
+                    {
+                        "$ref": "#/definitions/node.get"
+                    },
+                    {
+                        "$ref": "#/definitions/node.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/proxy.update"
+                    },
+                    {
+                        "$ref": "#/definitions/reloadTask.create"
+                    },
+                    {
+                        "$ref": "#/definitions/reloadTask.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/reloadTask.update"
+                    },
+                    {
+                        "$ref": "#/definitions/schemaTrigger.create"
+                    },
+                    {
+                        "$ref": "#/definitions/schemaTrigger.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/schemaTrigger.update"
+                    },
+                    {
+                        "$ref": "#/definitions/serviceStatus.get"
+                    },
+                    {
+                        "$ref": "#/definitions/stream.create"
+                    },
+                    {
+                        "$ref": "#/definitions/stream.get"
+                    },
+                    {
+                        "$ref": "#/definitions/stream.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/stream.update"
+                    },
+                    {
+                        "$ref": "#/definitions/systemRule.create"
+                    },
+                    {
+                        "$ref": "#/definitions/systemRule.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/systemRule"
+                    },
+                    {
+                        "$ref": "#/definitions/systemRule.licenseCreate"
+                    },
+                    {
+                        "$ref": "#/definitions/systemRule.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/systemRule.update"
+                    },
+                    {
+                        "$ref": "#/definitions/tag.create"
+                    },
+                    {
+                        "$ref": "#/definitions/tag.createMany"
+                    },
+                    {
+                        "$ref": "#/definitions/tag.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/tag.update"
+                    },
+                    {
+                        "$ref": "#/definitions/task.get"
+                    },
+                    {
+                        "$ref": "#/definitions/task.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/task.start"
+                    },
+                    {
+                        "$ref": "#/definitions/task.startSynchronous"
+                    },
+                    {
+                        "$ref": "#/definitions/task.stop"
+                    },
+                    {
+                        "$ref": "#/definitions/user.create"
+                    },
+                    {
+                        "$ref": "#/definitions/user.get"
+                    },
+                    {
+                        "$ref": "#/definitions/user.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/user.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/user.update"
+                    },
+                    {
+                        "$ref": "#/definitions/virtualProxy.create"
+                    },
+                    {
+                        "$ref": "#/definitions/virtualProxy.get"
+                    },
+                    {
+                        "$ref": "#/definitions/virtualProxy.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/virtualProxy.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/virtualProxy.update"
+                    }
+                ]
+            }
+        },
         "onError": {
             "oneOf": [
                 {
                     "type": "object",
                     "properties": {
                         "tasks": {
-                            "$ref": "#/definitions/tasks"
+                            "$ref": "#/definitions/Tasks_Without_Import"
                         }
                     },
                     "required": [

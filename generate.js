@@ -145,16 +145,18 @@ async function generateWindowsRunbookSchema() {
       fs.readFileSync(`./src/QSEoW/definitions/${definition}`)
     );
 
-    definitionContent.properties["description"] = {
-      type: "string",
-      description: "Task description (multiline is supported)",
-    };
+    if (definitionContent.properties) {
+      definitionContent.properties["description"] = {
+        type: "string",
+        description: "Task description (multiline is supported)",
+      };
 
-    definitionContent.properties["loop"] = { $ref: `#/definitions/Loop` }
+      definitionContent.properties["loop"] = { $ref: `#/definitions/Loop` }
 
-    definitionContent.properties.onError = {
-      $ref: `#/definitions/onError`,
-    };
+      definitionContent.properties.onError = {
+        $ref: `#/definitions/onError`,
+      };
+    }
 
     placeholder.definitions.tasks.items.anyOf.push({
       $ref: `#/definitions/${definitionName}`,
@@ -211,6 +213,16 @@ async function generateWindowsRunbookSchema() {
     },
   };
 
+  placeholder.definitions["Tasks_Without_Import"] = {
+    type: "array",
+    minITems: 1,
+    items: {
+      anyOf: placeholder.definitions.tasks.items.anyOf.filter(d => d["$ref"] !=
+        "#/definitions/include",
+      )
+    }
+  }
+
   placeholder.definitions["onError"] = {
     // type: "object",
     oneOf: [
@@ -218,7 +230,7 @@ async function generateWindowsRunbookSchema() {
         type: "object",
         properties: {
           tasks: {
-            $ref: "#/definitions/tasks",
+            $ref: "#/definitions/Tasks_Without_Import",
           },
         },
         required: ["tasks"],
