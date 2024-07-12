@@ -3474,10 +3474,10 @@
                             "type": "string"
                         },
                         "path": {
-                            "type": "integer"
+                            "type": "string"
                         },
                         "parameters": {
-                            "type": "integer"
+                            "type": "string"
                         },
                         "tags": {
                             "type": "array",
