@@ -271,6 +271,29 @@ async function generateWindowsRunbookSchema() {
   return placeholder;
 }
 
+async function generateImportWindowsSchema(generatedSchemaQSEoW) {
+  delete generatedSchemaQSEoW["additionalProperties"];
+  delete generatedSchemaQSEoW["properties"];
+  delete generatedSchemaQSEoW["required"];
+
+  generatedSchemaQSEoW["title"] = "JSON Schema for Automatiqal external runbook files";
+  generatedSchemaQSEoW["description"] = "Automatiqal only tasks JSON schema (@informatiqal)";
+  generatedSchemaQSEoW["minItems"] = 1;
+  generatedSchemaQSEoW["type"] = "array";
+  generatedSchemaQSEoW["items"] = {
+    anyOf: generatedSchemaQSEoW.definitions.tasks.items.anyOf
+  };
+
+  delete generatedSchemaQSEoW.definitions.tasks
+
+  fs.writeFileSync(
+    `./schemas/tasks_only_expanded.json`,
+    JSON.stringify(generatedSchemaQSEoW, null, 4)
+  );
+
+  fs.writeFileSync(`./schemas/tasks_only.json`, JSON.stringify(generatedSchemaQSEoW));
+}
+
 async function generateUISchema(runbookSchema) {
   const definitions = runbookSchema.definitions;
 
@@ -610,6 +633,7 @@ function definitionTaskNameProperty() {
 (async function () {
   const windowsSchema = await generateWindowsRunbookSchema();
   const saasSchema = await generateSaaSRunbookSchema();
+  const taskOnlySchema = await generateImportWindowsSchema(windowsSchema)
 
   await generateModuleFile(windowsSchema, saasSchema);
   // await generateModuleFile(windowsSchema);
