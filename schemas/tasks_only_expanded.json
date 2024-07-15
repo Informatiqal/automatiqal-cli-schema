@@ -3114,10 +3114,51 @@
         },
         "import": {
             "type": "object",
+            "description": "IMPORTANT! Use this way ONLY when calling from CLI!",
+            "required": [
+                "import"
+            ],
             "properties": {
                 "import": {
-                    "type": "string",
-                    "description": "Used only in CLI! Path to file with tasks to Include"
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "object",
+                            "description": "Used only in CLI! Path to file with tasks to Include",
+                            "required": [
+                                "path"
+                            ],
+                            "properties": {
+                                "path": {
+                                    "type": "string",
+                                    "description": "Path to yaml file where external tasks are defined"
+                                },
+                                "vars": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "^.*$": {
+                                                "anyOf": [
+                                                    {
+                                                        "type": "string"
+                                                    },
+                                                    {
+                                                        "type": "number"
+                                                    },
+                                                    {
+                                                        "type": "boolean"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 },
                 "description": {
                     "type": "string",
@@ -3129,8 +3170,7 @@
                 "onError": {
                     "$ref": "#/definitions/onError"
                 }
-            },
-            "title": "IMPORTANT! Use this way ONLY when calling from CLI!"
+            }
         },
         "node.get": {
             "type": "object",

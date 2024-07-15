@@ -28,7 +28,10 @@
     "*.md",
     "CHANGELOG.md",
     "LICENSE",
-    "!Notes.md"
+    "!Notes.md",
+    "!runbook_expanded.json",
+    "!runbook_saas_expanded.json",
+    "!tasks_only_expanded.json"
   ],
   "repository": {
     "type": "git",
