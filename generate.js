@@ -215,7 +215,7 @@ async function generateWindowsRunbookSchema() {
 
   placeholder.definitions["Tasks_Without_Import"] = {
     type: "array",
-    minITems: 1,
+    minItems: 1,
     items: {
       anyOf: placeholder.definitions.tasks.items.anyOf.filter(d => d["$ref"] !=
         "#/definitions/include",

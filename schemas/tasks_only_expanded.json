@@ -5918,7 +5918,7 @@
         },
         "Tasks_Without_Import": {
             "type": "array",
-            "minITems": 1,
+            "minItems": 1,
             "items": {
                 "anyOf": [
                     {

@@ -1,6 +1,6 @@
 {
   "name": "@informatiqal/automatiqal-schema",
-  "version": "0.12.1",
+  "version": "0.12.2",
   "description": "Automatiqal runbooks JSON and pseudo UI schemas",
   "author": {
     "email": "info@informatiqal.com",
@@ -28,10 +28,7 @@
     "*.md",
     "CHANGELOG.md",
     "LICENSE",
-    "!Notes.md",
-    "!runbook_expanded.json",
-    "!runbook_saas_expanded.json",
-    "!tasks_only_expanded.json"
+    "!Notes.md"
   ],
   "repository": {
     "type": "git",
