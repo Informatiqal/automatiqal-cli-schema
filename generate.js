@@ -272,26 +272,22 @@ async function generateWindowsRunbookSchema() {
 }
 
 async function generateImportWindowsSchema(generatedSchemaQSEoW) {
-  delete generatedSchemaQSEoW["additionalProperties"];
-  delete generatedSchemaQSEoW["properties"];
-  delete generatedSchemaQSEoW["required"];
+  const generatedWindowsSchema = JSON.parse(JSON.stringify(generatedSchemaQSEoW))
+  delete generatedWindowsSchema["additionalProperties"];
+  delete generatedWindowsSchema["properties"];
+  delete generatedWindowsSchema["required"];
 
-  generatedSchemaQSEoW["title"] = "JSON Schema for Automatiqal external runbook files";
-  generatedSchemaQSEoW["description"] = "Automatiqal only tasks JSON schema (@informatiqal)";
-  generatedSchemaQSEoW["minItems"] = 1;
-  generatedSchemaQSEoW["type"] = "array";
-  generatedSchemaQSEoW["items"] = {
-    anyOf: generatedSchemaQSEoW.definitions.tasks.items.anyOf
+  generatedWindowsSchema["title"] = "JSON Schema for Automatiqal external runbook files";
+  generatedWindowsSchema["description"] = "Automatiqal only tasks JSON schema (@informatiqal)";
+  generatedWindowsSchema["minItems"] = 1;
+  generatedWindowsSchema["type"] = "array";
+  generatedWindowsSchema["items"] = {
+    anyOf: generatedWindowsSchema.definitions.tasks.items.anyOf
   };
 
-  delete generatedSchemaQSEoW.definitions.tasks
+  delete generatedWindowsSchema.definitions.tasks
 
-  fs.writeFileSync(
-    `./schemas/tasks_only_expanded.json`,
-    JSON.stringify(generatedSchemaQSEoW, null, 4)
-  );
-
-  fs.writeFileSync(`./schemas/tasks_only.json`, JSON.stringify(generatedSchemaQSEoW));
+  return generatedWindowsSchema
 }
 
 async function generateUISchema(runbookSchema) {
@@ -482,7 +478,7 @@ async function appendUISchemaToModule(uiSchema) {
   );
 }
 
-async function generateModuleFile(windowsSchema, saasSchema) {
+async function generateModuleFile(windowsSchema, saasSchema, taskOnlySchema) {
   fs.writeFileSync(
     "./dist/index.js",
     `export const automatiqalWindowsSchema=${JSON.stringify(
@@ -498,6 +494,13 @@ async function generateModuleFile(windowsSchema, saasSchema) {
   //   )};
   //   `
   // );
+
+  fs.writeFileSync(
+    `./schemas/tasks_only_expanded.json`,
+    JSON.stringify(taskOnlySchema, null, 4)
+  );
+
+  fs.writeFileSync(`./schemas/tasks_only.json`, JSON.stringify(taskOnlySchema));
 }
 
 function nameToTitle(name) {
@@ -633,10 +636,9 @@ function definitionTaskNameProperty() {
 (async function () {
   const windowsSchema = await generateWindowsRunbookSchema();
   const saasSchema = await generateSaaSRunbookSchema();
-  const taskOnlySchema = await generateImportWindowsSchema(windowsSchema)
+  const taskOnlySchema = await generateImportWindowsSchema(windowsSchema )
 
-  await generateModuleFile(windowsSchema, saasSchema);
-  // await generateModuleFile(windowsSchema);
+  await generateModuleFile(windowsSchema, saasSchema, taskOnlySchema);
 
   // const uiPseudoSchema = await generateUISchema(runbookSchema);
   // await appendUISchemaToModule(uiPseudoSchema);
