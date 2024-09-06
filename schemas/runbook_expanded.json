@@ -209,6 +209,12 @@
                         "$ref": "#/definitions/compositeTrigger.create"
                     },
                     {
+                        "$ref": "#/definitions/compositeTrigger.get"
+                    },
+                    {
+                        "$ref": "#/definitions/compositeTrigger.getAll"
+                    },
+                    {
                         "$ref": "#/definitions/compositeTrigger.remove"
                     },
                     {
@@ -327,6 +333,12 @@
                     },
                     {
                         "$ref": "#/definitions/schemaTrigger.create"
+                    },
+                    {
+                        "$ref": "#/definitions/schemaTrigger.get"
+                    },
+                    {
+                        "$ref": "#/definitions/schemaTrigger.getAll"
                     },
                     {
                         "$ref": "#/definitions/schemaTrigger.remove"
@@ -1591,6 +1603,76 @@
                 "operation",
                 "details"
             ]
+        },
+        "compositeTrigger.get": {
+            "type": "object",
+            "description": "Get instance of composite trigger(s)",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "compositeTrigger.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "compositeTrigger.getAll": {
+            "type": "object",
+            "description": "Get instance of all composite triggers",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "compositeTrigger.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
         },
         "compositeTrigger.remove": {
             "type": "object",
@@ -4053,7 +4135,12 @@
                             "$ref": "#/definitions/TimeZones"
                         },
                         "daylightSavingTime": {
-                            "type": "boolean"
+                            "type": "string",
+                            "enum": [
+                                "ObserveDaylightSavingTime",
+                                "PermanentStandardTime",
+                                "PermanentDaylightSavingTime"
+                            ]
                         },
                         "task": {
                             "oneOf": [
@@ -4117,6 +4204,76 @@
                 "operation",
                 "details"
             ]
+        },
+        "schemaTrigger.get": {
+            "type": "object",
+            "description": "Get instance of schema trigger(s)",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "schemaTrigger.get"
+                    ]
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "schemaTrigger.getAll": {
+            "type": "object",
+            "description": "Get instance of all schema trigger",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "schemaTrigger.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
         },
         "schemaTrigger.remove": {
             "type": "object",
@@ -4229,7 +4386,12 @@
                             "$ref": "#/definitions/TimeZones"
                         },
                         "daylightSavingTime": {
-                            "type": "boolean"
+                            "type": "string",
+                            "enum": [
+                                "ObserveDaylightSavingTime",
+                                "PermanentStandardTime",
+                                "PermanentDaylightSavingTime"
+                            ]
                         }
                     }
                 },
@@ -6408,6 +6570,12 @@
                         "$ref": "#/definitions/compositeTrigger.create"
                     },
                     {
+                        "$ref": "#/definitions/compositeTrigger.get"
+                    },
+                    {
+                        "$ref": "#/definitions/compositeTrigger.getAll"
+                    },
+                    {
                         "$ref": "#/definitions/compositeTrigger.remove"
                     },
                     {
@@ -6526,6 +6694,12 @@
                     },
                     {
                         "$ref": "#/definitions/schemaTrigger.create"
+                    },
+                    {
+                        "$ref": "#/definitions/schemaTrigger.get"
+                    },
+                    {
+                        "$ref": "#/definitions/schemaTrigger.getAll"
                     },
                     {
                         "$ref": "#/definitions/schemaTrigger.remove"

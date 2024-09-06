@@ -50,7 +50,12 @@
                     "$ref": "#/definitions/TimeZones"
                 },
                 "daylightSavingTime": {
-                    "type": "boolean"
+                    "type": "string",
+                    "enum": [
+                        "ObserveDaylightSavingTime",
+                        "PermanentStandardTime",
+                        "PermanentDaylightSavingTime"
+                    ]
                 }
             }
         },

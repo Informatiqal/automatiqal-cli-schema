@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "description": "Get instance of all composite triggers",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "compositeTrigger.getAll"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}
