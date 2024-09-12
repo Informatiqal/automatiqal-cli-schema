@@ -2255,7 +2255,7 @@
                 }
             ]
         },
-        "customBannerMessage.update ": {
+        "customBannerMessage.update": {
             "type": "object",
             "description": "Update custom banner(s) properties",
             "properties": {
@@ -3208,28 +3208,6 @@
                 },
                 "details": {
                     "type": "object",
-                    "required": [
-                        "name",
-                        "version",
-                        "started",
-                        "commited_mem",
-                        "allocated_mem",
-                        "free_mem",
-                        "total_cpu",
-                        "calls",
-                        "selections",
-                        "active_users",
-                        "total_users",
-                        "hits_cache",
-                        "lookups_cache",
-                        "added_cache",
-                        "replaced_cache",
-                        "bytes_added",
-                        "saturated",
-                        "responded_to_latest",
-                        "totalPhysical",
-                        "totalStaticByteSize"
-                    ],
                     "properties": {
                         "name": {
                             "type": "string"
@@ -6341,6 +6319,22 @@
                             "items": {
                                 "type": "string"
                             }
+                        },
+                        "enableEngineSaturationCheck": {
+                            "type": "boolean"
+                        },
+                        "enableEngineHealthCheckData": {
+                            "type": "boolean"
+                        },
+                        "useStickyLoadBalancing": {
+                            "type": "boolean"
+                        },
+                        "loadBalancingAlgorithm": {
+                            "type": "string",
+                            "enum": [
+                                "RoundRobin",
+                                "MemoryAllocation"
+                            ]
                         }
                     }
                 },
@@ -6708,6 +6702,22 @@
                             "items": {
                                 "type": "string"
                             }
+                        },
+                        "enableEngineSaturationCheck": {
+                            "type": "boolean"
+                        },
+                        "enableEngineHealthCheckData": {
+                            "type": "boolean"
+                        },
+                        "useStickyLoadBalancing": {
+                            "type": "boolean"
+                        },
+                        "loadBalancingAlgorithm": {
+                            "type": "string",
+                            "enum": [
+                                "RoundRobin",
+                                "MemoryAllocation"
+                            ]
                         }
                     }
                 },
@@ -6944,7 +6954,7 @@
                         "$ref": "#/definitions/customBannerMessage.remove"
                     },
                     {
-                        "$ref": "#/definitions/customBannerMessage.update "
+                        "$ref": "#/definitions/customBannerMessage.update"
                     },
                     {
                         "$ref": "#/definitions/customProperty.create"
@@ -7452,7 +7462,7 @@
                 "$ref": "#/definitions/customBannerMessage.remove"
             },
             {
-                "$ref": "#/definitions/customBannerMessage.update "
+                "$ref": "#/definitions/customBannerMessage.update"
             },
             {
                 "$ref": "#/definitions/customProperty.create"

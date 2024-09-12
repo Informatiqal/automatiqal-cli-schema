@@ -13,28 +13,6 @@
         },
         "details": {
             "type": "object",
-            "required": [
-                "name",
-                "version",
-                "started",
-                "commited_mem",
-                "allocated_mem",
-                "free_mem",
-                "total_cpu",
-                "calls",
-                "selections",
-                "active_users",
-                "total_users",
-                "hits_cache",
-                "lookups_cache",
-                "added_cache",
-                "replaced_cache",
-                "bytes_added",
-                "saturated",
-                "responded_to_latest",
-                "totalPhysical",
-                "totalStaticByteSize"
-            ],
             "properties": {
                 "name": {
                     "type": "string"

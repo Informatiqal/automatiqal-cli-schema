@@ -205,6 +205,22 @@
                     "items": {
                         "type": "string"
                     }
+                },
+                "enableEngineSaturationCheck": {
+                    "type": "boolean"
+                },
+                "enableEngineHealthCheckData": {
+                    "type": "boolean"
+                },
+                "useStickyLoadBalancing": {
+                    "type": "boolean"
+                },
+                "loadBalancingAlgorithm": {
+                    "type": "string",
+                    "enum": [
+                        "RoundRobin",
+                        "MemoryAllocation"
+                    ]
                 }
             }
         }
