@@ -1,0 +1,61 @@
+{
+    "type": "object",
+    "description": "Update custom banner(s) properties",
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "customBannerMessage.update"
+            ]
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "messageType": {
+                    "type": "integer",
+                    "description": "0 -> Standard\n1 -> Info\n2 -> Warning\n3 -> Error"
+                },
+                "isActive": {
+                    "type": "boolean"
+                },
+                "duration": {
+                    "type": "integer",
+                    "description": "Duration time in seconds"
+                }
+            }
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "filter": {
+            "type": "string",
+            "description": "Filter to apply to retrieve the custom banner(s) to update"
+        },
+        "source": {
+            "type": "string",
+            "description": "Name of previously defined tasks. Use the result of the task as source"
+        }
+    },
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "oneOf": [
+        {
+            "$ref": "#/definitions/OneOf_1"
+        },
+        {
+            "$ref": "#/definitions/OneOf_2"
+        }
+    ]
+}

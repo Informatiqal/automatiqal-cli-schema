@@ -2052,6 +2052,280 @@
                 }
             ]
         },
+        "customBannerMessage.create": {
+            "type": "object",
+            "description": "Create new custom banner message",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "customBannerMessage.create"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "name",
+                        "message",
+                        "messageType",
+                        "isActive",
+                        "duration"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "message": {
+                            "type": "string"
+                        },
+                        "messageType": {
+                            "type": "integer",
+                            "description": "0 -> Standard\n1 -> Info\n2 -> Warning\n3 -> Error"
+                        },
+                        "isActive": {
+                            "type": "boolean"
+                        },
+                        "duration": {
+                            "type": "integer",
+                            "description": "Duration time in seconds"
+                        }
+                    }
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean",
+                            "description": "Default is false. If set to true then if there is already an tag with the same name the command will create new one"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "customBannerMessage.get": {
+            "type": "object",
+            "description": "Get instance of banner message(s)",
+            "required": [
+                "name",
+                "operation",
+                "filter"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "customBannerMessage.get"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "customBannerMessage.getAll": {
+            "type": "object",
+            "description": "Get instance of all banner messages",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "customBannerMessage.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
+        "customBannerMessage.remove": {
+            "type": "object",
+            "description": "Remove custom banner message(s))",
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "customBannerMessage.remove"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the banner messages"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "multiple": {
+                            "type": "boolean"
+                        },
+                        "loopParallel": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "required": [
+                "name",
+                "operation"
+            ],
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
+        "customBannerMessage.update ": {
+            "type": "object",
+            "description": "Update custom banner(s) properties",
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "customBannerMessage.update"
+                    ]
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "message": {
+                            "type": "string"
+                        },
+                        "messageType": {
+                            "type": "integer",
+                            "description": "0 -> Standard\n1 -> Info\n2 -> Warning\n3 -> Error"
+                        },
+                        "isActive": {
+                            "type": "boolean"
+                        },
+                        "duration": {
+                            "type": "integer",
+                            "description": "Duration time in seconds"
+                        }
+                    }
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string",
+                    "description": "Filter to apply to retrieve the custom banner(s) to update"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of previously defined tasks. Use the result of the task as source"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            },
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/OneOf_1"
+                },
+                {
+                    "$ref": "#/definitions/OneOf_2"
+                }
+            ]
+        },
         "customProperty.create": {
             "type": "object",
             "description": "Create new custom property",
@@ -4126,6 +4400,39 @@
                 }
             }
         },
+        "stream.getAll": {
+            "type": "object",
+            "description": "Get instance of all streams",
+            "required": [
+                "name",
+                "operation"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "readOnly": true,
+                    "enum": [
+                        "stream.getAll"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                }
+            }
+        },
         "stream.remove": {
             "type": "object",
             "description": "Remove stream/streams",
@@ -6180,6 +6487,21 @@
                         "$ref": "#/definitions/contentLibrary.update"
                     },
                     {
+                        "$ref": "#/definitions/customBannerMessage.create"
+                    },
+                    {
+                        "$ref": "#/definitions/customBannerMessage.get"
+                    },
+                    {
+                        "$ref": "#/definitions/customBannerMessage.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/customBannerMessage.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/customBannerMessage.update "
+                    },
+                    {
                         "$ref": "#/definitions/customProperty.create"
                     },
                     {
@@ -6280,6 +6602,9 @@
                     },
                     {
                         "$ref": "#/definitions/stream.get"
+                    },
+                    {
+                        "$ref": "#/definitions/stream.getAll"
                     },
                     {
                         "$ref": "#/definitions/stream.remove"
@@ -6655,6 +6980,21 @@
                 "$ref": "#/definitions/contentLibrary.update"
             },
             {
+                "$ref": "#/definitions/customBannerMessage.create"
+            },
+            {
+                "$ref": "#/definitions/customBannerMessage.get"
+            },
+            {
+                "$ref": "#/definitions/customBannerMessage.getAll"
+            },
+            {
+                "$ref": "#/definitions/customBannerMessage.remove"
+            },
+            {
+                "$ref": "#/definitions/customBannerMessage.update "
+            },
+            {
                 "$ref": "#/definitions/customProperty.create"
             },
             {
@@ -6755,6 +7095,9 @@
             },
             {
                 "$ref": "#/definitions/stream.get"
+            },
+            {
+                "$ref": "#/definitions/stream.getAll"
             },
             {
                 "$ref": "#/definitions/stream.remove"
