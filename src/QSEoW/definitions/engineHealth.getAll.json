@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "description": "Get instance of all engines health",
+    "required": [
+        "name",
+        "operation"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+                "engineHealth.getAll"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}

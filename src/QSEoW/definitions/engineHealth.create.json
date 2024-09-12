@@ -1,0 +1,143 @@
+{
+    "type": "object",
+    "description": "Create new engine health record",
+    "required": [
+        "name",
+        "operation",
+        "details"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "engineHealth.create"
+            ]
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "required": [
+                "name",
+                "version",
+                "started",
+                "commited_mem",
+                "allocated_mem",
+                "free_mem",
+                "total_cpu",
+                "calls",
+                "selections",
+                "active_users",
+                "total_users",
+                "hits_cache",
+                "lookups_cache",
+                "added_cache",
+                "replaced_cache",
+                "bytes_added",
+                "saturated",
+                "responded_to_latest",
+                "totalPhysical",
+                "totalStaticByteSize"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "started": {
+                    "type": "string"
+                },
+                "commited_mem": {
+                    "type": "number"
+                },
+                "allocated_mem": {
+                    "type": "number"
+                },
+                "free_mem": {
+                    "type": "number"
+                },
+                "total_cpu": {
+                    "type": "number"
+                },
+                "active_sessions": {
+                    "type": "number"
+                },
+                "total_sessions": {
+                    "type": "number"
+                },
+                "active_docs": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "in_memory_docs": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "loaded_docs": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "calls": {
+                    "type": "number"
+                },
+                "selections": {
+                    "type": "number"
+                },
+                "active_users": {
+                    "type": "number"
+                },
+                "total_users": {
+                    "type": "number"
+                },
+                "hits_cache": {
+                    "type": "number"
+                },
+                "lookups_cache": {
+                    "type": "number"
+                },
+                "added_cache": {
+                    "type": "number"
+                },
+                "replaced_cache": {
+                    "type": "number"
+                },
+                "bytes_added": {
+                    "type": "number"
+                },
+                "saturated": {
+                    "type": "boolean"
+                },
+                "responded_to_latest": {
+                    "type": "boolean"
+                },
+                "totalPhysical": {
+                    "type": "number"
+                },
+                "totalStaticByteSize": {
+                    "type": "number"
+                }
+            }
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "multiple": {
+                    "type": "boolean",
+                    "description": "Default is false. If set to true then if there is already an tag with the same name the command will create new one"
+                }
+            }
+        }
+    }
+}
