@@ -165,7 +165,12 @@ async function generateWindowsRunbookSchema() {
     if (definitionContent.properties &&
       definitionContent.properties.options &&
       !definitionContent.properties.options.hasOwnProperty("$ref")) {
-      definitionContent.properties.options.properties["loopParallel"] = { type: "boolean" }
+      definitionContent.properties.options.properties["loopParallel"] = { type: "boolean", "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'" }
+      definitionContent.properties.options.properties["parallel"] = { type: "boolean", "description": "process entities in parallel or sequence, default is true" }
+      definitionContent.properties.options.properties["concurrency"] = { type: "number", "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N" }
+      definitionContent.properties.options.properties["batch"] = {
+        type: "number", "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
+      }
     }
 
     placeholder.definitions[definitionName] = definitionContent;
@@ -636,7 +641,7 @@ function definitionTaskNameProperty() {
 (async function () {
   const windowsSchema = await generateWindowsRunbookSchema();
   const saasSchema = await generateSaaSRunbookSchema();
-  const taskOnlySchema = await generateImportWindowsSchema(windowsSchema )
+  const taskOnlySchema = await generateImportWindowsSchema(windowsSchema)
 
   await generateModuleFile(windowsSchema, saasSchema, taskOnlySchema);
 

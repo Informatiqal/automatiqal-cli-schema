@@ -564,7 +564,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -678,7 +691,20 @@
                             "$ref": "#/definitions/AddRemoveSet"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -1270,7 +1296,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -1818,7 +1857,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -2012,7 +2064,20 @@
                             "$ref": "#/definitions/AddRemoveSet"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -2110,7 +2175,20 @@
                             "description": "Default is false. If set to true then if there is already an tag with the same name the command will create new one"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -2227,7 +2305,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -2705,7 +2796,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -2749,7 +2853,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -2868,7 +2985,20 @@
                             "$ref": "#/definitions/AddRemoveSet"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -2973,7 +3103,7 @@
                             "type": "number"
                         },
                         "total_cpu": {
-                            "type": "number"
+                            "type": "integer"
                         },
                         "active_sessions": {
                             "type": "number"
@@ -3048,7 +3178,20 @@
                             "description": "Default is false. If set to true then if there is already an tag with the same name the command will create new one"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -3165,7 +3308,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -3482,7 +3638,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -3554,7 +3723,20 @@
                             "$ref": "#/definitions/AddRemoveSet"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -3761,7 +3943,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -4091,7 +4286,20 @@
                             "$ref": "#/definitions/AddRemoveSet"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -4222,7 +4430,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -4568,7 +4789,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -4887,7 +5121,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -4966,7 +5213,20 @@
                             "$ref": "#/definitions/AddRemoveSet"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -5280,7 +5540,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -5345,7 +5618,20 @@
                             "$ref": "#/definitions/AddRemoveSet"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -5425,7 +5711,20 @@
                             "description": "Default is false. If set to true then if there is already an tag with the same name the command will create new one"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -5519,7 +5818,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -5991,7 +6303,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -6072,7 +6397,20 @@
                             "$ref": "#/definitions/AddRemoveSet"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -6451,7 +6789,20 @@
                             "type": "boolean"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -6517,7 +6868,20 @@
                             "$ref": "#/definitions/AddRemoveSet"
                         },
                         "loopParallel": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'"
+                        },
+                        "parallel": {
+                            "type": "boolean",
+                            "description": "process entities in parallel or sequence, default is true"
+                        },
+                        "concurrency": {
+                            "type": "number",
+                            "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N"
+                        },
+                        "batch": {
+                            "type": "number",
+                            "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
                         }
                     }
                 },
@@ -6744,31 +7108,60 @@
         },
         "Loop": {
             "description": "Array of values. The task will be ran N number of times, depending on the count of values specified. Check the documentation for more info about this property ",
-            "type": "array",
-            "minItems": 1,
+            "type": "object",
             "oneOf": [
                 {
-                    "type": "array",
-                    "items": {
-                        "type": [
-                            "string",
-                            "number",
-                            "boolean"
-                        ]
+                    "type": "object",
+                    "required": [
+                        "values"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                        "values": {
+                            "type": "array",
+                            "oneOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "type": [
+                                            "string",
+                                            "number",
+                                            "boolean"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "patternProperties": {
+                                            "^.*$": {
+                                                "type": [
+                                                    "string",
+                                                    "number",
+                                                    "boolean"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
                     }
                 },
                 {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "patternProperties": {
-                            "^.*$": {
-                                "type": [
-                                    "string",
-                                    "number",
-                                    "boolean"
-                                ]
-                            }
+                    "type": "object",
+                    "required": [
+                        "format",
+                        "location"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                        "format": {
+                            "type": "string"
+                        },
+                        "location": {
+                            "type": "string"
                         }
                     }
                 }
