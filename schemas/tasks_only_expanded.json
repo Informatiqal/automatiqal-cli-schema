@@ -7158,7 +7158,12 @@
                     "additionalProperties": false,
                     "properties": {
                         "format": {
-                            "type": "string"
+                            "type": "string",
+                            "enum": [
+                                "csv",
+                                "json",
+                                "yaml"
+                            ]
                         },
                         "location": {
                             "type": "string"
