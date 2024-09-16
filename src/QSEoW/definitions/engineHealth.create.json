@@ -63,7 +63,7 @@
                     "type": "number"
                 },
                 "total_cpu": {
-                    "type": "number"
+                    "type": "integer"
                 },
                 "active_sessions": {
                     "type": "number"
