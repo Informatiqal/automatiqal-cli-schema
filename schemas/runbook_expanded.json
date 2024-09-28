@@ -30,102 +30,219 @@
             ]
         },
         "environment": {
-            "type": "object",
-            "description": "Define the Qlik environment details (host, port, authentication etc.)",
-            "properties": {
-                "host": {
-                    "type": "string",
-                    "description": "Qlik Sense host name"
-                },
-                "port": {
-                    "type": "integer",
-                    "description": "Repository port (default 4242)",
-                    "default": 4242
-                },
-                "authentication": {
+            "oneOf": [
+                {
                     "type": "object",
-                    "description": "Authentication information (certificates, jwt etc.)",
-                    "oneOf": [
-                        {
-                            "description": "Certificate authentication. Use when connecting to Repo  directly - on port 4242 (default)",
-                            "required": [
-                                "cert",
-                                "key",
-                                "user_dir",
-                                "user_name"
-                            ],
-                            "properties": {
-                                "cert": {
-                                    "type": "string",
-                                    "description": "Full path to certificate (cert.pem)\nc:\\path\\to\\cert.pem\nc:\\path\\to\\some-cert.pem",
-                                    "examples": [
-                                        "c:\\path\\to\\cert.pem",
-                                        "c:\\path\\to\\some-cert.pem"
-                                    ]
-                                },
-                                "key": {
-                                    "type": "string",
-                                    "description": "Full path to certificate key (cert_key.pem)",
-                                    "examples": [
-                                        "c:\\path\\to\\cert_key.pem",
-                                        "c:\\path\\to\\key.pem"
-                                    ]
-                                },
-                                "user_dir": {
-                                    "type": "string"
-                                },
-                                "user_name": {
-                                    "type": "string"
-                                }
-                            }
+                    "description": "Define the Qlik environment details (host, port, authentication etc.)",
+                    "properties": {
+                        "host": {
+                            "type": "string",
+                            "description": "Qlik Sense host name"
                         },
-                        {
-                            "description": "JWT authentication. Use via dedicated JWT virtual proxy",
-                            "required": [
-                                "token"
-                            ],
-                            "properties": {
-                                "token": {
-                                    "type": "string"
-                                }
-                            }
+                        "port": {
+                            "type": "integer",
+                            "description": "Repository port (default 4242)",
+                            "default": 4242
                         },
-                        {
-                            "description": "Header authentication. Use via header specific virtual proxy",
-                            "required": [
-                                "header",
-                                "user"
-                            ],
-                            "properties": {
-                                "header": {
-                                    "type": "string"
+                        "authentication": {
+                            "type": "object",
+                            "description": "Authentication information (certificates, jwt etc.)",
+                            "oneOf": [
+                                {
+                                    "description": "Certificate authentication. Use when connecting to Repo  directly - on port 4242 (default)",
+                                    "required": [
+                                        "cert",
+                                        "key",
+                                        "user_dir",
+                                        "user_name"
+                                    ],
+                                    "properties": {
+                                        "cert": {
+                                            "type": "string",
+                                            "description": "Full path to certificate (cert.pem)\nc:\\path\\to\\cert.pem\nc:\\path\\to\\some-cert.pem",
+                                            "examples": [
+                                                "c:\\path\\to\\cert.pem",
+                                                "c:\\path\\to\\some-cert.pem"
+                                            ]
+                                        },
+                                        "key": {
+                                            "type": "string",
+                                            "description": "Full path to certificate key (cert_key.pem)",
+                                            "examples": [
+                                                "c:\\path\\to\\cert_key.pem",
+                                                "c:\\path\\to\\key.pem"
+                                            ]
+                                        },
+                                        "user_dir": {
+                                            "type": "string"
+                                        },
+                                        "user_name": {
+                                            "type": "string"
+                                        }
+                                    }
                                 },
-                                "user": {
-                                    "type": "string"
+                                {
+                                    "description": "JWT authentication. Use via dedicated JWT virtual proxy",
+                                    "required": [
+                                        "token"
+                                    ],
+                                    "properties": {
+                                        "token": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                {
+                                    "description": "Header authentication. Use via header specific virtual proxy",
+                                    "required": [
+                                        "header",
+                                        "user"
+                                    ],
+                                    "properties": {
+                                        "header": {
+                                            "type": "string"
+                                        },
+                                        "user": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                {
+                                    "description": "Authenticate with session ID",
+                                    "required": [
+                                        "sessionId",
+                                        "cookieHeaderName"
+                                    ],
+                                    "properties": {
+                                        "sessionId": {
+                                            "type": "string"
+                                        },
+                                        "cookieHeaderName": {
+                                            "type": "string"
+                                        }
+                                    }
                                 }
-                            }
+                            ]
                         },
-                        {
-                            "description": "Authenticate with session ID",
-                            "required": [
-                                "sessionId",
-                                "cookieHeaderName"
-                            ],
-                            "properties": {
-                                "sessionId": {
-                                    "type": "string"
-                                },
-                                "cookieHeaderName": {
-                                    "type": "string"
-                                }
-                            }
+                        "name": {
+                            "type": "string"
                         }
+                    },
+                    "required": [
+                        "host",
+                        "authentication"
                     ]
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "description": "Define the Qlik environment details (host, port, authentication etc.)",
+                        "properties": {
+                            "host": {
+                                "type": "string",
+                                "description": "Qlik Sense host name"
+                            },
+                            "port": {
+                                "type": "integer",
+                                "description": "Repository port (default 4242)",
+                                "default": 4242
+                            },
+                            "authentication": {
+                                "type": "object",
+                                "description": "Authentication information (certificates, jwt etc.)",
+                                "oneOf": [
+                                    {
+                                        "description": "Certificate authentication. Use when connecting to Repo  directly - on port 4242 (default)",
+                                        "required": [
+                                            "cert",
+                                            "key",
+                                            "user_dir",
+                                            "user_name"
+                                        ],
+                                        "properties": {
+                                            "cert": {
+                                                "type": "string",
+                                                "description": "Full path to certificate (cert.pem)\nc:\\path\\to\\cert.pem\nc:\\path\\to\\some-cert.pem",
+                                                "examples": [
+                                                    "c:\\path\\to\\cert.pem",
+                                                    "c:\\path\\to\\some-cert.pem"
+                                                ]
+                                            },
+                                            "key": {
+                                                "type": "string",
+                                                "description": "Full path to certificate key (cert_key.pem)",
+                                                "examples": [
+                                                    "c:\\path\\to\\cert_key.pem",
+                                                    "c:\\path\\to\\key.pem"
+                                                ]
+                                            },
+                                            "user_dir": {
+                                                "type": "string"
+                                            },
+                                            "user_name": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "description": "JWT authentication. Use via dedicated JWT virtual proxy",
+                                        "required": [
+                                            "token"
+                                        ],
+                                        "properties": {
+                                            "token": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "description": "Header authentication. Use via header specific virtual proxy",
+                                        "required": [
+                                            "header",
+                                            "user"
+                                        ],
+                                        "properties": {
+                                            "header": {
+                                                "type": "string"
+                                            },
+                                            "user": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "description": "Authenticate with session ID",
+                                        "required": [
+                                            "sessionId",
+                                            "cookieHeaderName"
+                                        ],
+                                        "properties": {
+                                            "sessionId": {
+                                                "type": "string"
+                                            },
+                                            "cookieHeaderName": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "default": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "host",
+                            "authentication",
+                            "name",
+                            "default"
+                        ]
+                    }
                 }
-            },
-            "required": [
-                "host",
-                "authentication"
             ]
         },
         "tasks": {
@@ -508,6 +625,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -539,6 +660,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -572,6 +697,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -603,6 +732,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -636,6 +769,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -667,6 +804,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -716,6 +857,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -780,6 +925,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -846,6 +995,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -895,6 +1048,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -927,6 +1084,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -979,6 +1140,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1053,6 +1218,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1110,6 +1279,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1191,6 +1364,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1269,6 +1446,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1316,6 +1497,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1400,6 +1585,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1432,6 +1621,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1490,6 +1683,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1650,6 +1847,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1692,6 +1893,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1724,6 +1929,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1784,6 +1993,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1865,6 +2078,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1937,6 +2154,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1993,6 +2214,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2063,6 +2288,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2108,6 +2337,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2140,6 +2373,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2203,6 +2440,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2278,6 +2519,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2346,6 +2591,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2411,6 +2660,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2466,6 +2719,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2563,6 +2820,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2664,6 +2925,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2701,6 +2966,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2733,6 +3002,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2793,6 +3066,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2863,6 +3140,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2958,6 +3239,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2995,6 +3280,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3030,6 +3319,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3123,6 +3416,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3221,6 +3518,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3285,6 +3586,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3342,6 +3647,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3377,6 +3686,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3484,6 +3797,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3667,6 +3984,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3704,6 +4025,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3736,6 +4061,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3796,6 +4125,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3934,6 +4267,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3984,6 +4321,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4016,6 +4357,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -4066,6 +4411,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -4126,6 +4475,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -4223,6 +4576,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4302,6 +4659,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4339,6 +4700,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4371,6 +4736,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -4431,6 +4800,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -4521,6 +4894,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4594,6 +4971,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4631,6 +5012,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4663,6 +5048,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -4786,6 +5175,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4859,6 +5252,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4918,6 +5315,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5007,6 +5408,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5143,6 +5548,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5185,6 +5594,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5217,6 +5630,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5277,6 +5694,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5374,6 +5795,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5423,6 +5848,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5480,6 +5909,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5517,6 +5950,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5549,6 +5986,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5609,6 +6050,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5709,6 +6154,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5825,6 +6274,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5857,6 +6310,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5894,6 +6351,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5969,6 +6430,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6028,6 +6493,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6118,6 +6587,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6200,6 +6673,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6246,6 +6723,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6307,6 +6788,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6366,6 +6851,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6416,6 +6905,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6448,6 +6941,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6488,6 +6985,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6537,6 +7038,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6584,6 +7089,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6662,6 +7171,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6699,6 +7212,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6731,6 +7248,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6791,6 +7312,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6896,6 +7421,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -7148,6 +7677,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -7185,6 +7718,10 @@
                     "type": "string",
                     "description": "Task description (multiline is supported)"
                 },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -7217,6 +7754,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -7277,6 +7818,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -7556,6 +8101,10 @@
                 "description": {
                     "type": "string",
                     "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"

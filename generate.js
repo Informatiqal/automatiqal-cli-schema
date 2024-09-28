@@ -34,6 +34,11 @@ async function generateSaaSRunbookSchema() {
       description: "Task description (multiline is supported)",
     };
 
+    definitionContent.properties["environment"] = {
+      type: "string",
+      description: "Name of the environment against which the task will be ran"
+    }
+
     definitionContent.properties.onError = {
       $ref: `#/definitions/onError`,
     };
@@ -150,6 +155,11 @@ async function generateWindowsRunbookSchema() {
         type: "string",
         description: "Task description (multiline is supported)",
       };
+
+      definitionContent.properties["environment"] = {
+        type: "string",
+        description: "Name of the environment against which the task will be ran"
+      }      
 
       definitionContent.properties["loop"] = { $ref: `#/definitions/Loop` }
 
