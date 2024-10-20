@@ -151,21 +151,23 @@ async function generateWindowsRunbookSchema() {
     );
 
     if (definitionContent.properties) {
-      definitionContent.properties["description"] = {
-        type: "string",
-        description: "Task description (multiline is supported)",
-      };
+      if (definitionName != "pause") {
+        definitionContent.properties["description"] = {
+          type: "string",
+          description: "Task description (multiline is supported)",
+        };
 
-      definitionContent.properties["environment"] = {
-        type: "string",
-        description: "Name of the environment against which the task will be ran"
-      }      
+        definitionContent.properties["environment"] = {
+          type: "string",
+          description: "Name of the environment against which the task will be ran"
+        }
 
-      definitionContent.properties["loop"] = { $ref: `#/definitions/Loop` }
+        definitionContent.properties["loop"] = { $ref: `#/definitions/Loop` }
 
-      definitionContent.properties.onError = {
-        $ref: `#/definitions/onError`,
-      };
+        definitionContent.properties.onError = {
+          $ref: `#/definitions/onError`,
+        };
+      }
     }
 
     placeholder.definitions.tasks.items.anyOf.push({

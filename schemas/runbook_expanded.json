@@ -467,6 +467,9 @@
                         "$ref": "#/definitions/node.getAll"
                     },
                     {
+                        "$ref": "#/definitions/pause"
+                    },
+                    {
                         "$ref": "#/definitions/proxy.update"
                     },
                     {
@@ -5061,6 +5064,42 @@
                 }
             }
         },
+        "pause": {
+            "type": "object",
+            "description": "Task used to pause for X number of seconds",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "pause"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "required": [
+                        "seconds"
+                    ],
+                    "properties": {
+                        "seconds": {
+                            "type": "number",
+                            "description": "Seconds to pause",
+                            "exclusiveMinimum": 0
+                        }
+                    }
+                }
+            }
+        },
         "proxy.update": {
             "type": "object",
             "description": "Update proxy service",
@@ -8451,6 +8490,9 @@
                     },
                     {
                         "$ref": "#/definitions/node.getAll"
+                    },
+                    {
+                        "$ref": "#/definitions/pause"
                     },
                     {
                         "$ref": "#/definitions/proxy.update"
