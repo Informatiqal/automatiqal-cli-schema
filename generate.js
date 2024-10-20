@@ -29,19 +29,21 @@ async function generateSaaSRunbookSchema() {
         )
       );
 
-    definitionContent.properties["description"] = {
-      type: "string",
-      description: "Task description (multiline is supported)",
-    };
+    if (definitionName != "pause") {
+      definitionContent.properties["description"] = {
+        type: "string",
+        description: "Task description (multiline is supported)",
+      };
 
-    definitionContent.properties["environment"] = {
-      type: "string",
-      description: "Name of the environment against which the task will be ran"
+      definitionContent.properties["environment"] = {
+        type: "string",
+        description: "Name of the environment against which the task will be ran"
+      }
+
+      definitionContent.properties.onError = {
+        $ref: `#/definitions/onError`,
+      };
     }
-
-    definitionContent.properties.onError = {
-      $ref: `#/definitions/onError`,
-    };
 
     placeholder.definitions.tasks.items.anyOf.push({
       $ref: `#/definitions/${definitionName}`,
