@@ -164,16 +164,17 @@ async function generateWindowsRunbookSchema() {
           description: "Name of the environment against which the task will be ran"
         }
 
-        definitionContent.properties["when"] = {
-          type: "string",
-          description: "Determine if the task to be skipped or not based on the condition provided here"
-        }
 
         definitionContent.properties["loop"] = { $ref: `#/definitions/Loop` }
 
         definitionContent.properties.onError = {
           $ref: `#/definitions/onError`,
         };
+      }
+
+      definitionContent.properties["when"] = {
+        type: "string",
+        description: "Determine if the task to be skipped or not based on the condition provided here"
       }
     }
 

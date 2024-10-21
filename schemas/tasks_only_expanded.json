@@ -44,15 +44,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -84,15 +84,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -124,15 +124,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -164,15 +164,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -204,15 +204,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -244,15 +244,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -301,15 +301,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -373,15 +373,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -446,15 +446,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -503,15 +503,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -544,15 +544,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -604,15 +604,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -685,15 +685,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -751,15 +751,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -839,15 +839,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -925,15 +925,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -981,15 +981,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -1072,15 +1072,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -1113,15 +1113,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -1179,15 +1179,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -1346,15 +1346,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -1396,15 +1396,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -1437,15 +1437,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -1505,15 +1505,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -1593,15 +1593,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -1673,15 +1673,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -1738,15 +1738,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "oneOf": [
@@ -1815,15 +1815,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "oneOf": [
@@ -1868,15 +1868,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -1909,15 +1909,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -1980,15 +1980,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "oneOf": [
@@ -2062,15 +2062,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "oneOf": [
@@ -2138,15 +2138,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -2211,15 +2211,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "oneOf": [
@@ -2275,15 +2275,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "oneOf": [
@@ -2380,15 +2380,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -2488,15 +2488,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -2533,15 +2533,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -2574,15 +2574,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -2642,15 +2642,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -2720,15 +2720,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -2822,15 +2822,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -2867,15 +2867,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -2911,15 +2911,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -3012,15 +3012,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -3117,15 +3117,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -3189,15 +3189,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -3254,15 +3254,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -3298,15 +3298,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -3413,15 +3413,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -3603,15 +3603,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -3648,15 +3648,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -3689,15 +3689,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -3757,15 +3757,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -3902,15 +3902,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -3960,15 +3960,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -4001,15 +4001,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -4059,15 +4059,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -4127,15 +4127,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -4231,15 +4231,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -4318,15 +4318,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -4363,15 +4363,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -4404,15 +4404,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -4472,15 +4472,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -4569,15 +4569,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -4650,15 +4650,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -4695,15 +4695,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -4736,15 +4736,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -4778,6 +4778,10 @@
                             "exclusiveMinimum": 0
                         }
                     }
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -4899,15 +4903,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -4980,15 +4984,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -5048,15 +5052,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -5145,15 +5149,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -5288,15 +5292,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -5338,15 +5342,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -5379,15 +5383,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -5447,15 +5451,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -5551,15 +5555,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -5609,15 +5613,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -5673,15 +5677,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -5718,15 +5722,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -5759,15 +5763,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -5827,15 +5831,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -5935,15 +5939,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -6058,15 +6062,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -6099,15 +6103,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -6144,15 +6148,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -6226,15 +6230,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -6294,15 +6298,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -6391,15 +6395,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -6481,15 +6485,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -6536,15 +6540,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -6604,15 +6608,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -6671,15 +6675,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -6729,15 +6733,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -6770,15 +6774,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -6818,15 +6822,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "oneOf": [
@@ -6874,15 +6878,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "oneOf": [
@@ -6930,15 +6934,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "oneOf": [
@@ -7015,15 +7019,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -7060,15 +7064,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -7101,15 +7105,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -7169,15 +7173,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -7282,15 +7286,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -7541,15 +7545,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -7586,15 +7590,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -7627,15 +7631,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
@@ -7695,15 +7699,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             },
             "required": [
@@ -7982,15 +7986,15 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
-                "when": {
-                    "type": "string",
-                    "description": "Determine if the task to be skipped or not based on the condition provided here"
-                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 }
             }
         },
