@@ -44,6 +44,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -79,6 +83,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -116,6 +124,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -151,6 +163,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -188,6 +204,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -223,6 +243,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -276,6 +300,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -344,6 +372,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -414,6 +446,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -467,6 +503,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -503,6 +543,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -559,6 +603,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -637,6 +685,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -698,6 +750,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -783,6 +839,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -865,6 +925,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -916,6 +980,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1004,6 +1072,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1040,6 +1112,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1102,6 +1178,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1266,6 +1346,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1312,6 +1396,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1348,6 +1436,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1412,6 +1504,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1497,6 +1593,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1573,6 +1673,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1633,6 +1737,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1707,6 +1815,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1756,6 +1868,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -1792,6 +1908,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1859,6 +1979,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -1938,6 +2062,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2010,6 +2138,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2079,6 +2211,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2138,6 +2274,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2239,6 +2379,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2344,6 +2488,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2385,6 +2533,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2421,6 +2573,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2485,6 +2641,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2559,6 +2719,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2658,6 +2822,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2699,6 +2867,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -2738,6 +2910,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2835,6 +3011,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -2937,6 +3117,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3005,6 +3189,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3066,6 +3254,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3105,6 +3297,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3216,6 +3412,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3403,6 +3603,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3444,6 +3648,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3480,6 +3688,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3544,6 +3756,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3686,6 +3902,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3740,6 +3960,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -3776,6 +4000,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3830,6 +4058,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3894,6 +4126,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -3995,6 +4231,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4078,6 +4318,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4119,6 +4363,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4155,6 +4403,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -4219,6 +4471,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -4313,6 +4569,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4390,6 +4650,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4431,6 +4695,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4468,6 +4736,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4480,14 +4752,11 @@
             "type": "object",
             "description": "Task used to pause for X number of seconds",
             "required": [
-                "name",
                 "operation",
                 "details"
             ],
+            "additionalProperties": false,
             "properties": {
-                "name": {
-                    "$ref": "#/definitions/TaskName"
-                },
                 "operation": {
                     "type": "string",
                     "enum": [
@@ -4630,6 +4899,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4707,6 +4980,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -4770,6 +5047,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -4863,6 +5144,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5003,6 +5288,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5049,6 +5338,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5085,6 +5378,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5149,6 +5446,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5250,6 +5551,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5303,6 +5608,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5364,6 +5673,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5405,6 +5718,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5441,6 +5758,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5505,6 +5826,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5609,6 +5934,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5729,6 +6058,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5765,6 +6098,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5806,6 +6143,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -5885,6 +6226,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -5948,6 +6293,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6042,6 +6391,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6128,6 +6481,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6178,6 +6535,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6243,6 +6604,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6306,6 +6671,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6360,6 +6729,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6396,6 +6769,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6440,6 +6817,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6493,6 +6874,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6544,6 +6929,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6626,6 +7015,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6667,6 +7060,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -6703,6 +7100,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6767,6 +7168,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -6876,6 +7281,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -7132,6 +7541,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -7173,6 +7586,10 @@
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
                 },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                },
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
@@ -7209,6 +7626,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -7273,6 +7694,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
@@ -7556,6 +7981,10 @@
                 "environment": {
                     "type": "string",
                     "description": "Name of the environment against which the task will be ran"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"

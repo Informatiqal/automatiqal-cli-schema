@@ -2,14 +2,11 @@
     "type": "object",
     "description": "Task used to pause for X number of seconds",
     "required": [
-        "name",
         "operation",
         "details"
     ],
+    "additionalProperties": false,
     "properties": {
-        "name": {
-            "$ref": "#/definitions/TaskName"
-        },
         "operation": {
             "type": "string",
             "enum": [
