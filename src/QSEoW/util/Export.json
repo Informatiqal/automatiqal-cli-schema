@@ -1,0 +1,49 @@
+{
+    "description": "Export the raw data into a file (json or csv). For CSV there is a option to specify columns to include/exclude",
+    "type": "object",
+    "oneOf": [
+        {
+            "type": "object",
+            "required": [
+                "location"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "location": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string",
+                    "enum": [
+                        "json"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "object",
+            "required": [
+                "format",
+                "location"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "format": {
+                    "type": "string",
+                    "enum": [
+                        "csv"
+                    ]
+                },
+                "location": {
+                    "type": "string"
+                },
+                "columns": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    ]
+}

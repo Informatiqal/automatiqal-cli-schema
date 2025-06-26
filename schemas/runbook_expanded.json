@@ -635,6 +635,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -674,6 +677,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -715,6 +721,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -754,6 +763,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -795,6 +807,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -834,6 +849,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -891,6 +909,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -963,6 +984,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1037,6 +1061,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -1094,6 +1121,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -1134,6 +1164,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1194,6 +1227,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1276,6 +1312,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -1341,6 +1380,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1430,6 +1472,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -1516,6 +1561,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -1571,6 +1619,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1663,6 +1714,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -1703,6 +1757,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1769,6 +1826,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -1937,6 +1997,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -1987,6 +2050,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -2027,6 +2093,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2095,6 +2164,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2184,6 +2256,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -2264,6 +2339,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -2328,6 +2406,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2406,6 +2487,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -2459,6 +2543,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -2499,6 +2586,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2570,6 +2660,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2653,6 +2746,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -2729,6 +2825,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -2802,6 +2901,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -2865,6 +2967,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -2970,6 +3075,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3079,6 +3187,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -3124,6 +3235,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -3164,6 +3278,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3232,6 +3349,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3310,6 +3430,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3413,6 +3536,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -3458,6 +3584,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -3501,6 +3630,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3602,6 +3734,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -3708,6 +3843,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -3780,6 +3918,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -3845,6 +3986,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -3888,6 +4032,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4003,6 +4150,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4194,6 +4344,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -4239,6 +4392,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -4279,6 +4435,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4347,6 +4506,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4493,6 +4655,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -4551,6 +4716,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -4591,6 +4759,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4649,6 +4820,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4717,6 +4891,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -4822,6 +4999,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -4909,6 +5089,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -4954,6 +5137,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -4994,6 +5180,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5062,6 +5251,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5160,6 +5352,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -5241,6 +5436,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -5286,6 +5484,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -5326,6 +5527,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5494,6 +5698,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -5575,6 +5782,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -5642,6 +5852,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5739,6 +5952,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -5883,6 +6099,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -5933,6 +6152,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -5973,6 +6195,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -6041,6 +6266,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -6146,6 +6374,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -6203,6 +6434,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -6268,6 +6502,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -6313,6 +6550,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -6353,6 +6593,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -6421,6 +6664,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -6529,6 +6775,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -6653,6 +6902,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -6693,6 +6945,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -6738,6 +6993,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -6821,6 +7079,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -6888,6 +7149,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -6986,6 +7250,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -7076,6 +7343,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -7130,6 +7400,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -7199,6 +7472,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -7266,6 +7542,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -7324,6 +7603,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -7364,6 +7646,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -7412,6 +7697,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -7469,6 +7757,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -7524,6 +7815,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -7610,6 +7904,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -7655,6 +7952,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -7695,6 +7995,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -7763,6 +8066,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -7876,6 +8182,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -8136,6 +8445,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -8181,6 +8493,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -8221,6 +8536,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -8289,6 +8607,9 @@
                 },
                 "loop": {
                     "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
                 },
                 "onError": {
                     "$ref": "#/definitions/onError"
@@ -8577,6 +8898,9 @@
                 "loop": {
                     "$ref": "#/definitions/Loop"
                 },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
                 "onError": {
                     "$ref": "#/definitions/onError"
                 },
@@ -8593,6 +8917,55 @@
                 "set",
                 "add",
                 "remove"
+            ]
+        },
+        "Export": {
+            "description": "Export the raw data into a file (json or csv). For CSV there is a option to specify columns to include/exclude",
+            "type": "object",
+            "oneOf": [
+                {
+                    "type": "object",
+                    "required": [
+                        "location"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                        "location": {
+                            "type": "string"
+                        },
+                        "format": {
+                            "type": "string",
+                            "enum": [
+                                "json"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "required": [
+                        "format",
+                        "location"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                        "format": {
+                            "type": "string",
+                            "enum": [
+                                "csv"
+                            ]
+                        },
+                        "location": {
+                            "type": "string"
+                        },
+                        "columns": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
             ]
         },
         "Loop": {

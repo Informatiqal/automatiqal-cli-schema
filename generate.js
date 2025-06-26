@@ -166,7 +166,7 @@ async function generateWindowsRunbookSchema() {
 
 
         definitionContent.properties["loop"] = { $ref: `#/definitions/Loop` }
-
+        definitionContent.properties["export"] = { $ref: `#/definitions/Export` }
         definitionContent.properties.onError = {
           $ref: `#/definitions/onError`,
         };
