@@ -29,6 +29,28 @@
                 "debug"
             ]
         },
+        "constants": {
+            "type": "object",
+            "additionalProperties": {
+                "anyOf": [
+                    {
+                        "type": "string"
+                    },
+                    {
+                        "type": "integer"
+                    },
+                    {
+                        "type": "boolean"
+                    },
+                    {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "number"
+                        }
+                    }
+                ]
+            }
+        },
         "environment": {
             "oneOf": [
                 {
