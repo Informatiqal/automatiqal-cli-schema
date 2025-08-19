@@ -148,6 +148,9 @@
                         },
                         "name": {
                             "type": "string"
+                        },
+                        "default": {
+                            "type": "boolean"
                         }
                     },
                     "required": [
@@ -260,8 +263,7 @@
                         "required": [
                             "host",
                             "authentication",
-                            "name",
-                            "default"
+                            "name"
                         ]
                     }
                 }
