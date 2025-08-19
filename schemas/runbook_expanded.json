@@ -519,6 +519,15 @@
                         "$ref": "#/definitions/schemaTrigger.update"
                     },
                     {
+                        "$ref": "#/definitions/selection.create"
+                    },
+                    {
+                        "$ref": "#/definitions/selection.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/selection.removeAllItems"
+                    },
+                    {
                         "$ref": "#/definitions/serviceStatus.get"
                     },
                     {
@@ -6421,6 +6430,353 @@
                 }
             ]
         },
+        "selection.create": {
+            "type": "object",
+            "description": "Create new selection",
+            "required": [
+                "name",
+                "operation",
+                "details"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "selection.create"
+                    ]
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "filter": {
+                    "type": "string"
+                },
+                "details": {
+                    "oneOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "type"
+                            ],
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": [
+                                        "app",
+                                        "app/content",
+                                        "app/datasegment",
+                                        "app/internal",
+                                        "app/object",
+                                        "appcontentquota",
+                                        "appseedinfo",
+                                        "appstatus",
+                                        "binarydelete",
+                                        "binarydownload",
+                                        "binarysyncruleevaluation",
+                                        "compositeevent",
+                                        "compositeeventoperational",
+                                        "compositeeventruleoperational",
+                                        "contentcachecontrol",
+                                        "contentlibrary",
+                                        "custombannermessage",
+                                        "custompropertydefinition",
+                                        "dataconnection",
+                                        "engineservice",
+                                        "executionresult",
+                                        "executionresult/detail",
+                                        "executionsession",
+                                        "extension",
+                                        "externalproductsignon",
+                                        "externalprogramtask",
+                                        "externalprogramtaskoperational",
+                                        "fileextension",
+                                        "fileextensionwhitelist",
+                                        "filereference",
+                                        "license/analyzeraccessgroup",
+                                        "license/analyzeraccesstype",
+                                        "license/analyzeraccessusage",
+                                        "license/analyzertimeaccesstype",
+                                        "license/analyzertimeaccessusage",
+                                        "license/loginaccesstype",
+                                        "license/loginaccessusage",
+                                        "license/professionalaccessgroup",
+                                        "license/professionalaccesstype",
+                                        "license/professionalaccessusage",
+                                        "license/useraccessgroup",
+                                        "license/useraccesstype",
+                                        "license/useraccessusage",
+                                        "lock",
+                                        "many",
+                                        "mimetype",
+                                        "odagenginegroup",
+                                        "odaglink",
+                                        "odaglinkusage",
+                                        "odagmodelgroup",
+                                        "odagrequest",
+                                        "odagservice",
+                                        "previewcreateprivilege",
+                                        "previewprivileges",
+                                        "printingservice",
+                                        "proxyservice",
+                                        "proxyservicecertificate",
+                                        "reloadtask",
+                                        "reloadtaskoperational",
+                                        "repositoryservice",
+                                        "schedulerservice",
+                                        "schemaevent",
+                                        "schemaeventoperational",
+                                        "servernodeconfiguration",
+                                        "servernodeheartbeat",
+                                        "servernoderole",
+                                        "servicecluster",
+                                        "servicestatus",
+                                        "sharedcontent",
+                                        "staticcontentreference",
+                                        "stream",
+                                        "syncsession",
+                                        "systeminfo",
+                                        "systemnotification",
+                                        "systemrule",
+                                        "tag",
+                                        "tempcontent",
+                                        "user",
+                                        "userdirectory",
+                                        "usersynctask",
+                                        "usersynctaskoperational",
+                                        "virtualproxyconfig"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "objectId": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "app",
+                                            "app/content",
+                                            "app/datasegment",
+                                            "app/internal",
+                                            "app/object",
+                                            "appcontentquota",
+                                            "appseedinfo",
+                                            "appstatus",
+                                            "binarydelete",
+                                            "binarydownload",
+                                            "binarysyncruleevaluation",
+                                            "compositeevent",
+                                            "compositeeventoperational",
+                                            "compositeeventruleoperational",
+                                            "contentcachecontrol",
+                                            "contentlibrary",
+                                            "custombannermessage",
+                                            "custompropertydefinition",
+                                            "dataconnection",
+                                            "engineservice",
+                                            "executionresult",
+                                            "executionresult/detail",
+                                            "executionsession",
+                                            "extension",
+                                            "externalproductsignon",
+                                            "externalprogramtask",
+                                            "externalprogramtaskoperational",
+                                            "fileextension",
+                                            "fileextensionwhitelist",
+                                            "filereference",
+                                            "license/analyzeraccessgroup",
+                                            "license/analyzeraccesstype",
+                                            "license/analyzeraccessusage",
+                                            "license/analyzertimeaccesstype",
+                                            "license/analyzertimeaccessusage",
+                                            "license/loginaccesstype",
+                                            "license/loginaccessusage",
+                                            "license/professionalaccessgroup",
+                                            "license/professionalaccesstype",
+                                            "license/professionalaccessusage",
+                                            "license/useraccessgroup",
+                                            "license/useraccesstype",
+                                            "license/useraccessusage",
+                                            "lock",
+                                            "many",
+                                            "mimetype",
+                                            "odagenginegroup",
+                                            "odaglink",
+                                            "odaglinkusage",
+                                            "odagmodelgroup",
+                                            "odagrequest",
+                                            "odagservice",
+                                            "previewcreateprivilege",
+                                            "previewprivileges",
+                                            "printingservice",
+                                            "proxyservice",
+                                            "proxyservicecertificate",
+                                            "reloadtask",
+                                            "reloadtaskoperational",
+                                            "repositoryservice",
+                                            "schedulerservice",
+                                            "schemaevent",
+                                            "schemaeventoperational",
+                                            "servernodeconfiguration",
+                                            "servernodeheartbeat",
+                                            "servernoderole",
+                                            "servicecluster",
+                                            "servicestatus",
+                                            "sharedcontent",
+                                            "staticcontentreference",
+                                            "stream",
+                                            "syncsession",
+                                            "systeminfo",
+                                            "systemnotification",
+                                            "systemrule",
+                                            "tag",
+                                            "tempcontent",
+                                            "user",
+                                            "userdirectory",
+                                            "usersynctask",
+                                            "usersynctaskoperational",
+                                            "virtualproxyconfig"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                }
+            }
+        },
+        "selection.remove": {
+            "type": "object",
+            "description": "Remove selection NOT THE ITEMS IN IT",
+            "required": [
+                "name",
+                "operation",
+                "source"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "selection.remove"
+                    ]
+                },
+                "source": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                }
+            }
+        },
+        "selection.removeAllItems": {
+            "type": "object",
+            "description": "Remove all items for selection",
+            "required": [
+                "name",
+                "operation",
+                "source"
+            ],
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/TaskName"
+                },
+                "operation": {
+                    "type": "string",
+                    "enum": [
+                        "selection.removeAllItems"
+                    ]
+                },
+                "source": {
+                    "type": "string"
+                },
+                "skip": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "object",
+                    "properties": {
+                        "keepSelection": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Task description (multiline is supported)"
+                },
+                "environment": {
+                    "type": "string",
+                    "description": "Name of the environment against which the task will be ran"
+                },
+                "loop": {
+                    "$ref": "#/definitions/Loop"
+                },
+                "export": {
+                    "$ref": "#/definitions/Export"
+                },
+                "onError": {
+                    "$ref": "#/definitions/onError"
+                },
+                "when": {
+                    "type": "string",
+                    "description": "Determine if the task to be skipped or not based on the condition provided here"
+                }
+            }
+        },
         "serviceStatus.get": {
             "type": "object",
             "description": "Get status of service by service id",
@@ -9348,6 +9704,15 @@
                     },
                     {
                         "$ref": "#/definitions/schemaTrigger.update"
+                    },
+                    {
+                        "$ref": "#/definitions/selection.create"
+                    },
+                    {
+                        "$ref": "#/definitions/selection.remove"
+                    },
+                    {
+                        "$ref": "#/definitions/selection.removeAllItems"
                     },
                     {
                         "$ref": "#/definitions/serviceStatus.get"

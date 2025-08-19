@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "description": "Remove all items for selection",
+    "required": [
+        "name",
+        "operation",
+        "source"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "selection.removeAllItems"
+            ]
+        },
+        "source": {
+            "type": "string"
+        },
+        "skip": {
+            "type": "boolean"
+        },
+        "details": {
+            "type": "object",
+            "properties": {
+                "keepSelection": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

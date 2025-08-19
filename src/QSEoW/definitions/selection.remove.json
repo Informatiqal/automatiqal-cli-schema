@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "description": "Remove selection NOT THE ITEMS IN IT",
+    "required": [
+        "name",
+        "operation",
+        "source"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "#/definitions/TaskName"
+        },
+        "operation": {
+            "type": "string",
+            "enum": [
+                "selection.remove"
+            ]
+        },
+        "source": {
+            "type": "string"
+        },
+        "skip": {
+            "type": "boolean"
+        }
+    }
+}
