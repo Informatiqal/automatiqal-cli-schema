@@ -186,7 +186,27 @@ async function generateWindowsRunbookSchema() {
       definitionContent.properties.options &&
       !definitionContent.properties.options.hasOwnProperty("$ref")) {
       definitionContent.properties.options.properties["loopParallel"] = { type: "boolean", "description": "applied if 'loop' is used. Loop through the values in parallel or in sequence. Defaults is 'false'" }
-      definitionContent.properties.options.properties["parallel"] = { type: "boolean", "description": "process entities in parallel or sequence, default is true" }
+      definitionContent.properties.options.properties["parallel"] = {
+        oneOf: [{ type: "boolean", "description": "Process entities in parallel or sequence, default is false" }, {
+          type: "object",
+          "additionalProperties": false,
+          required: ["batch"],
+          "properties": {
+            batch: { type: "number", description: "Process items in batches. Each batch of items is ran in parallel" },
+            delay: { type: "number", description: "How many SECONDS to wait after each batch its processed. Decimal numbers are accepted" }
+          },
+        },
+        {
+          type: "object",
+          "additionalProperties": false,
+          required: ["concurrent"],
+          "properties": {
+            concurrent: { type: "number", description: "Process items in rolling N numbers" },
+            delay: { type: "number", description: "How many SECONDS to wait after each breakCount items. Decimal numbers are accepted" },
+            breakCount: { type: "number", description: "Only usable when 'delay' is set. Once N-th item is processed the process will trigger the delay number. If 'breakCount' is less than 'concurrent' then 'concurrency' will be set as 'breakCount' " }
+          }
+        }]
+      }
       definitionContent.properties.options.properties["concurrency"] = { type: "number", "description": " if parallel == true then this option will make sure that the task entries are process N at the time. Rolling N" }
       definitionContent.properties.options.properties["batch"] = {
         type: "number", "description": "if parallel == true then this option process the task entities in batches. Each batch will start once all entities are processed from the previous batch.\n\nTHE TASKS IN EACH BATCH ARE PROCESSED IN PARALLEL!"
