@@ -14,8 +14,6 @@ let validate1;
 
 describe("Automatiqal Schema Tests", function () {
   beforeAll(async () => {
-
-
     ajv = new Ajv({
       allErrors: true,
       strict: "log",
@@ -37,6 +35,77 @@ describe("Automatiqal Schema Tests", function () {
 
     validate = ajv.compile(automatiqalWindowsSchema);
     // validate1 = ajv.compile(automatiqalSaaSSchema);
+  });
+
+  it("Test", async () => {
+    const baseRunbook = {
+      name: "Test",
+      description: "Testing runbook",
+      edition: "windows",
+      trace: "debug",
+      constants: {
+        appName: "Big app",
+        appNames: {
+          "Big app": 1,
+          "Another big app": 1,
+        },
+        another: "asd123",
+        "yet another": true,
+        weighted: {
+          "SENSE-APR-2019": 1,
+        },
+      },
+      environment: [
+        {
+          host: "aaa",
+          name: "sense19",
+          default: true,
+          port: 4242,
+          authentication: {
+            user_dir: "SENSE-APR-2019",
+            user_name: "vagrant",
+            cert: "",
+            key: "",
+          },
+        },
+        {
+          host: "aaa",
+          name: "sense19-1",
+          port: 4242,
+          authentication: {
+            user_dir: "SENSE-APR-2019",
+            user_name: "vagrant",
+            cert: "",
+            key: "",
+          },
+        },
+      ],
+      tasks: [
+        {
+          name: "whatever",
+          operation: "app.get",
+          filter: "name eq '${appNames}'",
+          options: {
+            multiple: true,
+            allowZero: true,
+          },
+        },
+      ],
+    };
+
+    const validFilterRunbook = JSON.parse(JSON.stringify(baseRunbook));
+    const inValidResult1: boolean = validate(validFilterRunbook);
+
+    const a = validate.errors;
+
+    expect(validate.errors.length).to.be.equal(
+      0,
+      `ERRORS: \n\n ${validate.errors.join("\n")}`
+    );
+    expect(validate.warnings.length).to.be.equal(
+      0,
+      `WARNINGS: \n\n${validate.warnings.join("\n")}`
+    );
   });
 
   it("No schema errors or warnings", async () => {
@@ -61,7 +130,7 @@ describe("Automatiqal Schema Tests", function () {
           user_dir: `SOME_DIRECTORY`,
           user_name: `SOME_USER`,
           cert: "",
-          key: ""
+          key: "",
         },
       },
       tasks: [],

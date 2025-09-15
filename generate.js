@@ -363,7 +363,7 @@ async function generateUISchema(runbookSchema) {
       trace: {
         description: "Trace levels",
         type: "string",
-      },
+      }
     },
     tasks: {},
   };

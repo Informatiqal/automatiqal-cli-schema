@@ -21,6 +21,15 @@
                 "saas"
             ]
         },
+        "options": {
+            "type": "object",
+            "properties": {
+                "delay": {
+                    "type": "number",
+                    "default": 1
+                }
+            }
+        },
         "trace": {
             "description": "Trace levels",
             "type": "string",
